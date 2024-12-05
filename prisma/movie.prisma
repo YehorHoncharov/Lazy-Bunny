@@ -6,4 +6,6 @@ model Movie {
     languege String
     country String
     ageRating Int
+
+    Genre Relation[]
 }
