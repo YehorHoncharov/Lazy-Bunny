@@ -3,7 +3,7 @@ model Movie {
     name String
     rating Int
     year Int
-    languege String
+    language String
     country String
     ageRating Int
 
