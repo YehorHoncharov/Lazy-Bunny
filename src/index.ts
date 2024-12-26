@@ -15,14 +15,35 @@ app.set('views', path.join(__dirname, 'templates'))
 
 app.use('/movies/', router)
 
+const cors = require("cors");
+app.use(cors());
+
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
+
+
 app.get('/movie/all', (req, res) => {
-  res.json({
-    message: 'Back-End'
-  });
+  res.json([{
+    // message: 'Back-End'
+    id: 1,
+    Name: "Один дома",
+    ReleaseDate: "string",
+    Year: 1,
+    Genre: "string",
+    Country: "string",
+    Director: "string",
+    Duration: "string",
+    Screenwriter: "string",
+    Description: "string",
+    Language: "string",
+    FilmCompany: "string",
+    Starring: "string",
+    MoodImg: "string",
+    Img: "string",
+    Rating: 1,
+  }]);
 });
 
 
