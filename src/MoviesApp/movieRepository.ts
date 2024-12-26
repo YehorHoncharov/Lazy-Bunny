@@ -1,9 +1,9 @@
 import { Prisma, PrismaClient } from '@prisma/client';
-import client from '../client/prismaClient';
+import prisma from '../client/prismaClient';
 
 async function getMovies(){
     try{
-        let movies = await client.movie.findMany({})
+        let movies = await prisma.movie.findMany({})
         return movies
     } catch(err){
         if (err instanceof Prisma.PrismaClientKnownRequestError){
@@ -25,7 +25,7 @@ async function getMovies(){
 
 async function getMovieById(id: number) {
     try {
-        let movie = await client.movie.findUnique({
+        let movie = await prisma.movie.findUnique({
             where: {id: id}
         });
         return movie;
@@ -55,7 +55,7 @@ async function getMovieById(id: number) {
 
 async function getAllGenres(){
     try{
-        let movies = await client.genre.findMany({
+        let movies = await prisma.genre.findMany({
         
         })
         return movies
