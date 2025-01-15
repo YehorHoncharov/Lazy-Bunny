@@ -2,6 +2,6 @@ model Actor {
   id        Int       @id @default(autoincrement())
   firstName String
   lastName  String
-  movies Movie @relation(fields: [actorId], references: [id])
+  movies MovieToActor[]
   actorId Int
 }

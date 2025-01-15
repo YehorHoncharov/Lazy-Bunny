@@ -1,0 +1,9 @@
+model MovieToActor{
+    id       Int     @id @default(autoincrement())
+
+    Actor Actor @relation(fields: [actorId], references: [id])
+    actorId Int
+
+    Movie Movie @relation(fields: [movieId], references: [id])
+    movieId Int
+}
