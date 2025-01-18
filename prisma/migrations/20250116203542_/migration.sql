@@ -1,0 +1,26 @@
+-- CreateTable
+CREATE TABLE "Actor" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "firstName" TEXT NOT NULL,
+    "lastName" TEXT NOT NULL,
+    "actorId" INTEGER NOT NULL
+);
+
+-- CreateTable
+CREATE TABLE "Comment" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "date" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "author" TEXT NOT NULL,
+    "text" TEXT NOT NULL,
+    "commentId" INTEGER NOT NULL,
+    CONSTRAINT "Comment_commentId_fkey" FOREIGN KEY ("commentId") REFERENCES "Movie" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+);
+
+-- CreateTable
+CREATE TABLE "MovieToActor" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "actorId" INTEGER NOT NULL,
+    "movieId" INTEGER NOT NULL,
+    CONSTRAINT "MovieToActor_actorId_fkey" FOREIGN KEY ("actorId") REFERENCES "Actor" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
+    CONSTRAINT "MovieToActor_movieId_fkey" FOREIGN KEY ("movieId") REFERENCES "Movie" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+);

@@ -2,15 +2,7 @@ import { Prisma } from '@prisma/client'
 import {movieRepository} from "./movieRepository"
 
 
-interface IMovie{
-    id:   number
-    name: string
-    rating: number
-    year: number
-    language: string
-    country: string
-    ageRating: number
-}
+type IMovie = Prisma.MovieGetPayload<{}>
 
 interface IMovieError{
     status: 'error',
@@ -19,19 +11,15 @@ interface IMovieError{
 
 interface IMoviesSuccess{
     status: 'success',
-    data: IMovie[]
+    data: Prisma.MovieGetPayload<{}>[]
 }
 
 interface IMovieSuccess{
     status: 'success',
-    data: IMovie
+    data: Prisma.MovieGetPayload<{}>
 }
 
-interface IGenre{
-    id:   number
-    name: string
-    description: string
-}
+type IGenre = Prisma.GenreGetPayload<{}>
 
 interface IGenreError{
     status: 'error',
@@ -48,6 +36,11 @@ interface IGenreSuccess{
     data: IGenre
 }
 
+interface IComment{
+    author: string
+    text: string
+    commentId: number
+}
 
 
 async function getMovies() : Promise< IMoviesSuccess | IMovieError >{

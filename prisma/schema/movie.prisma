@@ -1,13 +1,19 @@
 model Movie {
     id       Int     @id @default(autoincrement())
-    name String
-    rating Int
-    year Int
-    language String
-    country String
-    ageRating Int
-    actors MovieToActor[]
-    comments Comment[]
-
-    Genre Relation[]
+    Name String
+    ReleaseDate String
+    Year Int
+    Country String
+    Director String
+    Duration String
+    Screenwriter String
+    Description String
+    Language String
+    FilmCompany String
+    MoodImg String
+    Img String
+    Rating Int
+    Actors MovieToActor[]
+    Comments Comment[]
+    Genres Relation[]
 }

@@ -3,5 +3,5 @@ model Actor {
   firstName String
   lastName  String
   movies MovieToActor[]
-  actorId Int
+
 }
