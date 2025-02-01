@@ -9,7 +9,8 @@ async function getMovies(req: Request, res: Response){
         res.send('error')
     }
     else{
-        res.render('movies', {movies: context.data});
+        res.json(context.data)
+        // res.render('movies', {movies: context.data});
 
     }
     
@@ -22,26 +23,27 @@ async function getMovieById(req: Request, res: Response){
         res.send('error')
     }
     else{
-        res.render('movies', {movie: movie.data});
+        res.json(movie.data)
+    
 
     }
 
 }
 
-async function getAllGenres(res: Response, req: Request){
-    const context = await movieService.getAllGenres()
-    if(context.status == 'error'){
-        res.send('error')
-    }
-    else{
-        res.render('genres', context);
-}
-}
+// async function getAllGenres(res: Response, req: Request){
+//     const context = await movieService.getAllGenres()
+//     if(context.status == 'error'){
+//         res.send('error')
+//     }
+//     else{
+//         res.render('genres', context);
+// }
+// }
     
 const movieController = {
     getMovies:getMovies,
     getMovieById:getMovieById,
-    getAllGenres:getAllGenres,
+    // getAllGenres:getAllGenres,
 };
 
 

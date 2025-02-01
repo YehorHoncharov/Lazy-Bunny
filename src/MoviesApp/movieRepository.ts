@@ -3,7 +3,14 @@ import prisma from '../client/prismaClient';
 
 async function getMovies(){
     try{
-        let movies = await prisma.movie.findMany({})
+        let movies = await prisma.movie.findMany(
+            {
+                include:{
+                      Genres: {include: {Genre: true}},
+                      Actors: {include: {Actor: true}},
+                      Comments: true
+                    }
+                })
         return movies
     } catch(err){
         if (err instanceof Prisma.PrismaClientKnownRequestError){
@@ -26,7 +33,12 @@ async function getMovies(){
 async function getMovieById(id: number) {
     try {
         let movie = await prisma.movie.findUnique({
-            where: {id: id}
+            where: {id: id},
+            include:{
+                Genres: {include: {Genre: true}},
+                Actors: {include: {Actor: true}},
+                Comments: true
+            }
         });
         return movie;
     } catch (err) {
@@ -53,26 +65,26 @@ async function getMovieById(id: number) {
     }
 }
 
-async function getAllGenres(){
-    try{
-        let movies = await prisma.genre.findMany({
+// async function getAllGenres(){
+//     try{
+//         let movies = await prisma.genre.findMany({
         
-        })
-        return movies
-    } catch(err){
-        if (err instanceof Prisma.PrismaClientKnownRequestError){
-            if (err.code == 'P2002'){
-                console.log(err.message);
-                throw err;
-            }
-        }
-    }
-}
+//         })
+//         return movies
+//     } catch(err){
+//         if (err instanceof Prisma.PrismaClientKnownRequestError){
+//             if (err.code == 'P2002'){
+//                 console.log(err.message);
+//                 throw err;
+//             }
+//         }
+//     }
+// }
 
 const movieRepository = {
     getMovies:getMovies,
     getMovieById:getMovieById,
-    getAllGenres:getAllGenres,
+
 };
 
 export {movieRepository}

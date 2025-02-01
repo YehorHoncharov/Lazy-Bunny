@@ -5,6 +5,6 @@ const router = express.Router();
 
 router.get('/', movieController.getMovies)
 router.get('/:id', movieController.getMovieById)
-router.get('/genres', movieController.getAllGenres)
+// router.get('/genres', movieController.getAllGenres)
 
 export {router}

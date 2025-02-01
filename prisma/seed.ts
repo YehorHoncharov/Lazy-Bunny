@@ -2,45 +2,45 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient()
 
-async function createMovies(){
-    const movies = await prisma.movie.create({
-        data: 
-            { Name: "Один дома", 
-              ReleaseDate: "25.10",
-              Year: 1990, Country: "USA",
-              Director: "Serj",
-              Duration: "3 hours", 
-              Screenwriter: "Kahnarov", 
-              Description: "zxc", 
-              Language:"arab",
-              FilmCompany:"SergeyAndCo",
-              MoodImg:"bebeb" ,
-              Img:"bebebe" ,
-              Rating: 4,
-              Actors: {connectOrCreate: {
-                where: {id: 1},
-                create: {
-                  Actor:{
-                    create:{
-                      firstName: "John",
-                      lastName: "Sigma"
-                    }
-                  }
-                }
-                }  
-              },
-              Genres:{connectOrCreate:{
-                where:{id:1},
-                create:{
-                  Genre:{
-                    create:{
-                      name:"bebebe",
-                    }
-                  }
-                }
-              }}
-    }})
-}
+// async function createMovies(){
+//     const movies = await prisma.movie.create({
+//         data: 
+//             { Name: "Один дома", 
+//               ReleaseDate: "25.10",
+//               Year: 1990, Country: "USA",
+//               Director: "Serj",
+//               Duration: "3 hours", 
+//               Screenwriter: "Kahnarov", 
+//               Description: "zxc", 
+//               Language:"arab",
+//               FilmCompany:"SergeyAndCo",
+//               MoodImg:"bebeb" ,
+//               Img:"bebebe" ,
+//               Rating: 4,
+//               Actors: {connectOrCreate: {
+//                 where: {id: 1},
+//                 create: {
+//                   Actor:{
+//                     create:{
+//                       firstName: "John",
+//                       lastName: "Sigma"
+//                     }
+//                   }
+//                 }
+//                 }  
+//               },
+//               Genres:{connectOrCreate:{
+//                 where:{id:1},
+//                 create:{
+//                   Genre:{
+//                     create:{
+//                       name:"bebebe",
+//                     }
+//                   }
+//                 }
+//               }}
+//     }})
+// }
 
 
 
@@ -102,6 +102,46 @@ async function createComments() {
 //       });
 //       console.log('фильм удалён:', deletedMovie);
 //     }
+
+async function createMovies(){
+  const movies = await prisma.movie.create({
+      data: 
+          { Name: "Django", 
+            ReleaseDate: "13.12",
+            Year: 2025, Country: "Ukraine",
+            Director: "Serj",
+            Duration: "3 hours", 
+            Screenwriter: "Kashnarov", 
+            Description: "zxc", 
+            Language:"arab",
+            FilmCompany:"SergeyAndCo",
+            MoodImg:"bebeb" ,
+            Img:"bebebe" ,
+            Rating: 4,
+            Actors: {connectOrCreate: {
+              where: {id: 1},
+              create: {
+                Actor:{
+                  create:{
+                    firstName: "John",
+                    lastName: "Sigma"
+                  }
+                }
+              }
+              }  
+            },
+            Genres:{connectOrCreate:{
+              where:{id:1},
+              create:{
+                Genre:{
+                  create:{
+                    name:"bebebe",
+                  }
+                }
+              }
+            }}
+  }})
+}
 
 async function main() {
     // await createMovies();
