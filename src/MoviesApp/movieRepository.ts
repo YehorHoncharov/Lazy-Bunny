@@ -65,6 +65,7 @@ async function getMovieById(id: number) {
     }
 }
 
+
 // async function getAllGenres(){
 //     try{
 //         let movies = await prisma.genre.findMany({
@@ -81,7 +82,38 @@ async function getMovieById(id: number) {
 //     }
 // }
 
+async function getActorById(id: number) {
+    try {
+        let actor = await prisma.actor.findUnique({
+            where: {id: id},
+        });
+        return actor;
+    } catch (err) {
+        if (err instanceof Prisma.PrismaClientKnownRequestError) {
+
+            if (err.code === 'P2002') {
+                console.error('ошибка P2002: нарушение уникальности.', err.message);
+                throw err;
+            }
+
+            if (err.code === 'P2015') {
+                console.error('ошибка P2015: запись не найдена.', err.message);
+                throw err;
+            }
+
+            if (err.code === 'P2019') {
+                console.error('ошибка P2019: поле не существует.', err.message);
+                throw err;
+            }
+        } else {
+            console.error('неизвестная ошибка', err);
+            throw err;
+        }
+    }
+}
+
 const movieRepository = {
+    getActorById:getActorById,
     getMovies:getMovies,
     getMovieById:getMovieById,
 

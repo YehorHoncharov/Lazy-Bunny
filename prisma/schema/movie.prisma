@@ -10,7 +10,6 @@ model Movie {
     Description String
     Language String
     FilmCompany String
-    MoodImg String
     Img String
     Rating Int
     Actors MovieToActor[]

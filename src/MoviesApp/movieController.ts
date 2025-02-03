@@ -30,6 +30,17 @@ async function getMovieById(req: Request, res: Response){
 
 }
 
+async function getActorById(req: Request, res: Response){
+    let id = req.params.id
+    const actor = await movieService.getActorById(+id);
+    if(actor.status == 'error'){
+        res.send('error')
+    }
+    else{
+        res.json(actor.data)
+    }
+}
+
 // async function getAllGenres(res: Response, req: Request){
 //     const context = await movieService.getAllGenres()
 //     if(context.status == 'error'){
@@ -43,6 +54,7 @@ async function getMovieById(req: Request, res: Response){
 const movieController = {
     getMovies:getMovies,
     getMovieById:getMovieById,
+    getActorById:getActorById
     // getAllGenres:getAllGenres,
 };
 

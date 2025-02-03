@@ -1,9 +1,9 @@
 model Relation{
     id       Int     @id @default(autoincrement())
 
-    Genre Genre @relation(fields: [genreId], references: [id])
+    Genre Genre @relation(fields: [genreId], references: [id], onDelete: Cascade)
     genreId Int
 
-    Movie Movie @relation(fields: [movieId], references: [id])
+    Movie Movie @relation(fields: [movieId], references: [id], onDelete: Cascade)
     movieId Int
 }

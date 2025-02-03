@@ -3,6 +3,10 @@ import {movieRepository} from "./movieRepository"
 
 
 // type IMovie = Prisma.MovieGetPayload<{include: {Genres: true, Actors: true}}>
+type IGenre = Prisma.GenreGetPayload<{}>
+type IActor= Prisma.ActorGetPayload<{}>
+type IComment= Prisma.CommentGetPayload<{}>
+
 
 interface IMovie{
     id: number
@@ -16,7 +20,6 @@ interface IMovie{
     Description: string
     Language: string
     FilmCompany: string
-    MoodImg: string
     Img: string
     Rating: number
     Actors: IActor[]
@@ -39,9 +42,16 @@ interface IMovieSuccess{
     data: Prisma.MovieGetPayload<{}>
 }
 
-type IGenre = Prisma.GenreGetPayload<{}>
-type IActor= Prisma.ActorGetPayload<{}>
-type IComment= Prisma.CommentGetPayload<{}>
+interface IActorSuccess{
+    status: 'success',
+    data: IActor
+}
+interface IActorError{
+    status: 'error',
+    message: string
+}
+
+
 
 
 
@@ -87,6 +97,18 @@ async function getMovieById(id: number) : Promise< IMovieSuccess | IMovieError >
     return {status: 'success', data: movie}
 }
 
+async function getActorById(id: number) : Promise< IActorSuccess | IActorError >{
+
+    const actor = await movieRepository.getActorById(id)
+    
+
+    if (!actor){
+        return {status: 'error', message: 'actor not found'};
+    }
+  
+    return {status: 'success', data: actor}
+}
+
 // async function getAllGenres() : Promise< IGenresSuccess | IGenreError >{
 //     const genre = await movieRepository.getAllGenres()
 
@@ -101,6 +123,7 @@ async function getMovieById(id: number) : Promise< IMovieSuccess | IMovieError >
 const movieService = {
     getMovies: getMovies,
     getMovieById: getMovieById,
+    getActorById: getActorById
 };
 
 export {movieService}

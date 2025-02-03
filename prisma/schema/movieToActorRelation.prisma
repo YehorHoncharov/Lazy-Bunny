@@ -1,9 +1,9 @@
 model MovieToActor{
     id       Int     @id @default(autoincrement())
 
-    Actor Actor @relation(fields: [actorId], references: [id])
+    Actor Actor @relation(fields: [actorId], references: [id], onDelete: Cascade)
     actorId Int
 
-    Movie Movie @relation(fields: [movieId], references: [id])
+    Movie Movie @relation(fields: [movieId], references: [id], onDelete: Cascade)
     movieId Int
 }

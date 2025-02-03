@@ -3,6 +3,6 @@ model Comment {
   date      DateTime @default(now())
   author    String
   text      String
-  movies Movie @relation(fields: [movieId], references: [id])
+  movies Movie @relation(fields: [movieId], references: [id], onDelete: Cascade)
   movieId Int
 }

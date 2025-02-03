@@ -1,7 +1,13 @@
 model Actor {
-  id        Int       @id @default(autoincrement())
-  firstName String
-  lastName  String
-  movies MovieToActor[]
+    id        Int       @id @default(autoincrement())
+    name String
+    surname String
+    dateOfBirth Int
+    placeOfBirth String
+    height Int
+    career String
+    totalMovies Int
+    image String
+    movies MovieToActor[]
 
 }
