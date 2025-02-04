@@ -134,61 +134,57 @@ async function deleteComentById(id: number){
   console.log('фильм удалён:', deletedComment);
 }
 
-async function createMovie() {
+async function createMovie(){
   const movies = await prisma.movie.create({
-    data: {
-      Name: "The Exorcist",
-      ReleaseDate: "26.12",
-      Year: 1973,
-      Country: "USA",
-      Director: "William Friedkin",
-      Duration: "2.02 hours",
-      Screenwriter: "William Peter Blatty",
-      Description: "When a teenage girl is possessed by a mysterious entity, her mother seeks the help of two priests to save her daughter.",
-      Language: "english",
-      FilmCompany: "Warner Bros.",
-      Img: "https://m.media-amazon.com/images/I/61tF7jKagWL._AC_UF894,1000_QL80_.jpg",
-      Rating: 8.1,
-      Actors: {
-        connectOrCreate: {
-          where: { id: 13 },
-          create: {
-            Actor: {
+      data: 
+          { Name: "Last", 
+            ReleaseDate: "14.02",
+            Year: 2014,
+            Country: "USA",
+            Director: "Anthony DiBlasie",
+            Duration: "1.5 hours", 
+            Screenwriter: "Adam Barber", 
+            Description: "A rookie cop's last night before their station is closed turns into a living nightmare.", 
+            Language:"english",
+            FilmCompany:"Skyra Entertainment",
+            Img:"https://irecommend.ru/sites/default/files/product-images/2315946/xyAIGoU4LOaNdEJBTYRmxw.jpg" ,
+            Rating: 8,
+            Actors: {connectOrCreate: {
+              where: {id: 1},
               create: {
-                name: "Linda",
-                surname: "Blair",
-                dateOfBirth: 1959,
-                placeOfBirth: "USA, Missouri",
-                height: 165,
-                career: "Actress known for her role in The Exorcist",
-                totalMovies: 70,
-                image: "https://www.famousbirthdays.com/headshots/linda-blair-5.jpg"
+                Actor:{
+                  create:{
+                    name: "Juliana ",
+                    surname: "Harkvy",
+                    dateOfBirth: 1987,
+                    placeOfBirth: "USA, California",
+                    height: 176,
+                    career: "крутая баба",
+                    totalMovies: 15,
+                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1rt6v5EqgSe0iIvx3iJmRinsC3OcAvq2wLA&s"
+                  }
+                }
               }
-            }
-          }
-        }
-      },
-      Genres: {
-        connectOrCreate: {
-          where: { id: 13 },
-          create: {
-            Genre: {
-              create: {
-                name: "supernatural horror",
+              }  
+            },
+            Genres:{connectOrCreate:{
+              where:{id:1},
+              create:{
+                Genre:{
+                  create:{
+                    name:"triller",
+                  }
+                }
               }
-            }
+            }}
           }
-        }
-      }
-    }
-  });
+        })
 }
-
 
 async function main() {
     await createMovie();
     // await createComments()
-    // await deleteMovieById(4)
+    // await deleteMovieById(6)
     // await getAllGenres();
     // await getMovieById();
     // await getAllMovies();

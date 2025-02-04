@@ -86,6 +86,9 @@ async function getActorById(id: number) {
     try {
         let actor = await prisma.actor.findUnique({
             where: {id: id},
+            include:{
+                movies: {include: {Movie: true}},
+            }
         });
         return actor;
     } catch (err) {

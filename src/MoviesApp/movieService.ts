@@ -7,6 +7,18 @@ type IGenre = Prisma.GenreGetPayload<{}>
 type IActor= Prisma.ActorGetPayload<{}>
 type IComment= Prisma.CommentGetPayload<{}>
 
+// interface IActor{
+//     id: number
+//     name: string
+//     surname: string
+//     dateOfBirth: number
+//     placeOfBirth: String
+//     height: number
+//     career: string
+//     totalMovies: number
+//     image: string
+//     movies: Prisma.MovieGetPayload<{}>[]
+// }
 
 interface IMovie{
     id: number
@@ -39,7 +51,7 @@ interface IMoviesSuccess{
 
 interface IMovieSuccess{
     status: 'success',
-    data: Prisma.MovieGetPayload<{}>
+    data: IMovie
 }
 
 interface IActorSuccess{
@@ -89,35 +101,56 @@ async function getMovieById(id: number) : Promise< IMovieSuccess | IMovieError >
 
     const movie = await movieRepository.getMovieById(id)
     
-
     if (!movie){
+        return {status: 'error', message: 'movies not found'}
+    }
+    const filteredGenres = movie?.Genres.map((genre) =>{
+        return genre.Genre
+    })
+    const filteredActors = movie?.Actors.map((actor) =>{
+        return actor.Actor
+    })
+
+    const filteredMovie = 
+    {
+        ...movie,
+        Genres: filteredGenres,
+        Actors: filteredActors
+    }
+
+    if (!filteredMovie){
         return {status: 'error', message: 'movies not found'};
     }
   
-    return {status: 'success', data: movie}
+    return {status: 'success', data: filteredMovie}
 }
 
 async function getActorById(id: number) : Promise< IActorSuccess | IActorError >{
 
     const actor = await movieRepository.getActorById(id)
-    
 
     if (!actor){
+        return {status: 'error', message: 'movies not found'}
+    }
+    const filteredMovies = actor?.movies.map((actor) =>{
+        return actor.Movie
+    })
+   
+
+    const filteredActor = 
+    {
+        ...actor,
+        movies: filteredMovies,
+
+    }
+    
+    if (!filteredActor){
         return {status: 'error', message: 'actor not found'};
     }
   
-    return {status: 'success', data: actor}
+    return {status: 'success', data: filteredActor}
 }
 
-// async function getAllGenres() : Promise< IGenresSuccess | IGenreError >{
-//     const genre = await movieRepository.getAllGenres()
-
-//         if (!genre){
-//             return {status: 'error', message: 'genre not found'};
-//         }
-      
-//         return {status: 'success', data: genre}
-//     }
     
    
 const movieService = {
