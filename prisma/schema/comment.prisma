@@ -1,8 +1,9 @@
 model Comment {
   id        Int      @id @default(autoincrement())
   date      DateTime @default(now())
-  author    String
+  author    User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  authorId  Int
   text      String
-  movies Movie @relation(fields: [movieId], references: [id], onDelete: Cascade)
-  movieId Int
+  movie     Movie    @relation(fields: [movieId], references: [id], onDelete: Cascade)
+  movieId   Int
 }
