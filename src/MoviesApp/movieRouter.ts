@@ -1,5 +1,5 @@
 import express, { Express, Request, Response } from 'express'
-import {movieController} from './movieController';
+import {movieController} from './movieController'
 
 const router = express.Router();
 
