@@ -1,6 +1,5 @@
 import { Request, Response } from 'express'
 import { movieService } from './movieService'
-// import { getAllGenres as getAllGenresService, getMovieById as getMovieByIdService, getMovie as getMovieService } from './movieService'
 
 
 async function getMovies(req: Request, res: Response){
@@ -24,8 +23,6 @@ async function getMovieById(req: Request, res: Response){
     }
     else{
         res.json(movie.data)
-    
-
     }
 
 }
@@ -40,22 +37,11 @@ async function getActorById(req: Request, res: Response){
         res.json(actor.data)
     }
 }
-
-// async function getAllGenres(res: Response, req: Request){
-//     const context = await movieService.getAllGenres()
-//     if(context.status == 'error'){
-//         res.send('error')
-//     }
-//     else{
-//         res.render('genres', context);
-// }
-// }
     
 const movieController = {
     getMovies:getMovies,
     getMovieById:getMovieById,
-    getActorById:getActorById
-    // getAllGenres:getAllGenres,
+    getActorById:getActorById,
 };
 
 

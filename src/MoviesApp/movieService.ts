@@ -4,14 +4,13 @@ import { IError, IOkWithData } from '../types/types'
 import { MovieWithGenres } from './types'
 
 
-// type IMovie = Prisma.MovieGetPayload<{include: {Genres: true, Actors: true}}>
 
 type IGenre = Prisma.GenreGetPayload<{}>
 type IActor= Prisma.ActorGetPayload<{}>
 type IComment= Prisma.CommentGetPayload<{}>
 
 
-async function getMovies() : Promise<IOkWithData<MovieWithGenres[]> | IError >{
+async function getMovies(): Promise<IOkWithData<MovieWithGenres[]> | IError >{
     const movies = await movieRepository.getMovies()
 
     const filterMovies = movies?.map((movie) =>{
@@ -87,12 +86,13 @@ async function getActorById(id: number) : Promise< IOkWithData<IActor> | IError 
     return {status: 'success', data: filteredActor}
 }
 
+
     
    
 const movieService = {
     getMovies: getMovies,
     getMovieById: getMovieById,
-    getActorById: getActorById
+    getActorById: getActorById,
 };
 
 export {movieService}

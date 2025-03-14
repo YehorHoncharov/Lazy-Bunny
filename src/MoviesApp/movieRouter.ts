@@ -1,4 +1,4 @@
-import express, { Express, Request, Response } from 'express'
+import express from 'express'
 import {movieController} from './movieController'
 
 const router = express.Router();
@@ -6,6 +6,5 @@ const router = express.Router();
 router.get('/', movieController.getMovies)
 router.get('/:id', movieController.getMovieById)
 router.get('/actor/:id', movieController.getActorById)
-// router.get('/genres', movieController.getAllGenres)
 
-export {router}
+export default router

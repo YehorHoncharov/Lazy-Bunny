@@ -1,8 +1,9 @@
 import express, { Express, Request, Response } from 'express';
-import { router } from "./MoviesApp/movieRouter";
+import movieRouter from "./MoviesApp/movieRouter";
 import path from 'path'
 import cors from "cors"
 import userRouter from './UserApp/userRouter';
+import genreRouter from './GenresApp/genreRouter';
 
 const app: Express = express();
 
@@ -15,8 +16,9 @@ app.set('view engine', 'ejs');
 
 app.set('views', path.join(__dirname, 'templates'))
 
-app.use('/movies/', router)
+app.use('/movies/', movieRouter)
 app.use('/users/', userRouter)
+app.use('/genres/', genreRouter)
 
 app.get('/', (req, res) => {
   res.send('Hello World!');

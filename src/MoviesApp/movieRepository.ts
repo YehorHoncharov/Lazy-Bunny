@@ -8,7 +8,7 @@ async function getMovies(){
                 include:{
                       Genres: {include: {Genre: true}},
                       Actors: {include: {Actor: true}},
-                      Comments: true
+                      Comments: {include: {author: true}}
                     }
                 })
         return movies
@@ -37,7 +37,7 @@ async function getMovieById(id: number) {
             include:{
                 Genres: {include: {Genre: true}},
                 Actors: {include: {Actor: true}},
-                Comments: true
+                Comments: {include: {author: true}}
             }
         });
         return movie;
@@ -66,21 +66,20 @@ async function getMovieById(id: number) {
 }
 
 
-// async function getAllGenres(){
-//     try{
-//         let movies = await prisma.genre.findMany({
-        
-//         })
-//         return movies
-//     } catch(err){
-//         if (err instanceof Prisma.PrismaClientKnownRequestError){
-//             if (err.code == 'P2002'){
-//                 console.log(err.message);
-//                 throw err;
-//             }
-//         }
-//     }
-// }
+async function getAllGenres(){
+    try{
+        let genres = await prisma.genre.findMany({
+        })
+        return genres
+    } catch(err){
+        if (err instanceof Prisma.PrismaClientKnownRequestError){
+            if (err.code == 'P2002'){
+                console.log(err.message);
+                throw err;
+            }
+        }
+    }
+}
 
 async function getActorById(id: number) {
     try {
@@ -115,11 +114,13 @@ async function getActorById(id: number) {
     }
 }
 
+
+
 const movieRepository = {
     getActorById:getActorById,
     getMovies:getMovies,
     getMovieById:getMovieById,
-
+    getAllGenres: getAllGenres,
 };
 
 export {movieRepository}
