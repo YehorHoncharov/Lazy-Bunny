@@ -5,6 +5,7 @@ model User {
     password  String
     image     String?
     age       Int?
+    role      String
     comments  Comment[]
     favoriteMovies Movie[] @relation("FavoriteMovies")
 }

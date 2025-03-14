@@ -94,23 +94,23 @@ async function deleteActorById(id: number) {
   console.log('actor удалён:', deletedActor);
 }
 
-async function createComments() {
-            const comments = await prisma.comment.createMany({
-              data: [
-                {
-                  author: "Богдан",
-                  text: "под пиво с рыбкой самое то",
-                  movieId: 1, 
-                },
-                {
-                  author: "Богдан",
-                  text: "zxczxczxc",
-                  movieId: 1, 
-                },
-              ],
-            });
-            console.log(comments);
-        }
+// async function createComments() {
+//             const comments = await prisma.comment.createMany({
+//               data: [
+//                 {
+//                   author: "Богдан",
+//                   text: "под пиво с рыбкой самое то",
+//                   movieId: 1, 
+//                 },
+//                 {
+//                   author: "Богдан",
+//                   text: "zxczxczxc",
+//                   movieId: 1, 
+//                 },
+//               ],
+//             });
+//             console.log(comments);
+//         }
 
 async function deleteMovieById(movieId: number) {
   try {
@@ -181,6 +181,20 @@ async function createMovie(){
         })
 }
 
+async function createUser() {
+  const user = await prisma.user.create({
+    data: {
+      nickname: "John Doe",
+      email: "john.doe@example.com",
+      password: '1234',
+      age: 18,
+      role: "user",
+      image: "https://i.pinimg.com/736x/e5/a3/3a/e5a33a66671181854b79f862c4a5d455.jpg"
+    },
+  });
+  console.log('User created!');
+}
+
 async function main() {
     await createMovie();
     // await createComments()
@@ -191,6 +205,7 @@ async function main() {
     // await deleteGenreById(1)
     // await deleteComentById(1)
     // await deleteActorById(1)
+    await createUser();
 };
 
 main().then(() => {

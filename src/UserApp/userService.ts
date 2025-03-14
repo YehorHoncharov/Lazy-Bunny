@@ -1,9 +1,31 @@
 import userRepository from "./userRepository"
-import { User, CreateUser } from "./types"
+import { User, CreateUser, UserWithOther } from "./types"
 import { IOkWithData ,IError } from "../types/types"
 import { hash , compare } from "bcryptjs"
 import { SECRET_KEY } from "../config/token";
 import { sign } from "jsonwebtoken";
+
+
+async function getUsers() : Promise<IOkWithData<User[]> | IError >{
+    const users = await userRepository.getUsers()
+
+    if (!users) {
+        return { status: 'error', message: 'No users found' }
+    }
+
+    return { status: 'success', data: users }
+}
+
+async function getUserById(id: number) : Promise< IOkWithData<User> | IError >{
+
+    const user = await userRepository.getUserById(id)
+    
+    if (!user){
+        return {status: 'error', message: 'user not found'}
+    }
+  
+    return {status: 'success', data: user}
+}
 
 async function login(password: string, email: string): Promise<IOkWithData<string> | IError> {
     const user = await userRepository.findUserByEmail(email);
@@ -59,7 +81,9 @@ async function registration(userData: CreateUser): Promise<IOkWithData<string> |
 
 const userService = {
     login: login,
-    registration: registration
+    registration: registration,
+    getUsers,
+    getUserById
 }
 
 export default userService
