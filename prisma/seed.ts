@@ -184,12 +184,12 @@ async function createMovie(){
 async function createUser() {
   const user = await prisma.user.create({
     data: {
-      nickname: "John Doe",
-      email: "john.doe@example.com",
+      nickname: "sema",
+      email: "sema@example.com",
       password: '1234',
-      age: 18,
-      role: "user",
-      image: "https://i.pinimg.com/736x/e5/a3/3a/e5a33a66671181854b79f862c4a5d455.jpg"
+      age: 17,
+      role: "admin",
+      image: ""
     },
   });
   console.log('User created!');
@@ -197,7 +197,7 @@ async function createUser() {
 
 async function main() {
     // await createMovie();
-    await createComments()
+    // await createComments()
     // await deleteMovieById(6)
     // await getAllGenres();
     // await getMovieById();
