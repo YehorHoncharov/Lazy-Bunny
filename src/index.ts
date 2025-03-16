@@ -11,11 +11,14 @@ app.use(express.json())
 const PORT = 3001;
 const HOST = 'localhost';
 
-app.use(cors({
-  origin: ["http://localhost:3000"],
-  methods: ["GET", "POST", "PUT", "DELETE"],
-}
-))
+app.use(express.json());
+
+app.use(cors());
+
+// app.use(cors({
+//   origin: ["http://localhost:3000"],
+//   methods: ["GET", "POST", "PUT", "DELETE"],
+// }
 
 app.set('view engine', 'ejs');
 
