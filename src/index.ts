@@ -10,6 +10,8 @@ const app: Express = express();
 const PORT = 3001;
 const HOST = 'localhost';
 
+app.use(express.json());
+
 app.use(cors());
 
 app.set('view engine', 'ejs');

@@ -1,5 +1,6 @@
 import { Request, Response } from 'express'
 import userService  from './userService'
+import { User } from '@prisma/client';
 
 
 async function getUsers(req: Request, res: Response){
@@ -15,6 +16,19 @@ async function getUsers(req: Request, res: Response){
 async function getUserById(req: Request, res: Response){
     let id = req.params.id
     const user = await userService.getUserById(+id);
+    if(user.status == 'error'){
+        res.send('error')
+    }
+    else{
+        res.json(user.data)
+    }
+}
+
+async function updateUserById(req: Request, res: Response){
+    let id = +req.params.id
+    let data = req.body
+    console.log(data)
+    const user = await userService.updateUserById(data, id);
     if(user.status == 'error'){
         res.send('error')
     }
@@ -41,6 +55,7 @@ const userController = {
     registrateUser,
     getUsers,
     getUserById,
+    updateUserById
 }
 
 export default userController

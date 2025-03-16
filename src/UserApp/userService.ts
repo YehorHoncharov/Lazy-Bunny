@@ -1,9 +1,28 @@
 import userRepository from "./userRepository"
-import { User, CreateUser, UserWithOther } from "./types"
+import { User, CreateUser, UserWithOther, UpdateUser } from "./types"
 import { IOkWithData ,IError } from "../types/types"
 import { hash , compare } from "bcryptjs"
 import { SECRET_KEY } from "../config/token";
 import { sign } from "jsonwebtoken";
+
+
+async function updateUserById(data: UpdateUser, id: number): Promise<IOkWithData<User> | IError> {
+
+    let updateData = data
+
+    if (updateData) {
+        const hashedPassword = await hash(String(data.password), 10);
+        updateData = {...updateData, password: hashedPassword}
+    }
+
+    const user = await userRepository.updateUserById(updateData, id);
+
+    if (!user) {
+        return { status: 'error', message: "User doesn't update" };
+    }
+
+    return { status: 'success', data: user };
+}
 
 
 async function getUsers() : Promise<IOkWithData<User[]> | IError >{
@@ -83,7 +102,8 @@ const userService = {
     login: login,
     registration: registration,
     getUsers,
-    getUserById
+    getUserById,
+    updateUserById
 }
 
 export default userService
