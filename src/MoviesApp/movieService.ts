@@ -1,7 +1,7 @@
 import { Prisma } from '@prisma/client'
 import {movieRepository} from "./movieRepository"
 import { IError, IOkWithData } from '../types/types'
-import { MovieWithGenres } from './types'
+import { IUpdateMovie, Movie, MovieWithGenres } from './types'
 
 
 
@@ -60,6 +60,61 @@ async function getMovieById(id: number) : Promise< IOkWithData<MovieWithGenres> 
     return {status: 'success', data: filteredMovie}
 }
 
+
+async function addMovie(Name: string, 
+                        ReleaseDate: string,
+                        Year: number, 
+                        Country: string, 
+                        Director: string, 
+                        Duration: string,
+                        Screenwriter: string,
+                        Description: string,
+                        Language: string,
+                        FilmCompany: string,
+                        Img: string,
+                        Rating: number): Promise<IOkWithData<Movie> | IError>{
+    const addgenre = await movieRepository.addMovie(Name, 
+                                                    ReleaseDate, 
+                                                    Year, 
+                                                    Country, 
+                                                    Director, 
+                                                    Duration, 
+                                                    Screenwriter, 
+                                                    Description, 
+                                                    Language, 
+                                                    FilmCompany, 
+                                                    Img, 
+                                                    Rating)
+
+    if (!addgenre) {
+        return { status: 'error', message: 'genre is not done' }
+    }
+
+    return { status: 'success', data: addgenre }
+}
+
+
+async function updateMovie(name: IUpdateMovie, id: number): Promise<IOkWithData<Movie> | IError>{
+    const updategenre = await movieRepository.updateMovie(name, id)
+
+    if (!updategenre) {
+        return { status: 'error', message: 'genre is not updated' }
+    }
+
+    return { status: 'success', data: updategenre }
+}
+
+
+async function deleteMovie(id: number): Promise<IOkWithData<Movie> | IError>{
+    const deleteMovie = await movieRepository.deleteMovie(id)
+
+    if (!deleteMovie) {
+        return { status: 'error', message: 'Cannot delete genre' };
+    }
+    
+    return { status: 'success', data: deleteMovie }
+}
+
 async function getActorById(id: number) : Promise< IOkWithData<IActor> | IError >{
 
     const actor = await movieRepository.getActorById(id)
@@ -93,6 +148,9 @@ const movieService = {
     getMovies: getMovies,
     getMovieById: getMovieById,
     getActorById: getActorById,
+    addMovie: addMovie,
+    updateMovie: updateMovie,
+    deleteMovie: deleteMovie
 };
 
 export {movieService}

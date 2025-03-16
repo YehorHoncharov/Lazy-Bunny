@@ -1,5 +1,6 @@
 import { Prisma, PrismaClient } from '@prisma/client';
 import prisma from '../client/prismaClient';
+import { IUpdateMovie } from './types';
 
 async function getMovies(){
     try{
@@ -40,7 +41,7 @@ async function getMovieById(id: number) {
                 Comments: {include: {author: true}}
             }
         });
-        return movie;
+        return movie
     } catch (err) {
         if (err instanceof Prisma.PrismaClientKnownRequestError) {
 
@@ -66,20 +67,79 @@ async function getMovieById(id: number) {
 }
 
 
-async function getAllGenres(){
+async function addMovie(Name: string, 
+                       ReleaseDate: string,
+                       Year: number, 
+                       Country: string, 
+                       Director: string, 
+                       Duration: string,
+                       Screenwriter: string,
+                       Description: string,
+                       Language: string,
+                       FilmCompany: string,
+                       Img: string,
+                       Rating: number,
+                    ){
     try{
-        let genres = await prisma.genre.findMany({
+        let addMovie = await prisma.movie.create({
+            data: { Name, 
+                ReleaseDate, 
+                Year, 
+                Country, 
+                Director, 
+                Duration, 
+                Screenwriter, 
+                Description, 
+                Language, 
+                FilmCompany, 
+                Img, 
+                Rating}
         })
-        return genres
-    } catch(err){
+        return addMovie
+    } catch (err) {
         if (err instanceof Prisma.PrismaClientKnownRequestError){
             if (err.code == 'P2002'){
-                console.log(err.message);
-                throw err;
+                console.log(err.message)
+                throw err
             }
         }
     }
 }
+
+async function updateMovie(Movie: IUpdateMovie, id: number){
+    try{
+        let updategenre = await prisma.movie.update({
+            where: { id }, data: Movie
+        })
+        return updategenre
+    } catch (err) {
+        if (err instanceof Prisma.PrismaClientKnownRequestError){
+            if (err.code == 'P2002'){
+                console.log(err.message)
+                throw err
+            }
+        }
+    }
+}
+async function deleteMovie(id: number){
+    try{
+        let deleteMovie = await prisma.movie.delete({
+            where: { id }
+        })
+        return deleteMovie
+    } catch (err) {
+        if (err instanceof Prisma.PrismaClientKnownRequestError){
+            if (err.code == 'P2002'){
+                console.log(err.message)
+                throw err
+            }
+        }
+    }
+}
+
+
+
+
 
 async function getActorById(id: number) {
     try {
@@ -116,11 +176,15 @@ async function getActorById(id: number) {
 
 
 
+
+
 const movieRepository = {
     getActorById:getActorById,
     getMovies:getMovies,
     getMovieById:getMovieById,
-    getAllGenres: getAllGenres,
+    addMovie:addMovie,
+    deleteMovie:deleteMovie,
+    updateMovie:updateMovie
 };
 
 export {movieRepository}

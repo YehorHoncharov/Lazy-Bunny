@@ -1,4 +1,4 @@
-import express, { Express, Request, Response } from 'express';
+import express, { Express } from 'express';
 import movieRouter from "./MoviesApp/movieRouter";
 import path from 'path'
 import cors from "cors"
@@ -7,10 +7,15 @@ import genreRouter from './GenresApp/genreRouter';
 
 const app: Express = express();
 
+app.use(express.json())
 const PORT = 3001;
 const HOST = 'localhost';
 
-app.use(cors());
+app.use(cors({
+  origin: ["http://localhost:3000"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+}
+))
 
 app.set('view engine', 'ejs');
 
