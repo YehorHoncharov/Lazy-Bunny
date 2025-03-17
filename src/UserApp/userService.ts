@@ -24,6 +24,16 @@ async function updateUserById(data: UpdateUser, id: number): Promise<IOkWithData
     return { status: 'success', data: user };
 }
 
+async function deleteUserById(id: number): Promise<IOkWithData<User> | IError> {
+    const user = await userRepository.deleteUserById(id)
+
+    if (!user) {
+        return { status: 'error', message: 'User not found' }
+    }
+
+    return { status: 'success', data: user }
+
+}
 
 async function getUsers() : Promise<IOkWithData<User[]> | IError >{
     const users = await userRepository.getUsers()
@@ -103,7 +113,8 @@ const userService = {
     registration: registration,
     getUsers,
     getUserById,
-    updateUserById
+    updateUserById,
+    deleteUserById
 }
 
 export default userService

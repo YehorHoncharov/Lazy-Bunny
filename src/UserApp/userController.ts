@@ -24,6 +24,17 @@ async function getUserById(req: Request, res: Response){
     }
 }
 
+async function deleteUserById(req: Request, res: Response){
+    const id = Number(req.params.id)
+    const user = await userService.deleteUserById(id)
+
+    if (user.status === 'error') {
+        res.send("error")
+    } else {
+        res.json(user.data)
+    }
+}
+
 async function updateUserById(req: Request, res: Response){
     let id = +req.params.id
     let data = req.body
@@ -55,7 +66,8 @@ const userController = {
     registrateUser,
     getUsers,
     getUserById,
-    updateUserById
+    updateUserById,
+    deleteUserById
 }
 
 export default userController
