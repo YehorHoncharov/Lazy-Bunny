@@ -8,3 +8,4 @@ export type UserWithOther = Prisma.UserGetPayload<{ include: { comments: true, f
 
 export type UpdateUser = Prisma.UserUncheckedUpdateInput
 
+ 

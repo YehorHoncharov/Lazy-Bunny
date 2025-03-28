@@ -1,120 +1,172 @@
-import userRepository from "./userRepository"
-import { User, CreateUser, UserWithOther, UpdateUser } from "./types"
-import { IOkWithData ,IError } from "../types/types"
-import { hash , compare } from "bcryptjs"
+import userRepository from "./userRepository";
+import { User, CreateUser, UserWithOther, UpdateUser } from "./types";
+import { IOkWithData, IError, IOk } from "../types/types";
+import { hash, compare } from "bcryptjs";
 import { SECRET_KEY } from "../config/token";
 import { sign } from "jsonwebtoken";
+import * as yup from 'yup';
 
+// // Схемы валидации
+// const registrationSchema = yup.object().shape({
+//   email: yup.string().email('Некорректный email').required('Email обязателен'),
+//   password: yup.string().min(6, 'Пароль должен содержать минимум 6 символов').required('Пароль обязателен'),
+// });
+
+// const loginSchema = yup.object().shape({
+//   email: yup.string().email('Некорректный email').required('Email обязателен'),
+//   password: yup.string().required('Пароль обязателен'),
+// });
+
+// const updateUserSchema = yup.object().shape({
+//   email: yup.string().email('Некорректный email'),
+//   password: yup.string().min(6, 'Пароль должен содержать минимум 6 символов'),
+// });
 
 async function updateUserById(data: UpdateUser, id: number): Promise<IOkWithData<User> | IError> {
+  try {
+    // Валидация данных
+    // await updateUserSchema.validate(data, { abortEarly: false });
 
-    let updateData = data
+    let updateData = data;
 
-    if (updateData) {
-        const hashedPassword = await hash(String(data.password), 10);
-        updateData = {...updateData, password: hashedPassword}
+    if (updateData.password) {
+      const hashedPassword = await hash(String(data.password), 10);
+      updateData = { ...updateData, password: hashedPassword };
     }
 
     const user = await userRepository.updateUserById(updateData, id);
 
     if (!user) {
-        return { status: 'error', message: "User doesn't update" };
+      return { status: 'error', message: "User doesn't update" };
     }
 
     return { status: 'success', data: user };
+  } catch (err) {
+    if (err instanceof yup.ValidationError) {
+      return { status: 'error', message: err.errors.join(', ') };
+    }
+    return { status: 'error', message: 'Internal server error' };
+  }
 }
 
 async function deleteUserById(id: number): Promise<IOkWithData<User> | IError> {
-    const user = await userRepository.deleteUserById(id)
+  const user = await userRepository.deleteUserById(id);
 
-    if (!user) {
-        return { status: 'error', message: 'User not found' }
-    }
+  if (!user) {
+    return { status: 'error', message: 'User not found' };
+  }
 
-    return { status: 'success', data: user }
-
+  return { status: 'success', data: user };
 }
 
-async function getUsers() : Promise<IOkWithData<User[]> | IError >{
-    const users = await userRepository.getUsers()
+async function deleteCommentById(id: number): Promise<IOk | IError> {
+  const comment = await userRepository.deleteCommentById(id);
 
-    if (!users) {
-        return { status: 'error', message: 'No users found' }
-    }
+  if (!comment) {
+    return { status: 'error', message: 'Comment not found' };
+  }
 
-    return { status: 'success', data: users }
+  return { status: 'success', message: "success delete" };
 }
 
-async function getUserById(id: number) : Promise< IOkWithData<User> | IError >{
+async function getUsers(): Promise<IOkWithData<User[]> | IError> {
+  const users = await userRepository.getUsers();
 
-    const user = await userRepository.getUserById(id)
-    
-    if (!user){
-        return {status: 'error', message: 'user not found'}
-    }
-  
-    return {status: 'success', data: user}
+  if (!users) {
+    return { status: 'error', message: 'No users found' };
+  }
+
+  return { status: 'success', data: users };
 }
 
-async function login(password: string, email: string): Promise<IOkWithData<string> | IError> {
+async function getUserById(id: number): Promise<IOkWithData<User> | IError> {
+  const user = await userRepository.findUserById(id);
+
+  if (!user) {
+    return { status: 'error', message: 'user not found' };
+  }
+
+  return { status: 'success', data: user };
+}
+
+async function login(email: string, password: string): Promise<IOkWithData<string> | IError> {
+  try {
+
+    // await loginSchema.validate({ email, password }, { abortEarly: false });
+    // return {}
     const user = await userRepository.findUserByEmail(email);
 
     if (!user) {
-        return { status: "error", message: "User not users" };
+      return { status: "error", message: "User not found" };
     }
     if (typeof user === "string") {
-        return { status: "error", message: user };
+      return { status: "error", message: user };
     }
-    const isMatch = await compare(password, user.password)
+
+    const isMatch = await compare(password, user.password);
 
     if (!isMatch) {
-        return { status: "error", message: "Passwords didn`t match" };
+      return { status: "error", message: "Passwords didn`t match" };
     }
 
-    const token = sign(String(user.id), SECRET_KEY, { expiresIn: "1d" })
+    const token = sign({id: user.id}, SECRET_KEY, { expiresIn: "7d" });
 
     return { status: "success", data: token };
+  } catch (err) {
+    if (err instanceof Error) {
+      return { status: "error", message: err.message};
+    }
+    return { status: "error", message: "Internal server error" };
+  }
 }
 
 async function registration(userData: CreateUser): Promise<IOkWithData<string> | IError> {
+  try {
+
+    // await registrationSchema.validate(userData, { abortEarly: false });
+
     const user = await userRepository.findUserByEmail(userData.email);
-        
-    if (!user) {
-        return {status: "error", message: "user not found" };
+
+    if (user) {
+      return { status: "error", message: "User already exists" };
     }
 
-    if (typeof user === "string") {
-        return { status: "error", message: user };
-    }
+    const hashedPassword = await hash(userData.password, 10);
 
-    const hashedPassword = await hash(userData.password, 10)
-    
     const hashedUserData = {
-        ...userData ,
-        password: hashedPassword
-    }
+      ...userData,
+      password: hashedPassword,
+    };
 
     const newUser = await userRepository.createUser(hashedUserData);
-    if (typeof newUser === "string") {
-        return { status: "error", message: newUser };
-    }
 
     if (!newUser) {
-        return { status: "error", message: "User is not user" };
+      return { status: "error", message: "User is not created" };
     }
 
-    const token = sign(String(newUser.id), SECRET_KEY, { expiresIn: "1d" })
+    const token = sign({id: newUser.id}, SECRET_KEY, { expiresIn: "1d" });
 
     return { status: "success", data: token };
+  } catch (err) {
+    if (err instanceof Error) {
+      return { status: "error", message: err.message };
+    }
+    return { status: "error", message: "An unknown error occurred" };
+    // if (err instanceof yup.ValidationError) {
+    //   return { status: "error", message: err.errors.join(', ') };
+    // }
+    // return { status: "error", message: "Internal server error" };
+  }
 }
 
 const userService = {
-    login: login,
-    registration: registration,
-    getUsers,
-    getUserById,
-    updateUserById,
-    deleteUserById
-}
+  login,
+  registration,
+  getUsers,
+  getUserById,
+  updateUserById,
+  deleteUserById,
+  deleteCommentById,
+};
 
-export default userService
+export default userService;

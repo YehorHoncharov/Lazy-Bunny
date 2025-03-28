@@ -15,12 +15,12 @@ async function getUsers(req: Request, res: Response){
 
 async function getUserById(req: Request, res: Response){
     let id = req.params.id
-    const user = await userService.getUserById(+id);
-    if(user.status == 'error'){
-        res.send('error')
+    const result = await userService.getUserById(+id);
+    if(result.status == 'error'){
+        res.send(result.message)
     }
     else{
-        res.json(user.data)
+        res.json(result.data)
     }
 }
 
@@ -32,6 +32,16 @@ async function deleteUserById(req: Request, res: Response){
         res.send("error")
     } else {
         res.json(user.data)
+    }
+}
+async function deleteCommentById(req: Request, res: Response){
+    const id = Number(req.params.id)
+    const comment = await userService.deleteCommentById(id)
+
+    if (comment.status === 'error') {
+        res.send("bebebe")
+    } else {
+        res.json(comment.message)
     }
 }
 
@@ -60,6 +70,12 @@ async function authorisateUser (req: Request, res: Response){
     res.json(result)
 }
 
+async function aboutUser(req: Request, res: Response){
+    const id = res.locals.userId
+    const result = await userService.getUserById(id)
+    res.json(result)
+}
+
 
 const userController = {
     authorisateUser,
@@ -67,7 +83,9 @@ const userController = {
     getUsers,
     getUserById,
     updateUserById,
-    deleteUserById
+    deleteUserById,
+    deleteCommentById,
+    aboutUser
 }
 
 export default userController

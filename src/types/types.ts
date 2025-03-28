@@ -7,3 +7,7 @@ export interface IOkWithData<T>{
     status: 'success',
     data: T
 }
+export interface IOk{
+    status: 'success',
+    message: string
+}

@@ -17,35 +17,35 @@ async function getUsers() {
     }
 }
 
-async function getUserById(id: number) {
-    try {
-        let user = await prisma.user.findUnique({
-            where: {id: id},
-        });
-        return user;
-    } catch (err) {
-        if (err instanceof Prisma.PrismaClientKnownRequestError) {
+// async function getUserById(id: number) {
+//     try {
+//         let user = await prisma.user.findUnique({
+//             where: {id: id},
+//         });
+//         return user;
+//     } catch (err) {
+//         if (err instanceof Prisma.PrismaClientKnownRequestError) {
 
-            if (err.code === 'P2002') {
-                console.error('ошибка P2002: нарушение уникальности.', err.message);
-                throw err;
-            }
+//             if (err.code === 'P2002') {
+//                 console.error('ошибка P2002: нарушение уникальности.', err.message);
+//                 throw err;
+//             }
 
-            if (err.code === 'P2015') {
-                console.error('ошибка P2015: запись не найдена.', err.message);
-                throw err;
-            }
+//             if (err.code === 'P2015') {
+//                 console.error('ошибка P2015: запись не найдена.', err.message);
+//                 throw err;
+//             }
 
-            if (err.code === 'P2019') {
-                console.error('ошибка P2019: поле не существует.', err.message);
-                throw err;
-            }
-        } else {
-            console.error('неизвестная ошибка', err);
-            throw err;
-        }
-    }
-}
+//             if (err.code === 'P2019') {
+//                 console.error('ошибка P2019: поле не существует.', err.message);
+//                 throw err;
+//             }
+//         } else {
+//             console.error('неизвестная ошибка', err);
+//             return null
+//         }
+//     }
+// }
 
 
 async function findUserByEmail(email: string) {
@@ -63,15 +63,15 @@ async function findUserByEmail(email: string) {
         if (err instanceof Prisma.PrismaClientKnownRequestError){
             if (err.code == 'P2002'){
                 console.log(err.message);
-                throw err;
+                return null
             }
             if (err.code == 'P2015'){
                 console.log(err.message);
-                throw err;
+                return null
             }
             if (err.code == 'P20019'){
                 console.log(err.message);
-                throw err;
+                return null
             }
         }
     }
@@ -108,6 +108,9 @@ async function findUserById(id: number) {
         const user = await prisma.user.findUnique({
             where: {
                 id: id
+            },
+            include: {
+                favoriteMovies: true
             }
         });
         
@@ -188,6 +191,20 @@ async function deleteUserById(id: number) {
         return null;
     }
 }
+async function deleteCommentById(id: number) {
+    try {
+        const comment = await prisma.comment.delete({
+            where: { id },
+        });
+
+        return comment;
+    } catch (error) {
+        console.error('Error deleting user:', error);
+        return null;
+    }
+}
+
+
 
 
 const userRepository = {
@@ -195,9 +212,10 @@ const userRepository = {
     createUser: createUser,
     findUserById: findUserById,
     getUsers,
-    getUserById,
+    // getUserById,
     updateUserById,
-    deleteUserById
+    deleteUserById,
+    deleteCommentById
 };
 
 export default userRepository
