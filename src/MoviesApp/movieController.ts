@@ -9,8 +9,6 @@ async function getMovies(req: Request, res: Response){
     }
     else{
         res.json(context.data)
-        // res.render('movies', {movies: context.data});
-
     }
     
 }
@@ -38,20 +36,26 @@ async function getActorById(req: Request, res: Response){
     }
 }
 
-async function addMovie(req: Request, res: Response){
+async function addMovie(req: Request, res: Response) {
     let newMovie = req.body
-    const context = await movieService.addMovie(newMovie.Name, 
-                                                newMovie.ReleaseDate, 
-                                                newMovie.Year, 
-                                                newMovie.Country, 
-                                                newMovie.Director, 
-                                                newMovie.Duration, 
-                                                newMovie.Screenwriter, 
-                                                newMovie.Description, 
-                                                newMovie.Language, 
-                                                newMovie.FilmCompany, 
-                                                newMovie.Img, 
-                                                newMovie.Rating)
+    const context = await movieService.addMovie(
+        newMovie.Name, 
+        newMovie.ReleaseDate, 
+        newMovie.Year, 
+        newMovie.Country, 
+        newMovie.Director, 
+        newMovie.Duration, 
+        newMovie.Screenwriter, 
+        newMovie.Description, 
+        newMovie.Language, 
+        newMovie.FilmCompany, 
+        newMovie.Img, 
+        newMovie.Rating,
+        newMovie.Baner,
+        newMovie.Mood,
+        newMovie.Moments || [],
+        newMovie.Url
+    )
     if(context.status == 'error'){
         res.send('error')
     }
@@ -82,14 +86,21 @@ async function deleteMovie(req: Request, res: Response){
         res.json(context.data)
     }
 }
-    
+
+async function createComment(req: Request, res: Response){
+    const data = req.body
+    const result = await movieService.createComment(data)
+    res.json(result)
+}
+
 const movieController = {
     getMovies:getMovies,
     getMovieById:getMovieById,
     getActorById:getActorById,
     deleteMovie:deleteMovie,
     updateMovie:updateMovie,
-    addMovie:addMovie
+    addMovie:addMovie,
+    createComment:createComment
 };
 
 

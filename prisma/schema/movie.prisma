@@ -12,8 +12,12 @@ model Movie {
     FilmCompany   String
     Img           String
     Rating        Int
+    Baner         String
+    Mood          String
+    Url           String
     Actors        MovieToActor[]
     Comments      Comment[]
     Genres        Relation[]
     favoritedBy   User[]    @relation("FavoriteMovies")
+    Moments       Moment[]
 }

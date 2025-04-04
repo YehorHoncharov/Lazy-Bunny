@@ -1,7 +1,7 @@
 import { Prisma } from '@prisma/client';
 import { movieRepository } from './movieRepository';
 import { IError, IOkWithData } from '../types/types';
-import { IUpdateMovie, Movie, MovieWithGenres } from './types';
+import { CreateComment, IUpdateMovie, Movie, MovieWithGenres } from './types';
 import * as yup from 'yup';
 
 type IGenre = Prisma.GenreGetPayload<{}>;
@@ -49,9 +49,12 @@ async function getMovies(): Promise<IOkWithData<MovieWithGenres[]> | IError> {
     const filteredActors = movie.Actors.map((actor) => {
       return actor.Actor;
     });
+    
+    
 
     return {
       ...movie,
+      Moments: movie.Moments || []
     };
   });
 
@@ -77,7 +80,9 @@ async function getMovieById(id: number): Promise<IOkWithData<MovieWithGenres> | 
 
   const filteredMovie = {
     ...movie,
+    Moments: movie.Moments || []
   };
+
 
   if (!filteredMovie) {
     return { status: 'error', message: 'movies not found' };
@@ -98,7 +103,11 @@ async function addMovie(
   Language: string,
   FilmCompany: string,
   Img: string,
-  Rating: number
+  Rating: number,
+  Baner: string,
+  Moments: string[] = [],
+  Mood: string,
+  Url: string
 ): Promise<IOkWithData<Movie> | IError> {
   try {
     // Валидация данных
@@ -115,6 +124,10 @@ async function addMovie(
       FilmCompany,
       Img,
       Rating,
+      Baner,
+      Moments,
+      Mood,
+      Url
     }, { abortEarly: false });
 
     const addMovie = await movieRepository.addMovie(
@@ -129,7 +142,11 @@ async function addMovie(
       Language,
       FilmCompany,
       Img,
-      Rating
+      Rating,
+      Baner,
+      Mood,
+      Moments,
+      Url
     );
 
     if (!addMovie) {
@@ -197,6 +214,20 @@ async function getActorById(id: number): Promise<IOkWithData<IActor> | IError> {
   return { status: 'success', data: filteredActor };
 }
 
+
+async function createComment(data: CreateComment): Promise<IOkWithData<string> | IError> {
+  try {
+    const newComment = await movieRepository.createComment(data);
+
+    return { status: "success", data: "newComment" };
+  } catch (err) {
+    if (err instanceof Error) {
+      return { status: "error", message: err.message };
+    }
+    return { status: "error", message: "An unknown error occurred" };
+  }
+}
+
 const movieService = {
   getMovies,
   getMovieById,
@@ -204,6 +235,7 @@ const movieService = {
   addMovie,
   updateMovie,
   deleteMovie,
+  createComment
 };
 
 export { movieService };

@@ -1,0 +1,7 @@
+model Moment{
+    id            Int       @id @default(autoincrement())
+    url         String
+
+    Movie Movie @relation(fields: [movieId], references: [id], onDelete: Cascade)
+    movieId Int
+}

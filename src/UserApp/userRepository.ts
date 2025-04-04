@@ -156,7 +156,17 @@ async function updateUserById(data: UpdateUser, id: number) {
             where: {
                 id: id,
             },
-            data: updatedData,
+            data: {
+                nickname: updatedData.nickname,
+                email: updatedData.email,
+                password: updatedData.password,
+                image: updatedData.image,
+                age: updatedData.age,
+                role: updatedData.role,
+                comments: updatedData.comments,
+                favoriteMovies: updatedData.favoriteMovies
+
+            },
         });
         return user;
 

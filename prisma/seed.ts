@@ -135,431 +135,113 @@ async function deleteComentById(id: number){
 }
 
 
-async function createInception() {
+
+async function createSonic4() {
   await prisma.movie.create({
     data: {
-      Name: "Inception",
-      ReleaseDate: "16.07",
-      Year: 2010,
-      Country: "USA",
-      Director: "Christopher Nolan",
-      Duration: "2.5 hours",
-      Screenwriter: "Christopher Nolan",
-      Description: "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+      Name: "Sonic the Hedgehog 4",
+      ReleaseDate: "20.12",
+      Year: 2024,
+      Country: "USA, Japan",
+      Director: "Jeff Fowler",
+      Duration: "2.05 hours", 
+      Screenwriter: "Pat Casey, Josh Miller, John Whittington",
+      Description: "The continuing adventures of Sonic the Hedgehog as he faces new threats in the human world alongside his friends Tails and Knuckles.",
       Language: "english",
-      FilmCompany: "Warner Bros.",
-      Img: "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg",
-      Rating: 8.8,
+      FilmCompany: "Paramount Pictures, SEGA",
+      Img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4N5ukWYipZbKxobxKBvV829mPAwrWMJlQrg&s", 
+      Rating: 7,
+      Baner: "https://i.ytimg.com/vi/yBMFN_xlLAc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAHX1KR96moqXjylG2Zik-Xn9qQjg",
+      Mood: '',
+      Url: "https://youtu.be/qSu6i2iFMO0?si=WaraSHmRxMUgxeBd",
+      Moments: {
+        create: [
+          { url: "https://lifehacker.ru/wp-content/uploads/2025/01/Sonic3Horizontal4_1736791761.jpeg" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMUoQ4NyACAZE4I-O0vHy4y-BTRN0hnIEbHONYbW6ShUM2vSjK7HhRFe20rPwmDT5W550&usqp=CAU" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnsoxFUJr8etvlrvdDwGetI48hhsl8pBHwuQ&s" },
+          { url: "https://assetsio.gnwcdn.com/sonic_6tZ4wQP.webp?width=720&quality=70&format=jpg&auto=webp" },
+          { url: "https://www.afisha.uz/uploads/media/2024/12/5439e012ab1de4271b2af484a83c5af4.jpg" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJnkTTpBK65uzgtgGw0L88wXMfVQJlC8J2IBEcPgjBigkvpWrT1xzFtWHbfK_FqvylEg0&usqp=CAU" }
+        ]
+      },
       Actors: {
-        connectOrCreate: {
-          where: { id: 1 },
-          create: {
-            Actor: {
-              create: {
-                name: "Leonardo",
-                surname: "DiCaprio",
-                dateOfBirth: 1974,
-                placeOfBirth: "USA, California",
-                height: 183,
-                career: "Academy Award-winning actor",
-                totalMovies: 50,
-                image: "https://upload.wikimedia.org/wikipedia/commons/4/46/Leonardo_Dicaprio_Cannes_2019.jpg"
+        connectOrCreate: [
+          {
+            where: { id: 1 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Ben",
+                  surname: "Schwartz",
+                  dateOfBirth: 1981,
+                  placeOfBirth: "USA, New York",
+                  height: 183,
+                  career: "Actor and comedian, known for voicing Sonic",
+                  totalMovies: 80,
+                  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS72k8x7Z99tDAQJ-YVFaHx1rkh53M30gBavQ&s"
+                }
+              }
+            }
+          },
+          {
+            where: { id: 2 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Idris",
+                  surname: "Elba",
+                  dateOfBirth: 1972,
+                  placeOfBirth: "UK, London",
+                  height: 189,
+                  career: "Acclaimed actor known for roles in Thor, The Wire",
+                  totalMovies: 100,
+                  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZkn0H1HDSbbSY6DmQ8RpeZKkSNTa27xw4hg&s"
+                }
               }
             }
           }
-        }
+        ]
       },
       Genres: {
-        connectOrCreate: {
-          where: { id: 1 },
-          create: {
-            Genre: {
-              create: {
-                name: "sci-fi"
+        connectOrCreate: [
+          {
+            where: { id: 1 },
+            create: {
+              Genre: {
+                create: {
+                  name: "action"
+                }
+              }
+            }
+          },
+          {
+            where: { id: 2 },
+            create: {
+              Genre: {
+                create: {
+                  name: "adventure"
+                }
+              }
+            }
+          },
+          {
+            where: { id: 3 },
+            create: {
+              Genre: {
+                create: {
+                  name: "comedy"
+                }
               }
             }
           }
-        }
+        ]
       }
     }
   });
-  console.log('Фильм "Inception" добавлен.');
+  console.log('Фильм "Sonic the Hedgehog 3" добавлен.');
 }
 
-// Функция для добавления фильма "The Dark Knight"
-async function createTheDarkKnight() {
-  await prisma.movie.create({
-    data: {
-      Name: "The Dark Knight",
-      ReleaseDate: "18.07",
-      Year: 2008,
-      Country: "USA",
-      Director: "Christopher Nolan",
-      Duration: "2.5 hours",
-      Screenwriter: "Jonathan Nolan, Christopher Nolan",
-      Description: "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.",
-      Language: "english",
-      FilmCompany: "Warner Bros.",
-      Img: "https://upload.wikimedia.org/wikipedia/en/8/8a/Dark_Knight.jpg",
-      Rating: 9.0,
-      Actors: {
-        connectOrCreate: {
-          where: { id: 2 },
-          create: {
-            Actor: {
-              create: {
-                name: "Christian",
-                surname: "Bale",
-                dateOfBirth: 1974,
-                placeOfBirth: "Wales, UK",
-                height: 183,
-                career: "Academy Award-winning actor",
-                totalMovies: 60,
-                image: "https://upload.wikimedia.org/wikipedia/commons/9/9c/Christian_Bale_2018.jpg"
-              }
-            }
-          }
-        }
-      },
-      Genres: {
-        connectOrCreate: {
-          where: { id: 2 },
-          create: {
-            Genre: {
-              create: {
-                name: "action"
-              }
-            }
-          }
-        }
-      }
-    }
-  });
-  console.log('Фильм "The Dark Knight" добавлен.');
-}
-
-
-
-// Функция для добавления фильма "Interstellar"
-async function createInterstellar() {
-  await prisma.movie.create({
-    data: {
-      Name: "Interstellar",
-      ReleaseDate: "07.11",
-      Year: 2014,
-      Country: "USA",
-      Director: "Christopher Nolan",
-      Duration: "2.49 hours",
-      Screenwriter: "Jonathan Nolan, Christopher Nolan",
-      Description: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
-      Language: "english",
-      FilmCompany: "Paramount Pictures",
-      Img: "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg",
-      Rating: 8.6,
-      Actors: {
-        connectOrCreate: {
-          where: { id: 3 },
-          create: {
-            Actor: {
-              create: {
-                name: "Matthew",
-                surname: "McConaughey",
-                dateOfBirth: 1969,
-                placeOfBirth: "USA, Texas",
-                height: 182,
-                career: "Academy Award-winning actor",
-                totalMovies: 70,
-                image: "https://upload.wikimedia.org/wikipedia/commons/9/9b/Matthew_McConaughey_2011.jpg"
-              }
-            }
-          }
-        }
-      },
-      Genres: {
-        connectOrCreate: {
-          where: { id: 3 },
-          create: {
-            Genre: {
-              create: {
-                name: "adventure"
-              }
-            }
-          }
-        }
-      }
-    }
-  });
-  console.log('Фильм "Interstellar" добавлен.');
-}
-
-// Функция для добавления фильма "The Grand Budapest Hotel"
-async function createTheGrandBudapestHotel() {
-  await prisma.movie.create({
-    data: {
-      Name: "The Grand Budapest Hotel",
-      ReleaseDate: "28.03",
-      Year: 2014,
-      Country: "USA",
-      Director: "Wes Anderson",
-      Duration: "1.40 hours",
-      Screenwriter: "Wes Anderson, Hugo Guinness",
-      Description: "The adventures of Gustave H, a legendary concierge at a famous hotel from the fictional Republic of Zubrowka between the first and second World Wars, and Zero Moustafa, the lobby boy who becomes his most trusted friend.",
-      Language: "english",
-      FilmCompany: "Fox Searchlight Pictures",
-      Img: "https://upload.wikimedia.org/wikipedia/en/a/a6/The_Grand_Budapest_Hotel_Poster.jpg",
-      Rating: 8.1,
-      Actors: {
-        connectOrCreate: {
-          where: { id: 4 },
-          create: {
-            Actor: {
-              create: {
-                name: "Ralph",
-                surname: "Fiennes",
-                dateOfBirth: 1962,
-                placeOfBirth: "UK, Suffolk",
-                height: 180,
-                career: "Academy Award-nominated actor",
-                totalMovies: 80,
-                image: "https://upload.wikimedia.org/wikipedia/commons/1/1e/Ralph_Fiennes_2011.jpg"
-              }
-            }
-          }
-        }
-      },
-      Genres: {
-        connectOrCreate: {
-          where: { id: 4 },
-          create: {
-            Genre: {
-              create: {
-                name: "comedy"
-              }
-            }
-          }
-        }
-      }
-    }
-  });
-  console.log('Фильм "The Grand Budapest Hotel" добавлен.');
-}
-
-
-
-// Функция для добавления фильма "The Revenant"
-async function createTheRevenant() {
-  await prisma.movie.create({
-    data: {
-      Name: "The Revenant",
-      ReleaseDate: "25.12",
-      Year: 2015,
-      Country: "USA",
-      Director: "Alejandro González Iñárritu",
-      Duration: "2.36 hours",
-      Screenwriter: "Mark L. Smith, Alejandro González Iñárritu",
-      Description: "A frontiersman on a fur trading expedition in the 1820s fights for survival after being mauled by a bear and left for dead by members of his own hunting team.",
-      Language: "english",
-      FilmCompany: "20th Century Fox",
-      Img: "https://upload.wikimedia.org/wikipedia/en/b/b6/The_Revenant_2015_film_poster.jpg",
-      Rating: 8.0,
-      Actors: {
-        connectOrCreate: {
-          where: { id: 5 },
-          create: {
-            Actor: {
-              create: {
-                name: "Leonardo",
-                surname: "DiCaprio",
-                dateOfBirth: 1974,
-                placeOfBirth: "USA, California",
-                height: 183,
-                career: "Academy Award-winning actor",
-                totalMovies: 50,
-                image: "https://upload.wikimedia.org/wikipedia/commons/4/46/Leonardo_Dicaprio_Cannes_2019.jpg"
-              }
-            }
-          }
-        }
-      },
-      Genres: {
-        connectOrCreate: {
-          where: { id: 5 },
-          create: {
-            Genre: {
-              create: {
-                name: "drama"
-              }
-            }
-          }
-        }
-      }
-    }
-  });
-  console.log('Фильм "The Revenant" добавлен.');
-}
-
-// Функция для добавления фильма "The Conjuring"
-async function createTheConjuring() {
-  await prisma.movie.create({
-    data: {
-      Name: "The Conjuring",
-      ReleaseDate: "19.07",
-      Year: 2013,
-      Country: "USA",
-      Director: "James Wan",
-      Duration: "1.52 hours",
-      Screenwriter: "Chad Hayes, Carey W. Hayes",
-      Description: "Paranormal investigators Ed and Lorraine Warren work to help a family terrorized by a dark presence in their farmhouse.",
-      Language: "english",
-      FilmCompany: "New Line Cinema",
-      Img: "https://upload.wikimedia.org/wikipedia/en/1/1f/Conjuring_poster.jpg",
-      Rating: 7.5,
-      Actors: {
-        connectOrCreate: {
-          where: { id: 6 },
-          create: {
-            Actor: {
-              create: {
-                name: "Vera",
-                surname: "Farmiga",
-                dateOfBirth: 1973,
-                placeOfBirth: "USA, New Jersey",
-                height: 171,
-                career: "Academy Award-nominated actress",
-                totalMovies: 40,
-                image: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Vera_Farmiga_2019.jpg"
-              }
-            }
-          }
-        }
-      },
-      Genres: {
-        connectOrCreate: {
-          where: { id: 6 },
-          create: {
-            Genre: {
-              create: {
-                name: "horror"
-              }
-            }
-          }
-        }
-      }
-    }
-  });
-  console.log('Фильм "The Conjuring" добавлен.');
-}
-
-
-
-// Функция для добавления фильма "Hereditary"
-async function createHereditary() {
-  await prisma.movie.create({
-    data: {
-      Name: "Hereditary",
-      ReleaseDate: "08.06",
-      Year: 2018,
-      Country: "USA",
-      Director: "Ari Aster",
-      Duration: "2.07 hours",
-      Screenwriter: "Ari Aster",
-      Description: "A grieving family is haunted by tragic and disturbing occurrences.",
-      Language: "english",
-      FilmCompany: "A24",
-      Img: "https://upload.wikimedia.org/wikipedia/en/d/d9/Hereditary.png",
-      Rating: 7.3,
-      Actors: {
-        connectOrCreate: {
-          where: { id: 7 },
-          create: {
-            Actor: {
-              create: {
-                name: "Toni",
-                surname: "Collette",
-                dateOfBirth: 1972,
-                placeOfBirth: "Australia, New South Wales",
-                height: 169,
-                career: "Academy Award-nominated actress",
-                totalMovies: 60,
-                image: "https://upload.wikimedia.org/wikipedia/commons/7/7f/Toni_Collette_2019.jpg"
-              }
-            }
-          }
-        }
-      },
-      Genres: {
-        connectOrCreate: {
-          where: { id: 7 },
-          create: {
-            Genre: {
-              create: {
-                name: "psychological horror"
-              }
-            }
-          }
-        }
-      }
-    }
-  });
-  console.log('Фильм "Hereditary" добавлен.');
-}
-
-// Функция для добавления фильма "Get Out"
-async function createGetOut() {
-  await prisma.movie.create({
-    data: {
-      Name: "Get Out",
-      ReleaseDate: "24.02",
-      Year: 2017,
-      Country: "USA",
-      Director: "Jordan Peele",
-      Duration: "1.44 hours",
-      Screenwriter: "Jordan Peele",
-      Description: "A young African-American visits his white girlfriend's parents for the weekend, where his simmering uneasiness about their reception of him eventually reaches a boiling point.",
-      Language: "english",
-      FilmCompany: "Universal Pictures",
-      Img: "https://upload.wikimedia.org/wikipedia/en/a/a3/Get_Out_poster.png",
-      Rating: 7.7,
-      Actors: {
-        connectOrCreate: {
-          where: { id: 8 },
-          create: {
-            Actor: {
-              create: {
-                name: "Daniel",
-                surname: "Kaluuya",
-                dateOfBirth: 1989,
-                placeOfBirth: "UK, London",
-                height: 178,
-                career: "Academy Award-winning actor",
-                totalMovies: 30,
-                image: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Daniel_Kaluuya_2018.jpg"
-              }
-            }
-          }
-        }
-      },
-      Genres: {
-        connectOrCreate: {
-          where: { id: 8 },
-          create: {
-            Genre: {
-              create: {
-                name: "thriller"
-              }
-            }
-          }
-        }
-      }
-    }
-  });
-  console.log('Фильм "Get Out" добавлен.');
-}
-
-
-
-// Функция для добавления фильма "The Babadook"
-async function createTheBabadook() {
+async function skuf() {
   await prisma.movie.create({
     data: {
       Name: "The Babadook",
@@ -572,11 +254,21 @@ async function createTheBabadook() {
       Description: "A single mother, plagued by the violent death of her husband, battles with her son's fear of a monster lurking in the house, but soon discovers a sinister presence all around her.",
       Language: "english",
       FilmCompany: "Entertainment One",
-      Img: "https://upload.wikimedia.org/wikipedia/en/d/d7/The_Babadook.jpg",
+      Img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmkWgcDSoM_-OZ5NyNwq5e2VsZbLaHV8RG6w&s",
       Rating: 6.8,
+      Baner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbEPrGnvjXI-nXSgZ2kNXPTRQccmxMMooXdw&s",
+      Mood: '',
+      Url: "https://youtu.be/uLdqc4SFVsA?si=DlOLZpGdFjFPlv4B",
+      Moments: {
+        create: [
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKenpZ6FElbsptBwmAjBI3f7PZKdTw9od-yQ&s" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7JzKBTCFfROIh9XyCizeUvFnFzfBSaDYawg&s" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrYGg_YvI0JtIZvKnqR8AYqfG49gdRICjI4Q&s" }
+        ]
+      },
       Actors: {
         connectOrCreate: {
-          where: { id: 9 },
+          where: { id: 3 },
           create: {
             Actor: {
               create: {
@@ -587,7 +279,7 @@ async function createTheBabadook() {
                 height: 170,
                 career: "Acclaimed actress",
                 totalMovies: 40,
-                image: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Essie_Davis_2014.jpg"
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Essie_Davis-67964.jpg/1200px-Essie_Davis-67964.jpg"
               }
             }
           }
@@ -595,7 +287,7 @@ async function createTheBabadook() {
       },
       Genres: {
         connectOrCreate: {
-          where: { id: 9 },
+          where: { id: 4 },
           create: {
             Genre: {
               create: {
@@ -610,40 +302,613 @@ async function createTheBabadook() {
   console.log('Фильм "The Babadook" добавлен.');
 }
 
-// Функция для добавления фильма "A Quiet Place"
-async function createAQuietPlace() {
+async function createTheMaskedSinger() {
   await prisma.movie.create({
     data: {
-      Name: "A Quiet Place",
-      ReleaseDate: "06.04",
-      Year: 2018,
+      Name: "The Masked Singer",
+      ReleaseDate: "02.01",
+      Year: 2019,
       Country: "USA",
-      Director: "John Krasinski",
+      Director: "Various",
       Duration: "1.30 hours",
-      Screenwriter: "Bryan Woods, Scott Beck, John Krasinski",
-      Description: "In a post-apocalyptic world, a family is forced to live in silence while hiding from monsters with ultra-sensitive hearing.",
+      Screenwriter: "Various",
+      Description: "Celebrity singing competition where famous faces are hidden under elaborate costumes.",
       Language: "english",
-      FilmCompany: "Paramount Pictures",
-      Img: "https://upload.wikimedia.org/wikipedia/en/a/a0/A_Quiet_Place_film_poster.png",
-      Rating: 7.5,
+      FilmCompany: "Fox Broadcasting Company",
+      Img: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/b6690b184419543.6551f920d6314.jpg",
+      Rating: 7.2,
+      Baner: "https://www.ovoarena.co.uk/assets/img/7324_75_TMS_Banner_Wembley_1440x810-dee6de4d9c.jpg",
+      Mood: '',
+      Url: "",
+      Moments: {
+        create: [
+          { url: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/84a87f184419543.6551f920d4ef0.jpg" },
+          { url: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/756b62184419543.6551f920d4452.jpg" }
+        ]
+      },
       Actors: {
         connectOrCreate: {
-          where: { id: 10 },
+          where: { id: 11 },
           create: {
             Actor: {
               create: {
-                name: "Emily",
-                surname: "Blunt",
-                dateOfBirth: 1983,
-                placeOfBirth: "UK, London",
-                height: 170,
-                career: "Academy Award-nominated actress",
-                totalMovies: 45,
-                image: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Emily_Blunt_2019.jpg"
+                name: "Nick",
+                surname: "Cannon",
+                dateOfBirth: 1980,
+                placeOfBirth: "USA, California",
+                height: 185,
+                career: "TV Host, Actor",
+                totalMovies: 25,
+                image: "https://upload.wikimedia.org/wikipedia/commons/6/60/Nick_Cannon_by_David_Shankbone.jpg"
               }
             }
           }
         }
+      },
+      Genres: {
+        connectOrCreate: {
+          where: { id: 5 },
+          create: {
+            Genre: {
+              create: {
+                name: "show"
+              }
+            }
+          }
+        }
+      }
+    }
+  });
+  console.log('Фильм "The Masked Singer" успешно добавлен');
+}
+
+async function createAmericasGotTalent() {
+  await prisma.movie.create({
+    data: {
+      Name: "America's Got Talent",
+      ReleaseDate: "21.06",
+      Year: 2006,
+      Country: "USA",
+      Director: "Various",
+      Duration: "2.00 hours",
+      Screenwriter: "Various",
+      Description: "Talent show featuring singers, dancers, magicians, comedians and other performers.",
+      Language: "english",
+      FilmCompany: "NBCUniversal",
+      Img: "https://jakes-take.com/wp-content/uploads/2023/12/408705370_906599197490107_6975515092428561704_n.jpg",
+      Rating: 7.5,
+      Baner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7CBCQeL-zzhQgmvXEz4QklxyqaOAna5sn1w&s",
+      Mood: '',
+      Url: "",
+      Moments: {
+        create: [
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLVBIiNkl9USmWVJ84JdMMYU_Aw4ocI52cmA&s" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThgG2G9b41WZvpb3RELuEYEQOpupU2yEd4LA&s" },
+        ]
+      },
+      Actors: {
+        connectOrCreate: {
+          where: { id: 12 },
+          create: {
+            Actor: {
+              create: {
+                name: "Simon",
+                surname: "Cowell",
+                dateOfBirth: 1959,
+                placeOfBirth: "UK, London",
+                height: 178,
+                career: "TV Judge, Producer",
+                totalMovies: 5,
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Simon_Cowell_in_December_2011.jpg/500px-Simon_Cowell_in_December_2011.jpg"
+              }
+            }
+          }
+        }
+      },
+      Genres: {
+        connectOrCreate: {
+          where: { id: 5 },
+          create: {
+            Genre: {
+              create: {
+                name: "show"
+              }
+            }
+          }
+        }
+      }
+    }
+  });
+  console.log('Фильм "America\'s Got Talent" успешно добавлен');
+}
+
+
+async function createHorrorMovie() {
+  await prisma.movie.create({
+    data: {
+      Name: "The Silent Shadows",
+      ReleaseDate: "31.10",
+      Year: 2025,
+      Country: "USA",
+      Director: "John Doe",
+      Duration: "1.45 hours",
+      Screenwriter: "Jane Doe",
+      Description: "A terrifying tale of a small town haunted by malevolent shadows. Four strangers must uncover the dark truth behind the eerie occurrences before it's too late.",
+      Language: "english",
+      FilmCompany: "Dark Shadows Productions",
+      Img: "https://m.media-amazon.com/images/M/MV5BODdhNjc1MTUtNzY0ZS00ZDVhLWI2N2MtODVlYmZmYjE3MzNhXkEyXkFqcGc@._V1_.jpg", // Пример изображения
+      Rating: 8.2,
+      Baner: "https://i.ytimg.com/vi/v0X4zCSfT1Y/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCWPjsQj5YrNnLVMB_R3x7_DBmqog", // Пример баннера
+      Mood: '',
+      Url: "https://youtu.be/1flPjguvWH4?si=KXHsYaNIBcvt5npb",
+      Moments: {
+        create: [
+          { url: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Scary_Scene.jpg" }, // Пример сцены 1
+          { url: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Scary_Shadow.jpg" }, // Пример сцены 2
+        ]
+      },
+      Actors: {
+        create: [
+          {
+            Actor: {
+              create: {
+                name: "Alice",
+                surname: "Johnson",
+                dateOfBirth: 1985,
+                placeOfBirth: "USA, New York",
+                height: 165,
+                career: "Actress, Horror Specialist",
+                totalMovies: 10,
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Alice_Johnson.jpg/500px-Alice_Johnson.jpg"
+              }
+            }
+          },
+          {
+            Actor: {
+              create: {
+                name: "Bob",
+                surname: "Smith",
+                dateOfBirth: 1980,
+                placeOfBirth: "USA, Los Angeles",
+                height: 180,
+                career: "Actor, Thriller",
+                totalMovies: 15,
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Bob_Smith.jpg/500px-Bob_Smith.jpg"
+              }
+            }
+          },
+          {
+            Actor: {
+              create: {
+                name: "Charlie",
+                surname: "Brown",
+                dateOfBirth: 1990,
+                placeOfBirth: "USA, Chicago",
+                height: 170,
+                career: "Actor, Horror Enthusiast",
+                totalMovies: 5,
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Charlie_Brown.jpg/500px-Charlie_Brown.jpg"
+              }
+            }
+          },
+          {
+            Actor: {
+              create: {
+                name: "Diana",
+                surname: "White",
+                dateOfBirth: 1995,
+                placeOfBirth: "USA, Miami",
+                height: 160,
+                career: "Actress, Suspense",
+                totalMovies: 7,
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Diana_White.jpg/500px-Diana_White.jpg"
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: {
+          where: { id: 7 },
+          create: {
+            Genre: {
+              create: {
+                name: "Horror"
+              }
+            }
+          }
+        }
+      }
+    }
+  });
+  console.log('Фильм "The Silent Shadows" успешно добавлен');
+}
+async function createAnotherHorrorMovie() {
+  await prisma.movie.create({
+    data: {
+      Name: "The Dark Below",
+      ReleaseDate: "15.09",
+      Year: 2026,
+      Country: "USA",
+      Director: "Sarah Miller",
+      Duration: "1.30 hours",
+      Screenwriter: "Mark Lee",
+      Description: "A group of friends is trapped underground in a forgotten mine. As they struggle to survive, they discover something much worse than the darkness lurking below.",
+      Language: "english",
+      FilmCompany: "Underground Studios",
+      Img: "https://m.media-amazon.com/images/M/MV5BMTc1MDk2Nzk0NV5BMl5BanBnXkFtZTgwNDE1MjAwNjE@._V1_.jp", // Пример изображения
+      Rating: 7.8,
+      Baner: "https://johnnyalucard.com/wp-content/uploads/2017/03/darkbelow.jpg", // Пример баннера
+      Mood: '',
+      Url: "https://youtu.be/aR4g9BMqA58?si=QP6DgDhW1ha1NChh",
+      Moments: {
+        create: [
+          { url: "https://upload.wikimedia.org/wikipedia/commons/3/37/Underground_Horror_Scene.jpg" }, // Пример сцены 1
+          { url: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Dark_Mine.jpg" }, // Пример сцены 2
+        ]
+      },
+      Actors: {
+        create: [
+          {
+            Actor: {
+              create: {
+                name: "Evelyn",
+                surname: "Scott",
+                dateOfBirth: 1992,
+                placeOfBirth: "USA, Boston",
+                height: 168,
+                career: "Actress, Thriller",
+                totalMovies: 8,
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Evelyn_Scott.jpg/500px-Evelyn_Scott.jpg"
+              }
+            }
+          },
+          {
+            Actor: {
+              create: {
+                name: "Nathan",
+                surname: "Clark",
+                dateOfBirth: 1987,
+                placeOfBirth: "USA, San Francisco",
+                height: 175,
+                career: "Actor, Horror",
+                totalMovies: 12,
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Nathan_Clark.jpg/500px-Nathan_Clark.jpg"
+              }
+            }
+          },
+          {
+            Actor: {
+              create: {
+                name: "Olivia",
+                surname: "Parker",
+                dateOfBirth: 1989,
+                placeOfBirth: "USA, Miami",
+                height: 160,
+                career: "Actress, Suspense Specialist",
+                totalMovies: 10,
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Olivia_Parker.jpg/500px-Olivia_Parker.jpg"
+              }
+            }
+          },
+          {
+            Actor: {
+              create: {
+                name: "James",
+                surname: "Miller",
+                dateOfBirth: 1984,
+                placeOfBirth: "USA, Chicago",
+                height: 182,
+                career: "Actor, Thriller",
+                totalMovies: 9,
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/James_Miller.jpg/500px-James_Miller.jpg"
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: {
+          where: { id: 8 },
+          create: {
+            Genre: {
+              create: {
+                name: "another"
+              }
+            }
+          }
+        }
+      }
+    }
+  });
+  console.log('Фильм "The Dark Below" успешно добавлен');
+}
+
+
+async function moodAngry() {
+  await prisma.movie.create({
+    data: {
+      Name: "The Dark Below",
+      ReleaseDate: "15.09",
+      Year: 2026,
+      Country: "USA",
+      Director: "Sarah Miller",
+      Duration: "1.30 hours",
+      Screenwriter: "Mark Lee",
+      Description: "A group of friends is trapped underground in a forgotten mine. As they struggle to survive, they discover something much worse than the darkness lurking below.",
+      Language: "english",
+      FilmCompany: "Underground Studios",
+      Img: "https://m.media-amazon.com/images/M/MV5BMTc1MDk2Nzk0NV5BMl5BanBnXkFtZTgwNDE1MjAwNjE@._V1_.jpg", // Пример изображения
+      Rating: 7.8,
+      Baner: "https://johnnyalucard.com/wp-content/uploads/2017/03/darkbelow.jpg", // Пример баннера
+      Mood: 'Angry',
+      Url: "",
+      Moments: {
+        create: [
+          { url: "https://upload.wikimedia.org/wikipedia/commons/3/37/Underground_Horror_Scene.jpg" }, // Пример сцены 1
+          { url: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Dark_Mine.jpg" }, // Пример сцены 2
+        ]
+      },
+      Actors: {
+        create: [
+          {
+            Actor: {
+              create: {
+                name: "Evelyn",
+                surname: "Scott",
+                dateOfBirth: 1992,
+                placeOfBirth: "USA, Boston",
+                height: 168,
+                career: "Actress, Thriller",
+                totalMovies: 8,
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Evelyn_Scott.jpg/500px-Evelyn_Scott.jpg"
+              }
+            }
+          },
+          {
+            Actor: {
+              create: {
+                name: "Nathan",
+                surname: "Clark",
+                dateOfBirth: 1987,
+                placeOfBirth: "USA, San Francisco",
+                height: 175,
+                career: "Actor, Horror",
+                totalMovies: 12,
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Nathan_Clark.jpg/500px-Nathan_Clark.jpg"
+              }
+            }
+          },
+          {
+            Actor: {
+              create: {
+                name: "Olivia",
+                surname: "Parker",
+                dateOfBirth: 1989,
+                placeOfBirth: "USA, Miami",
+                height: 160,
+                career: "Actress, Suspense Specialist",
+                totalMovies: 10,
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Olivia_Parker.jpg/500px-Olivia_Parker.jpg"
+              }
+            }
+          },
+          {
+            Actor: {
+              create: {
+                name: "James",
+                surname: "Miller",
+                dateOfBirth: 1984,
+                placeOfBirth: "USA, Chicago",
+                height: 182,
+                career: "Actor, Thriller",
+                totalMovies: 9,
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/James_Miller.jpg/500px-James_Miller.jpg"
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: {
+          where: { id: 8 },
+          create: {
+            Genre: {
+              create: {
+                name: "angry"
+              }
+            }
+          }
+        }
+      }
+    }
+  });
+  console.log('Фильм "The Dark Below" успешно добавлен');
+}
+async function moodSad() {
+  await prisma.movie.create({
+    data: {
+      Name: "The Dark Below",
+      ReleaseDate: "15.09",
+      Year: 2026,
+      Country: "USA",
+      Director: "Sarah Miller",
+      Duration: "1.30 hours",
+      Screenwriter: "Mark Lee",
+      Description: "A group of friends is trapped underground in a forgotten mine. As they struggle to survive, they discover something much worse than the darkness lurking below.",
+      Language: "english",
+      FilmCompany: "Underground Studios",
+      Img: "https://upload.wikimedia.org/wikipedia/commons/9/94/Dark_Horror_Theme.jpg", // Пример изображения
+      Rating: 7.8,
+      Baner: "https://upload.wikimedia.org/wikipedia/commons/7/7f/Horror_Movie_Banner.jpg", // Пример баннера
+      Mood: 'Sad',
+      Url: "",
+      Moments: {
+        create: [
+          { url: "https://upload.wikimedia.org/wikipedia/commons/3/37/Underground_Horror_Scene.jpg" }, // Пример сцены 1
+          { url: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Dark_Mine.jpg" }, // Пример сцены 2
+        ]
+      },
+      Actors: {
+        create: [
+          {
+            Actor: {
+              create: {
+                name: "Evelyn",
+                surname: "Scott",
+                dateOfBirth: 1992,
+                placeOfBirth: "USA, Boston",
+                height: 168,
+                career: "Actress, Thriller",
+                totalMovies: 8,
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Evelyn_Scott.jpg/500px-Evelyn_Scott.jpg"
+              }
+            }
+          },
+          {
+            Actor: {
+              create: {
+                name: "Nathan",
+                surname: "Clark",
+                dateOfBirth: 1987,
+                placeOfBirth: "USA, San Francisco",
+                height: 175,
+                career: "Actor, Horror",
+                totalMovies: 12,
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Nathan_Clark.jpg/500px-Nathan_Clark.jpg"
+              }
+            }
+          },
+          {
+            Actor: {
+              create: {
+                name: "Olivia",
+                surname: "Parker",
+                dateOfBirth: 1989,
+                placeOfBirth: "USA, Miami",
+                height: 160,
+                career: "Actress, Suspense Specialist",
+                totalMovies: 10,
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Olivia_Parker.jpg/500px-Olivia_Parker.jpg"
+              }
+            }
+          },
+          {
+            Actor: {
+              create: {
+                name: "James",
+                surname: "Miller",
+                dateOfBirth: 1984,
+                placeOfBirth: "USA, Chicago",
+                height: 182,
+                career: "Actor, Thriller",
+                totalMovies: 9,
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/James_Miller.jpg/500px-James_Miller.jpg"
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: {
+          where: { id: 9 },
+          create: {
+            Genre: {
+              create: {
+                name: "sad"
+              }
+            }
+          }
+        }
+      }
+    }
+  });
+  console.log('Фильм "The Dark Below" успешно добавлен');
+}
+
+async function moodHappy() {
+  await prisma.movie.create({
+    data: {
+      Name: "The Dark Below",
+      ReleaseDate: "15.09",
+      Year: 2026,
+      Country: "USA",
+      Director: "Sarah Miller",
+      Duration: "1.30 hours",
+      Screenwriter: "Mark Lee",
+      Description: "A group of friends is trapped underground in a forgotten mine. As they struggle to survive, they discover something much worse than the darkness lurking below.",
+      Language: "english",
+      FilmCompany: "Underground Studios",
+      Img: "https://upload.wikimedia.org/wikipedia/commons/9/94/Dark_Horror_Theme.jpg", // Пример изображения
+      Rating: 7.8,
+      Baner: "https://upload.wikimedia.org/wikipedia/commons/7/7f/Horror_Movie_Banner.jpg", // Пример баннера
+      Mood: 'Happy',
+      Url: "",
+      Moments: {
+        create: [
+          { url: "https://upload.wikimedia.org/wikipedia/commons/3/37/Underground_Horror_Scene.jpg" }, // Пример сцены 1
+          { url: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Dark_Mine.jpg" }, // Пример сцены 2
+        ]
+      },
+      Actors: {
+        create: [
+          {
+            Actor: {
+              create: {
+                name: "Evelyn",
+                surname: "Scott",
+                dateOfBirth: 1992,
+                placeOfBirth: "USA, Boston",
+                height: 168,
+                career: "Actress, Thriller",
+                totalMovies: 8,
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Evelyn_Scott.jpg/500px-Evelyn_Scott.jpg"
+              }
+            }
+          },
+          {
+            Actor: {
+              create: {
+                name: "Nathan",
+                surname: "Clark",
+                dateOfBirth: 1987,
+                placeOfBirth: "USA, San Francisco",
+                height: 175,
+                career: "Actor, Horror",
+                totalMovies: 12,
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Nathan_Clark.jpg/500px-Nathan_Clark.jpg"
+              }
+            }
+          },
+          {
+            Actor: {
+              create: {
+                name: "Olivia",
+                surname: "Parker",
+                dateOfBirth: 1989,
+                placeOfBirth: "USA, Miami",
+                height: 160,
+                career: "Actress, Suspense Specialist",
+                totalMovies: 10,
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Olivia_Parker.jpg/500px-Olivia_Parker.jpg"
+              }
+            }
+          },
+          {
+            Actor: {
+              create: {
+                name: "James",
+                surname: "Miller",
+                dateOfBirth: 1984,
+                placeOfBirth: "USA, Chicago",
+                height: 182,
+                career: "Actor, Thriller",
+                totalMovies: 9,
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/James_Miller.jpg/500px-James_Miller.jpg"
+              }
+            }
+          }
+        ]
       },
       Genres: {
         connectOrCreate: {
@@ -651,7 +916,7 @@ async function createAQuietPlace() {
           create: {
             Genre: {
               create: {
-                name: "horror"
+                name: "happy"
               }
             }
           }
@@ -659,99 +924,7 @@ async function createAQuietPlace() {
       }
     }
   });
-  console.log('Фильм "A Quiet Place" добавлен.');
-}
-
-async function createSonic3() {
-  await prisma.movie.create({
-    data: {
-      Name: "Sonic the Hedgehog 3",
-      ReleaseDate: "20.12",
-      Year: 2024,
-      Country: "USA, Japan",
-      Director: "Jeff Fowler",
-      Duration: "2.05 hours", 
-      Screenwriter: "Pat Casey, Josh Miller, John Whittington",
-      Description: "The continuing adventures of Sonic the Hedgehog as he faces new threats in the human world alongside his friends Tails and Knuckles.",
-      Language: "english",
-      FilmCompany: "Paramount Pictures, SEGA",
-      Img: "https://upload.wikimedia.org/wikipedia/ru/2/2b/%D0%A1%D0%BE%D0%BD%D0%B8%D0%BA_3_%D0%B2_%D0%BA%D0%B8%D0%BD%D0%BE.png", 
-      Rating: 7, 
-      Actors: {
-        connectOrCreate: [
-          {
-            where: { id: 11 },
-            create: {
-              Actor: {
-                create: {
-                  name: "Ben",
-                  surname: "Schwartz",
-                  dateOfBirth: 1981,
-                  placeOfBirth: "USA, New York",
-                  height: 183,
-                  career: "Actor and comedian, known for voicing Sonic",
-                  totalMovies: 80,
-                  image: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Ben_Schwartz_by_Gage_Skidmore.jpg"
-                }
-              }
-            }
-          },
-          {
-            where: { id: 12 },
-            create: {
-              Actor: {
-                create: {
-                  name: "Idris",
-                  surname: "Elba",
-                  dateOfBirth: 1972,
-                  placeOfBirth: "UK, London",
-                  height: 189,
-                  career: "Acclaimed actor known for roles in Thor, The Wire",
-                  totalMovies: 100,
-                  image: "https://upload.wikimedia.org/wikipedia/commons/e/ed/Idris_Elba_2019.jpg"
-                }
-              }
-            }
-          }
-        ]
-      },
-      Genres: {
-        connectOrCreate: [
-          {
-            where: { id: 11 },
-            create: {
-              Genre: {
-                create: {
-                  name: "action"
-                }
-              }
-            }
-          },
-          {
-            where: { id: 12 },
-            create: {
-              Genre: {
-                create: {
-                  name: "adventure"
-                }
-              }
-            }
-          },
-          {
-            where: { id: 13 },
-            create: {
-              Genre: {
-                create: {
-                  name: "comedy"
-                }
-              }
-            }
-          }
-        ]
-      }
-    }
-  });
-  console.log('Фильм "Sonic the Hedgehog 3" добавлен.');
+  console.log('Фильм "The Dark Below" успешно добавлен');
 }
 
 async function createUser() {
@@ -810,68 +983,37 @@ async function clearAllComments() {
   return deleteResult
 }
 
-async function skuf() {
-  await prisma.movie.create({
-    data: {
-      Name: "The Babadook",
-      ReleaseDate: "17.05",
-      Year: 2014,
-      Country: "Australia",
-      Director: "Jennifer Kent",
-      Duration: "1.34 hours",
-      Screenwriter: "Jennifer Kent",
-      Description: "A single mother, plagued by the violent death of her husband, battles with her son's fear of a monster lurking in the house, but soon discovers a sinister presence all around her.",
-      Language: "english",
-      FilmCompany: "Entertainment One",
-      Img: "https://upload.wikimedia.org/wikipedia/en/d/d7/The_Babadook.jpg",
-      Rating: 6.8,
-      Actors: {
-        connectOrCreate: {
-          where: { id: 16 },
-          create: {
-            Actor: {
-              create: {
-                name: "Essie",
-                surname: "Davis",
-                dateOfBirth: 1970,
-                placeOfBirth: "Australia, Tasmania",
-                height: 170,
-                career: "Acclaimed actress",
-                totalMovies: 40,
-                image: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Essie_Davis_2014.jpg"
-              }
-            }
-          }
-        }
-      },
-      Genres: {
-        connectOrCreate: {
-          where: { id: 16 },
-          create: {
-            Genre: {
-              create: {
-                name: "psychological horror"
-              }
-            }
-          }
-        }
-      }
-    }
-  });
-  console.log('Фильм "The Babadook" добавлен.');
-}
+
 
 async function main() {
+//          MOVIE
     // await createMovie();
-    // await createComments()
-    // await deleteMovieById(6)
-    // await getAllGenres();
+    // await createMovies()
+    // await deleteMovieById()
+    // await clearAllFilms()
     // await getMovieById();
     // await getAllMovies();
-    // await deleteGenreById(1)
+
+//            COMMENT
+    // await createComments()
+    // await clearAllComments()
     // await deleteComentById(1)
+
+//            GENRE
+    // await getAllGenres();
+    // await clearAllGenres()
+    // await deleteGenreById()
+
+//            ACTOR
     // await deleteActorById(1)
-    await createUser();
+    // await clearAllActors()
+
+//            USER
+    // await createUser();
+    // await deleteUser(8)
+    // await clearAllUsers()
+
+//            CREATE FILM
     // await createAQuietPlace()
     // await createTheBabadook()
     // await createGetOut()
@@ -882,10 +1024,22 @@ async function main() {
     // await createTheDarkKnight()
     // await createInception()
     // await createTheConjuring()
-    // await deleteUser(8)
+    await createSonic4()
+    await skuf()
+    await createTheMaskedSinger();
+    await createAmericasGotTalent();
+    await createHorrorMovie()
+    await createAnotherHorrorMovie()
+    await moodAngry()
+    await moodHappy()
+    await moodSad()
+
+//             CLEAN
     // await clearAllUsers()
-    // await createSonic3()
-    // await skuf()
+    // await clearAllActors()
+    // await clearAllGenres()
+    // await clearAllComments()
+    // await clearAllFilms()
   };
 
 main().then(() => {

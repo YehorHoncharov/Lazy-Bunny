@@ -1,46 +1,79 @@
-# Lazy Bunny - Backend
+# Lazy Bunny - Backend для платформи перегляду фільмів
 
-## Описание проекта
+## Опис проекту
 
-Lazy Bunny – это серверная часть веб-приложения для просмотра фильмов, реализованная на **Node.js** с использованием **Express.js** и **MongoDB**.  
+Lazy Bunny – це серверна частина веб-програми для перегляду фільмів, реалізована на Node.js з використанням Express.js та Prisma ORM.
 
-Приложение обрабатывает запросы клиентов, управляет базой данных фильмов, пользователей и отзывов.  
+Програма обробляє запити клієнтів, керує базою даних фільмів, користувачів та відгуків.
 
----
+## Технології  
 
-## Технологии  
+- Серверне середовище: Node.js
+- Фреймворк для API: Express.js   
+- Автентифікація: JWT
+- Хешування паролів: bcrypt
 
-- **Node.js** – серверная среда  
-- **Express.js** – фреймворк для API  
-- **JWT** – аутентификация  
-- **bcrypt** – хеширование паролей  
+## Схема проекту
 
----
+ mermaid
+    graph TD
+    ROOT["/ (root)"] --> prisma
+    ROOT --> src
+    ROOT --> client
+    ROOT --> config
+    ROOT --> middlewares
+    ROOT --> templates
+    ROOT --> types
+    ROOT --> static/img
+    ROOT --> .env
+    ROOT --> .gitignore
+    ROOT --> README.md
+    ROOT --> package.json
+    ROOT --> tsconfig.json
+    ROOT --> index.ts
 
-## Установка и запуск 
+    prisma --> db
+    prisma --> migrations
+    prisma --> schema
+    prisma --> seed.ts
 
-## Эндпоинты
+    src --> GenresApp
+    src --> MoviesApp
+    src --> UserApp
 
-| Метод      | Маршрут                | Описание |
-| ------------- |:------------------:| -----:|
-| GET | /genres/ | Получение всех жанров. |
-| post | '/', genreController.addGenre | Добавление жанра. |
-| put | '/:id', genreController.updateGenre | Обновление жанров. |
-| delete | '/:id', genreController.deleteGenre | Удаление жанра. |
-| ------------- |:------------------:| -----:|
-| get | '/', movieController.getMovies | Получение фильмов. |
-| get | '/:id', movieController.getMovieById | Получение фильма по Id. |
-| get | '/actor/:id', movieController.getActorById | Получение актера по Id. |
-| post | '/', movieController.addMovie | Добавление фильма. |
-| put | '/:id', movieController.updateMovie | Обновление информации о фильме. |
-| delete | '/:id', movieController.deleteMovie | Удаление фильма. |
-| ------------- |:------------------:| -----:|
-| get | '/', userController.getUsers | Получение пользователей. |
-| get | '/me', authTokenMiddleware, userController.aboutUser | Получение информации о пользователе. |
-| get | '/:id', userController.getUserById | Получение пользователя по Id. |
-| put | '/:id', userController.updateUserById | Обновление информации о пользователе. |
-| delete | '/:id', userController.deleteUserById | Удаление пользователя, используя Id. |
-| delete | '/comment/:id', userController.deleteCommentById | Удаление комментария, используя Id. |
-| post | '/login', userController.authorisateUser | Авторизация пользователя. |
-| post | '/reg', userController.registrateUser | Регистрация пользователя. |
+[Посилання на FigJam-схему](https://www.figma.com/board/UbgQAU8TwanZH2Pac5Rrbo/LazyBunny-BackEnd-Scheme?node-id=0-1&t=m0giMnyBWQRT1mkY-1)
 
+## Запуск проекту 
+
+1. Клонування репозиторію git clone
+2. Встановлення залежностей npm install
+3. Запуск проекту npm run start
+
+## Ендпоінти
+
+| Метод      | Маршрут                | Опис |
+| GET | /genres | Отримання всіх жанрів. |
+| POST | /genres | Додавання жанру. |
+| PUT | /genres/:id | Відновлення жанрів. |
+| DELETE | /genres/:id | Видалення жанру. |
+| GET | /movies | Отримання фільмів. |
+| GET | /movies/:id | Отримання фільму за Id. |
+| GET | /movies/actor/:id | Отримання актора за Id. |
+| POST | /movies | Додавання фільму. |
+| put | /movies/:id | Оновлення інформації про фільм. |
+| DELETE | /movies/:id | Видалення фільму. |
+| GET | /users | Отримання користувачів. |
+| GET | /users/me | Отримання інформації про користувача. |
+| GET | /users/:id | Отримання користувача за Id. |
+| put | /users/:id | Оновлення інформації про користувача. |
+| DELETE | /users/:id | Видалення користувача за допомогою Id. |
+| DELETE | /users/comment/:id | Видалення коментарів за допомогою Id. |
+| POST | /users/login | Авторизація користувача. |
+| POST | /users/reg | Реєстрація користувача. |
+
+## Команда розробки
+
+- Єгор Гончаров - [GitHub](https://github.com/YehorHoncharov)
+- Семен Гераймович - [GitHub](https://github.com/arman455)
+- Богдан Рубанов - [GitHub](https://github.com/BohdanRubanov)
+- Мирослава Теліус - [GitHub](https://github.com/AsolaRim)

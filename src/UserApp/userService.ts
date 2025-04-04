@@ -22,7 +22,7 @@ import * as yup from 'yup';
 //   password: yup.string().min(6, 'Пароль должен содержать минимум 6 символов'),
 // });
 
-async function updateUserById(data: UpdateUser, id: number): Promise<IOkWithData<User> | IError> {
+async function updateUserById(data: UpdateUser, id: number): Promise<IOkWithData<UpdateUser> | IError> {
   try {
     // Валидация данных
     // await updateUserSchema.validate(data, { abortEarly: false });

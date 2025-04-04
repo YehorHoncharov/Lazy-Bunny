@@ -1,6 +1,6 @@
 import { Prisma } from '@prisma/client';
 import prisma from '../client/prismaClient';
-import { IUpdateMovie } from './types';
+import { CreateComment, IUpdateMovie } from './types';
 
 async function getMovies(){
     try{
@@ -9,7 +9,8 @@ async function getMovies(){
                 include:{
                       Genres: {include: {Genre: true}},
                       Actors: {include: {Actor: true}},
-                      Comments: {include: {author: true}}
+                      Comments: {include: {author: true}},
+                      Moments: true
                     }
                 })
         return movies
@@ -38,7 +39,8 @@ async function getMovieById(id: number) {
             include:{
                 Genres: {include: {Genre: true}},
                 Actors: {include: {Actor: true}},
-                Comments: {include: {author: true}}
+                Comments: {include: {author: true}},
+                Moments: true
             }
         });
         return movie
@@ -66,23 +68,28 @@ async function getMovieById(id: number) {
     }
 }
 
-
-async function addMovie(Name: string, 
-                       ReleaseDate: string,
-                       Year: number, 
-                       Country: string, 
-                       Director: string, 
-                       Duration: string,
-                       Screenwriter: string,
-                       Description: string,
-                       Language: string,
-                       FilmCompany: string,
-                       Img: string,
-                       Rating: number,
-                    ){
+async function addMovie(
+    Name: string, 
+    ReleaseDate: string,
+    Year: number, 
+    Country: string, 
+    Director: string, 
+    Duration: string,
+    Screenwriter: string,
+    Description: string,
+    Language: string,
+    FilmCompany: string,
+    Img: string,
+    Rating: number,
+    Baner: string,
+    Mood: string,
+    Moments: string[] = [],
+    Url: string
+){
     try{
         let addMovie = await prisma.movie.create({
-            data: { Name, 
+            data: { 
+                Name, 
                 ReleaseDate, 
                 Year, 
                 Country, 
@@ -93,7 +100,17 @@ async function addMovie(Name: string,
                 Language, 
                 FilmCompany, 
                 Img, 
-                Rating}
+                Rating,
+                Baner,
+                Mood,
+                Url,
+                Moments: {
+                    create: Moments.map(url => ({ url }))
+                },
+            },
+            include: {
+                Moments: true
+            }
         })
         return addMovie
     } catch (err) {
@@ -137,10 +154,6 @@ async function deleteMovie(id: number){
     }
 }
 
-
-
-
-
 async function getActorById(id: number) {
     try {
         let actor = await prisma.actor.findUnique({
@@ -176,7 +189,31 @@ async function getActorById(id: number) {
 
 
 
+async function createComment(data: CreateComment) {
+    try {
+        const comment = await prisma.comment.create({
+            data: data,
+        });
+        return comment;
 
+    } catch (err) {
+        console.log(err)
+        if (err instanceof Prisma.PrismaClientKnownRequestError){
+            if (err.code == 'P2002'){
+                console.log(err.message);
+                throw err;
+            }
+            if (err.code == 'P2015'){
+                console.log(err.message);
+                throw err;
+            }
+            if (err.code == 'P20019'){
+                console.log(err.message);
+                throw err;
+            }
+        }
+    }
+}
 
 const movieRepository = {
     getActorById:getActorById,
@@ -184,7 +221,8 @@ const movieRepository = {
     getMovieById:getMovieById,
     addMovie:addMovie,
     deleteMovie:deleteMovie,
-    updateMovie:updateMovie
+    updateMovie:updateMovie,
+    createComment:createComment
 };
 
 export {movieRepository}

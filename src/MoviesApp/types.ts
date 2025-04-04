@@ -6,5 +6,5 @@ export type CreateMovie = Prisma.MovieUncheckedCreateInput
 
 export type MovieWithGenres = Prisma.MovieGetPayload<{ include: { Genres: true, Actors: true }}>
 
-
+export type CreateComment = Prisma.CommentUncheckedCreateInput
 export type IUpdateMovie = Prisma.MovieUpdateInput
