@@ -1014,16 +1014,6 @@ async function main() {
     // await clearAllUsers()
 
 //            CREATE FILM
-    // await createAQuietPlace()
-    // await createTheBabadook()
-    // await createGetOut()
-    // await createHereditary()
-    // await createTheRevenant()
-    // await createTheGrandBudapestHotel()
-    // await createInterstellar()
-    // await createTheDarkKnight()
-    // await createInception()
-    // await createTheConjuring()
     await createSonic4()
     await skuf()
     await createTheMaskedSinger();

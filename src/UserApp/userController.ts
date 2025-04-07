@@ -58,6 +58,12 @@ async function updateUserById(req: Request, res: Response){
     }
 }
 
+export async function AddFavouriteFilm(req: Request, res: Response) {
+    const data = req.body
+    const result = await userService.AddFavouriteFilm(data.userId, data.filmId);
+    res.json(result);
+}
+
 async function registrateUser(req: Request, res: Response){
     const data = req.body
     const result = await userService.registration(data)
@@ -85,7 +91,8 @@ const userController = {
     updateUserById,
     deleteUserById,
     deleteCommentById,
-    aboutUser
+    aboutUser,
+    AddFavouriteFilm
 }
 
 export default userController

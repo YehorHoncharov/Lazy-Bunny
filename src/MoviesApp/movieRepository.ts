@@ -1,6 +1,6 @@
 import { Prisma } from '@prisma/client';
 import prisma from '../client/prismaClient';
-import { CreateComment, IUpdateMovie } from './types';
+import { CreateComment, CreateMovie, IUpdateMovie } from './types';
 
 async function getMovies(){
     try{
@@ -215,6 +215,87 @@ async function createComment(data: CreateComment) {
     }
 }
 
+
+// async function createMovie(data: CreateMovie) {
+//   try {
+//     const newMovie = await prisma.movie.create({
+//       data: {
+//         ...data,
+//       },
+//     });
+//     return newMovie;
+//   } catch (err) {
+//     console.log(err)
+//     if (err instanceof Prisma.PrismaClientKnownRequestError){
+//         if (err.code == 'P2002'){
+//             console.log(err.message);
+//             throw err;
+//         }
+//         if (err.code == 'P2015'){
+//             console.log(err.message);
+//             throw err;
+//         }
+//         if (err.code == 'P20019'){
+//             console.log(err.message);
+//             throw err;
+//         }
+//     }
+// }
+// }
+
+async function createMovie(data: CreateMovie) {
+  try {
+    const genresToConnect = [];
+
+    if (!data.Genres || !Array.isArray(data.Genres)) {
+        throw new Error("Genres must be a defined array.");
+    }
+    for (const name of data.Genres) {
+      let genre = await prisma.genre.findFirst({
+        where: { name },
+      });
+
+      if (!genre) {
+        genre = await prisma.genre.create({
+          data: { name },
+        });
+      }
+
+      genresToConnect.push({ id: genre.id });
+    }
+
+    const newMovie = await prisma.movie.create({
+      data: {
+        ...data,
+        Genres: {
+          connect: genresToConnect,
+        },
+      },
+    });
+
+    return newMovie;
+
+  } catch (err) {
+    console.error(err);
+    if (err instanceof Prisma.PrismaClientKnownRequestError) {
+      if (err.code === 'P2002') {
+        console.error('🔴 Unique constraint failed:', err.message);
+        throw err;
+      }
+      if (err.code === 'P2015') {
+        console.error('🔴 Related record not found:', err.message);
+        throw err;
+      }
+      if (err.code === 'P20019') {
+        console.error('🔴 Input value error:', err.message);
+        throw err;
+      }
+    }
+    throw err;
+  }
+}
+
+
 const movieRepository = {
     getActorById:getActorById,
     getMovies:getMovies,
@@ -222,7 +303,8 @@ const movieRepository = {
     addMovie:addMovie,
     deleteMovie:deleteMovie,
     updateMovie:updateMovie,
-    createComment:createComment
+    createComment:createComment,
+    createMovie:createMovie,
 };
 
 export {movieRepository}

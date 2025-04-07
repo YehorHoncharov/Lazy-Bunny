@@ -93,6 +93,18 @@ async function createComment(req: Request, res: Response){
     res.json(result)
 }
 
+
+async function createMovie(req: Request, res: Response) {
+  const data = req.body;
+  const result = await movieService.createMovie(data);
+
+  if (result.status === "error") {
+    res.send("error");
+  } else {
+    res.json(result.data);
+  }
+}
+
 const movieController = {
     getMovies:getMovies,
     getMovieById:getMovieById,
@@ -100,7 +112,8 @@ const movieController = {
     deleteMovie:deleteMovie,
     updateMovie:updateMovie,
     addMovie:addMovie,
-    createComment:createComment
+    createComment:createComment,
+    createMovie:createMovie
 };
 
 

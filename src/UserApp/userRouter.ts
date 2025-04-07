@@ -12,5 +12,6 @@ router.delete('/:id', userController.deleteUserById)
 router.delete('/comment/:id', userController.deleteCommentById)
 router.post('/login', userController.authorisateUser)
 router.post('/reg', userController.registrateUser)
+router.put('/fav/:id', userController.AddFavouriteFilm)
 
 export default router

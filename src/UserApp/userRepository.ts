@@ -135,6 +135,61 @@ async function findUserById(id: number) {
     }
 }
 
+export async function addMovieToFavourites(userId: number, filmId: number) {
+    try {
+        const user = await prisma.user.findUnique({
+            where: { id: userId },
+            include: { favoriteMovies: true },
+        });
+
+        if (!user) {
+            throw new Error("User not found");
+        }
+
+        const film = await prisma.movie.findUnique({
+            where: { id: filmId },
+        });
+
+        if (!film) {
+            throw new Error("Film not found");
+        }
+
+        const isAlreadyFavourite = user.favoriteMovies.some(movie => movie.id === filmId);
+
+        if (isAlreadyFavourite) {
+        
+            const updatedUser = await prisma.user.update({
+                where: { id: userId },
+                data: {
+                    favoriteMovies: {
+                        disconnect: { id: filmId },
+                    },
+                },
+                include: { favoriteMovies: true },
+            });
+
+            return updatedUser;
+        } else {
+       
+            const updatedUser = await prisma.user.update({
+                where: { id: userId },
+                data: {
+                    favoriteMovies: {
+                        connect: { id: filmId },
+                    },
+                },
+                include: { favoriteMovies: true },
+            });
+
+            return updatedUser;
+        }
+
+    } catch (err) {
+        console.error(err);
+        throw err;
+    }
+}
+
 async function updateUserById(data: UpdateUser, id: number) {
     try {
         const currentUser = await prisma.user.findUnique({
@@ -225,7 +280,8 @@ const userRepository = {
     // getUserById,
     updateUserById,
     deleteUserById,
-    deleteCommentById
+    deleteCommentById,
+    addMovieToFavourites
 };
 
 export default userRepository

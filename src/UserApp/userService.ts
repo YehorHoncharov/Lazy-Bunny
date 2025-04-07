@@ -5,6 +5,7 @@ import { hash, compare } from "bcryptjs";
 import { SECRET_KEY } from "../config/token";
 import { sign } from "jsonwebtoken";
 import * as yup from 'yup';
+import { movieRepository } from "../MoviesApp/movieRepository";
 
 // // Схемы валидации
 // const registrationSchema = yup.object().shape({
@@ -48,6 +49,33 @@ async function updateUserById(data: UpdateUser, id: number): Promise<IOkWithData
     return { status: 'error', message: 'Internal server error' };
   }
 }
+
+export async function AddFavouriteFilm(userId: number, filmId: number): Promise<IOkWithData<User> | IError> {
+  try {
+    const result = await userRepository.addMovieToFavourites(userId, filmId);
+    
+    return {
+      status: 'success',
+      data: result
+    };
+
+  } catch (error) {
+    console.error('Помилка в AddFavouriteFilm:', error);
+    
+    if (error instanceof Error) {
+      return { 
+        status: 'error', 
+        message: error.message || 'Внутрішня помилка сервера' 
+      };
+    }
+    
+    return { 
+      status: 'error', 
+      message: 'Невідома помилка' 
+    };
+  }
+}
+
 
 async function deleteUserById(id: number): Promise<IOkWithData<User> | IError> {
   const user = await userRepository.deleteUserById(id);
@@ -167,6 +195,7 @@ const userService = {
   updateUserById,
   deleteUserById,
   deleteCommentById,
+  AddFavouriteFilm
 };
 
 export default userService;

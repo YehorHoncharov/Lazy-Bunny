@@ -1,7 +1,7 @@
 import { Prisma } from '@prisma/client';
 import { movieRepository } from './movieRepository';
 import { IError, IOkWithData } from '../types/types';
-import { CreateComment, IUpdateMovie, Movie, MovieWithGenres } from './types';
+import { CreateComment, CreateMovie, IUpdateMovie, Movie, MovieWithGenres } from './types';
 import * as yup from 'yup';
 
 type IGenre = Prisma.GenreGetPayload<{}>;
@@ -228,6 +228,18 @@ async function createComment(data: CreateComment): Promise<IOkWithData<string> |
   }
 }
 
+async function createMovie(data: CreateMovie): Promise<IOkWithData<string> | IError> {
+  try {
+    const newFilm = await movieRepository.createMovie(data);
+    return { status: "success", data: "Фильм успешно создан" };
+  } catch (err) {
+    if (err instanceof Error) {
+      return { status: "error", message: err.message };
+    }
+    return { status: "error", message: "Произошла неизвестная ошибка" };
+  }
+}
+
 const movieService = {
   getMovies,
   getMovieById,
@@ -235,7 +247,8 @@ const movieService = {
   addMovie,
   updateMovie,
   deleteMovie,
-  createComment
+  createComment,
+  createMovie,
 };
 
 export { movieService };
