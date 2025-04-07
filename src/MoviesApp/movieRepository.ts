@@ -243,58 +243,125 @@ async function createComment(data: CreateComment) {
 // }
 // }
 
+// async function createMovie(data: CreateMovie) {
+//     try {
+//       // Для жанров используем правильное поле для поиска и создания
+//       const genresToConnect = Array.isArray(data.Genres)
+//         ? data.Genres.map((genreName) => ({
+//             where: { name: genreName },  // Ищем жанр по полю 'name'
+//             create: { name: genreName }, // Если жанр не найден, создаём его
+//           }))
+//         : [];
+  
+//       // Для актеров аналогично
+//       const actorsToConnect = Array.isArray(data.Actors)
+//         ? data.Actors.map((actor) => ({
+//             where: { id: actor.id }, 
+//             create: actor,
+//           }))
+//         : [];
+  
+//       const newMovie = await prisma.movie.create({
+//         data: {
+//           Name: data.Name,
+//           ReleaseDate: data.ReleaseDate,
+//           Year: data.Year,
+//           Country: data.Country,
+//           Director: data.Director,
+//           Duration: data.Duration,
+//           Screenwriter: data.Screenwriter,
+//           Description: data.Description,
+//           Language: data.Language,
+//           FilmCompany: data.FilmCompany,
+//           Img: data.Img,
+//           Rating: data.Rating,
+//           Mood: data.Mood,
+//           Baner: data.Baner,
+//           Url: data.Url,
+//           Moments: {
+//             create: Array.isArray(data.Moments) ? data.Moments.map((url) => ({ url })) : undefined,
+//           },
+//           Genres: {
+//             connectOrCreate: genresToConnect,
+//           },
+//           Actors: {
+//             connectOrCreate: actorsToConnect,
+//           },
+//         },
+//       });
+  
+//       return newMovie;
+//     } catch (err) {
+//       console.error(err);
+//       throw err;
+//     }
+//   }
+
 async function createMovie(data: CreateMovie) {
-  try {
-    const genresToConnect = [];
-
-    if (!data.Genres || !Array.isArray(data.Genres)) {
-        throw new Error("Genres must be a defined array.");
-    }
-    for (const name of data.Genres) {
-      let genre = await prisma.genre.findFirst({
-        where: { name },
-      });
-
-      if (!genre) {
-        genre = await prisma.genre.create({
-          data: { name },
-        });
-      }
-
-      genresToConnect.push({ id: genre.id });
-    }
-
-    const newMovie = await prisma.movie.create({
-      data: {
-        ...data,
-        Genres: {
-          connect: genresToConnect,
+    try {
+      // Обработка жанров с использованием upsert
+      const genreUpserts = Array.isArray(data.Genres)
+        ? await Promise.all(
+            data.Genres.map((genreName) =>
+              prisma.genre.upsert({
+                where: { name: genreName },
+                create: { name: genreName },
+                update: {}, // Пустое обновление, если жанр уже существует
+              })
+            )
+          )
+        : [];
+  
+      // Обработка актеров с connectOrCreate
+      const actorsToConnect = Array.isArray(data.Actors)
+        ? data.Actors.map((actor) => ({
+            where: { id: actor.id },
+            create: actor,
+          }))
+        : [];
+  
+      // Создание фильма со всеми связями
+      const newMovie = await prisma.movie.create({
+        data: {
+          Name: data.Name,
+          ReleaseDate: data.ReleaseDate,
+          Year: data.Year,
+          Country: data.Country,
+          Director: data.Director,
+          Duration: data.Duration,
+          Screenwriter: data.Screenwriter,
+          Description: data.Description,
+          Language: data.Language,
+          FilmCompany: data.FilmCompany,
+          Img: data.Img,
+          Rating: data.Rating,
+          Mood: data.Mood,
+          Baner: data.Baner,
+          Url: data.Url,
+          Genres: {
+            connect: genreUpserts.map((genre) => ({
+              id: genre.id, // Подключаем жанры по ID
+            })),
+          },
+          Actors: {
+            connectOrCreate: actorsToConnect, // Для актеров используем connectOrCreate
+          },
+          Moments: {
+            create: Array.isArray(data.Moments)
+              ? data.Moments.map((url) => ({ url })) // Создаем моменты для фильма
+              : undefined,
+          },
         },
-      },
-    });
-
-    return newMovie;
-
-  } catch (err) {
-    console.error(err);
-    if (err instanceof Prisma.PrismaClientKnownRequestError) {
-      if (err.code === 'P2002') {
-        console.error('🔴 Unique constraint failed:', err.message);
-        throw err;
-      }
-      if (err.code === 'P2015') {
-        console.error('🔴 Related record not found:', err.message);
-        throw err;
-      }
-      if (err.code === 'P20019') {
-        console.error('🔴 Input value error:', err.message);
-        throw err;
-      }
+      });
+  
+      return newMovie;
+    } catch (err) {
+      console.error(err);
+      throw err;
     }
-    throw err;
   }
-}
-
+  
+  
 
 const movieRepository = {
     getActorById:getActorById,

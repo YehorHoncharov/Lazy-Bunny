@@ -6,4 +6,6 @@ model Relation{
 
     Movie Movie @relation(fields: [movieId], references: [id], onDelete: Cascade)
     movieId Int
+
+    @@unique([movieId, genreId])
 }
