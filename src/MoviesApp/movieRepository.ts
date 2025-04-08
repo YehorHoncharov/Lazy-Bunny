@@ -299,28 +299,39 @@ async function createComment(data: CreateComment) {
 
 async function createMovie(data: CreateMovie) {
     try {
-      // Обработка жанров с использованием upsert
-      const genreUpserts = Array.isArray(data.Genres)
+      const genres = Array.isArray(data.Genres)
         ? await Promise.all(
-            data.Genres.map((genreName) =>
-              prisma.genre.upsert({
+            data.Genres.map(async (genreName) => {
+              return await prisma.genre.upsert({
                 where: { name: genreName },
                 create: { name: genreName },
-                update: {}, // Пустое обновление, если жанр уже существует
-              })
-            )
+                update: {},
+              });
+            })
           )
         : [];
   
-      // Обработка актеров с connectOrCreate
-      const actorsToConnect = Array.isArray(data.Actors)
-        ? data.Actors.map((actor) => ({
-            where: { id: actor.id },
-            create: actor,
-          }))
+      const actors = Array.isArray(data.Actors)
+        ? await Promise.all(
+            data.Actors.map(async (actorName) => {
+              return await prisma.actor.upsert({
+                where: { name: actorName },
+                create: {
+                  name: actorName,
+                  surname: "Unknown",
+                  dateOfBirth: 1970,
+                  placeOfBirth: "Unknown",
+                  height: 170,
+                  career: "Unknown",
+                  totalMovies: 0,
+                  image: "https://example.com/default-actor.jpg",
+                },
+                update: {},
+              });
+            })
+          )
         : [];
   
-      // Создание фильма со всеми связями
       const newMovie = await prisma.movie.create({
         data: {
           Name: data.Name,
@@ -338,25 +349,34 @@ async function createMovie(data: CreateMovie) {
           Mood: data.Mood,
           Baner: data.Baner,
           Url: data.Url,
-          Genres: {
-            connect: genreUpserts.map((genre) => ({
-              id: genre.id, // Подключаем жанры по ID
-            })),
-          },
-          Actors: {
-            connectOrCreate: actorsToConnect, // Для актеров используем connectOrCreate
-          },
+  
           Moments: {
             create: Array.isArray(data.Moments)
-              ? data.Moments.map((url) => ({ url })) // Создаем моменты для фильма
-              : undefined,
+              ? data.Moments.map((url) => ({ url }))
+              : [],
+          },
+  
+          Actors: {
+            create: actors.map((actor) => ({
+              Actor: {
+                connect: { id: actor.id },
+              },
+            })),
+          },
+  
+          Genres: {
+            create: genres.map((genre) => ({
+              Genre: {
+                connect: { id: genre.id },
+              },
+            })),
           },
         },
       });
   
       return newMovie;
     } catch (err) {
-      console.error(err);
+      console.error("Ошибка при создании фильма:", err);
       throw err;
     }
   }
