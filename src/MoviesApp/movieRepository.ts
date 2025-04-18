@@ -315,7 +315,7 @@ async function createMovie(data: CreateMovie) {
         ? await Promise.all(
             data.Actors.map(async (actorName) => {
               return await prisma.actor.upsert({
-                where: { name: actorName },
+                where: { name: actorName.name },
                 create: {
                   name: actorName,
                   surname: "Unknown",
