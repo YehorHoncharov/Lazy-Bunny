@@ -136,1209 +136,6 @@ async function deleteComentById(id: number){
 
 
 
-// async function createSonic4() {
-//   await prisma.movie.create({
-//     data: {
-//       Name: "Sonic the Hedgehog 4",
-//       ReleaseDate: "20.12",
-//       Year: 2024,
-//       Country: "USA, Japan",
-//       Director: "Jeff Fowler",
-//       Duration: "2.05 hours", 
-//       Screenwriter: "Pat Casey, Josh Miller, John Whittington",
-//       Description: "The continuing adventures of Sonic the Hedgehog as he faces new threats in the human world alongside his friends Tails and Knuckles.",
-//       Language: "english",
-//       FilmCompany: "Paramount Pictures, SEGA",
-//       Img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4N5ukWYipZbKxobxKBvV829mPAwrWMJlQrg&s", 
-//       Rating: 7,
-//       Baner: "https://i.ytimg.com/vi/yBMFN_xlLAc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAHX1KR96moqXjylG2Zik-Xn9qQjg",
-//       Mood: '',
-//       Url: "https://youtu.be/qSu6i2iFMO0?si=WaraSHmRxMUgxeBd",
-//       Moments: {
-//         create: [
-//           { url: "https://lifehacker.ru/wp-content/uploads/2025/01/Sonic3Horizontal4_1736791761.jpeg" },
-//           { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMUoQ4NyACAZE4I-O0vHy4y-BTRN0hnIEbHONYbW6ShUM2vSjK7HhRFe20rPwmDT5W550&usqp=CAU" },
-//           { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnsoxFUJr8etvlrvdDwGetI48hhsl8pBHwuQ&s" },
-//           { url: "https://assetsio.gnwcdn.com/sonic_6tZ4wQP.webp?width=720&quality=70&format=jpg&auto=webp" },
-//           { url: "https://www.afisha.uz/uploads/media/2024/12/5439e012ab1de4271b2af484a83c5af4.jpg" },
-//           { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJnkTTpBK65uzgtgGw0L88wXMfVQJlC8J2IBEcPgjBigkvpWrT1xzFtWHbfK_FqvylEg0&usqp=CAU" }
-//         ]
-//       },
-//       Actors: {
-//         connectOrCreate: [
-//           {
-//             where: { id: 1 },
-//             create: {
-//               Actor: {
-//                 create: {
-//                   name: "Ben",
-//                   surname: "Schwartz",
-//                   dateOfBirth: 1981,
-//                   placeOfBirth: "USA, New York",
-//                   height: 183,
-//                   career: "Actor and comedian, known for voicing Sonic",
-//                   totalMovies: 80,
-//                   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS72k8x7Z99tDAQJ-YVFaHx1rkh53M30gBavQ&s"
-//                 }
-//               }
-//             }
-//           },
-//           {
-//             where: { id: 2 },
-//             create: {
-//               Actor: {
-//                 create: {
-//                   name: "Idris",
-//                   surname: "Elba",
-//                   dateOfBirth: 1972,
-//                   placeOfBirth: "UK, London",
-//                   height: 189,
-//                   career: "Acclaimed actor known for roles in Thor, The Wire",
-//                   totalMovies: 100,
-//                   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZkn0H1HDSbbSY6DmQ8RpeZKkSNTa27xw4hg&s"
-//                 }
-//               }
-//             }
-//           }
-//         ]
-//       },
-//       Genres: {
-//         connectOrCreate: [
-//           {
-//             where: { id: 1 },
-//             create: {
-//               Genre: {
-//                 create: {
-//                   name: "action"
-//                 }
-//               }
-//             }
-//           },
-//           {
-//             where: { id: 2 },
-//             create: {
-//               Genre: {
-//                 create: {
-//                   name: "adventure"
-//                 }
-//               }
-//             }
-//           },
-//           {
-//             where: { id: 3 },
-//             create: {
-//               Genre: {
-//                 create: {
-//                   name: "comedy"
-//                 }
-//               }
-//             }
-//           }
-//         ]
-//       }
-//     }
-//   });
-//   console.log('Фильм "Sonic the Hedgehog 3" добавлен.');
-// }
-
-
-
-async function skuf() {
-  await prisma.movie.create({
-    data: {
-      Name: "The Babadook",
-      ReleaseDate: "17.05",
-      Year: 2014,
-      Country: "Australia",
-      Director: "Jennifer Kent",
-      Duration: "1.34 hours",
-      Screenwriter: "Jennifer Kent",
-      Description: "A single mother, plagued by the violent death of her husband, battles with her son's fear of a monster lurking in the house, but soon discovers a sinister presence all around her.",
-      Language: "english",
-      FilmCompany: "Entertainment One",
-      Img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmkWgcDSoM_-OZ5NyNwq5e2VsZbLaHV8RG6w&s",
-      Rating: 6.8,
-      Baner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbEPrGnvjXI-nXSgZ2kNXPTRQccmxMMooXdw&s",
-      Mood: '',
-      Url: "https://youtu.be/uLdqc4SFVsA?si=DlOLZpGdFjFPlv4B",
-      Moments: {
-        create: [
-          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKenpZ6FElbsptBwmAjBI3f7PZKdTw9od-yQ&s" },
-          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7JzKBTCFfROIh9XyCizeUvFnFzfBSaDYawg&s" },
-          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrYGg_YvI0JtIZvKnqR8AYqfG49gdRICjI4Q&s" }
-        ]
-      },
-      Actors: {
-        connectOrCreate: {
-          where: { id: 3 },
-          create: {
-            Actor: {
-              create: {
-                name: "Essie",
-                surname: "Davis",
-                dateOfBirth: 1970,
-                placeOfBirth: "Australia, Tasmania",
-                height: 170,
-                career: "Acclaimed actress",
-                totalMovies: 40,
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Essie_Davis-67964.jpg/1200px-Essie_Davis-67964.jpg"
-              }
-            }
-          }
-        }
-      },
-      Genres: {
-        connectOrCreate: {
-          where: { id: 4 },
-          create: {
-            Genre: {
-              create: {
-                name: "psychological horror"
-              }
-            }
-          }
-        }
-      }
-    }
-  });
-  console.log('Фильм "The Babadook" добавлен.');
-}
-
-async function createTheMaskedSinger() {
-  await prisma.movie.create({
-    data: {
-      Name: "The Masked Singer",
-      ReleaseDate: "02.01",
-      Year: 2019,
-      Country: "USA",
-      Director: "Various",
-      Duration: "1.30 hours",
-      Screenwriter: "Various",
-      Description: "Celebrity singing competition where famous faces are hidden under elaborate costumes.",
-      Language: "english",
-      FilmCompany: "Fox Broadcasting Company",
-      Img: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/b6690b184419543.6551f920d6314.jpg",
-      Rating: 7.2,
-      Baner: "https://www.ovoarena.co.uk/assets/img/7324_75_TMS_Banner_Wembley_1440x810-dee6de4d9c.jpg",
-      Mood: '',
-      Url: "",
-      Moments: {
-        create: [
-          { url: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/84a87f184419543.6551f920d4ef0.jpg" },
-          { url: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/756b62184419543.6551f920d4452.jpg" }
-        ]
-      },
-      Actors: {
-        connectOrCreate: {
-          where: { id: 11 },
-          create: {
-            Actor: {
-              create: {
-                name: "Nick",
-                surname: "Cannon",
-                dateOfBirth: 1980,
-                placeOfBirth: "USA, California",
-                height: 185,
-                career: "TV Host, Actor",
-                totalMovies: 25,
-                image: "https://upload.wikimedia.org/wikipedia/commons/6/60/Nick_Cannon_by_David_Shankbone.jpg"
-              }
-            }
-          }
-        }
-      },
-      Genres: {
-        connectOrCreate: {
-          where: { id: 5 },
-          create: {
-            Genre: {
-              create: {
-                name: "show"
-              }
-            }
-          }
-        }
-      }
-    }
-  });
-  console.log('Фильм "The Masked Singer" успешно добавлен');
-}
-
-async function createAmericasGotTalent() {
-  await prisma.movie.create({
-    data: {
-      Name: "America's Got Talent",
-      ReleaseDate: "21.06",
-      Year: 2006,
-      Country: "USA",
-      Director: "Various",
-      Duration: "2.00 hours",
-      Screenwriter: "Various",
-      Description: "Talent show featuring singers, dancers, magicians, comedians and other performers.",
-      Language: "english",
-      FilmCompany: "NBCUniversal",
-      Img: "https://jakes-take.com/wp-content/uploads/2023/12/408705370_906599197490107_6975515092428561704_n.jpg",
-      Rating: 7.5,
-      Baner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7CBCQeL-zzhQgmvXEz4QklxyqaOAna5sn1w&s",
-      Mood: '',
-      Url: "",
-      Moments: {
-        create: [
-          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLVBIiNkl9USmWVJ84JdMMYU_Aw4ocI52cmA&s" },
-          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThgG2G9b41WZvpb3RELuEYEQOpupU2yEd4LA&s" },
-        ]
-      },
-      Actors: {
-        connectOrCreate: {
-          where: { id: 12 },
-          create: {
-            Actor: {
-              create: {
-                name: "Simon",
-                surname: "Cowell",
-                dateOfBirth: 1959,
-                placeOfBirth: "UK, London",
-                height: 178,
-                career: "TV Judge, Producer",
-                totalMovies: 5,
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Simon_Cowell_in_December_2011.jpg/500px-Simon_Cowell_in_December_2011.jpg"
-              }
-            }
-          }
-        }
-      },
-      Genres: {
-        connectOrCreate: {
-          where: { id: 5 },
-          create: {
-            Genre: {
-              create: {
-                name: "show"
-              }
-            }
-          }
-        }
-      }
-    }
-  });
-  console.log('Фильм "America\'s Got Talent" успешно добавлен');
-}
-
-
-async function createHorrorMovie() {
-  await prisma.movie.create({
-    data: {
-      Name: "The Silent Shadows",
-      ReleaseDate: "31.10",
-      Year: 2025,
-      Country: "USA",
-      Director: "John Doe",
-      Duration: "1.45 hours",
-      Screenwriter: "Jane Doe",
-      Description: "A terrifying tale of a small town haunted by malevolent shadows. Four strangers must uncover the dark truth behind the eerie occurrences before it's too late.",
-      Language: "english",
-      FilmCompany: "Dark Shadows Productions",
-      Img: "https://m.media-amazon.com/images/M/MV5BODdhNjc1MTUtNzY0ZS00ZDVhLWI2N2MtODVlYmZmYjE3MzNhXkEyXkFqcGc@._V1_.jpg", // Пример изображения
-      Rating: 8.2,
-      Baner: "https://i.ytimg.com/vi/v0X4zCSfT1Y/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCWPjsQj5YrNnLVMB_R3x7_DBmqog", // Пример баннера
-      Mood: '',
-      Url: "https://youtu.be/1flPjguvWH4?si=KXHsYaNIBcvt5npb",
-      Moments: {
-        create: [
-          { url: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Scary_Scene.jpg" }, // Пример сцены 1
-          { url: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Scary_Shadow.jpg" }, // Пример сцены 2
-        ]
-      },
-      Actors: {
-        create: [
-          {
-            Actor: {
-              create: {
-                name: "Alice",
-                surname: "Johnson",
-                dateOfBirth: 1985,
-                placeOfBirth: "USA, New York",
-                height: 165,
-                career: "Actress, Horror Specialist",
-                totalMovies: 10,
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Alice_Johnson.jpg/500px-Alice_Johnson.jpg"
-              }
-            }
-          },
-          {
-            Actor: {
-              create: {
-                name: "Bob",
-                surname: "Smith",
-                dateOfBirth: 1980,
-                placeOfBirth: "USA, Los Angeles",
-                height: 180,
-                career: "Actor, Thriller",
-                totalMovies: 15,
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Bob_Smith.jpg/500px-Bob_Smith.jpg"
-              }
-            }
-          },
-          {
-            Actor: {
-              create: {
-                name: "Charlie",
-                surname: "Brown",
-                dateOfBirth: 1990,
-                placeOfBirth: "USA, Chicago",
-                height: 170,
-                career: "Actor, Horror Enthusiast",
-                totalMovies: 5,
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Charlie_Brown.jpg/500px-Charlie_Brown.jpg"
-              }
-            }
-          },
-          {
-            Actor: {
-              create: {
-                name: "Diana",
-                surname: "White",
-                dateOfBirth: 1995,
-                placeOfBirth: "USA, Miami",
-                height: 160,
-                career: "Actress, Suspense",
-                totalMovies: 7,
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Diana_White.jpg/500px-Diana_White.jpg"
-              }
-            }
-          }
-        ]
-      },
-      Genres: {
-        connectOrCreate: {
-          where: { id: 7 },
-          create: {
-            Genre: {
-              create: {
-                name: "Horror"
-              }
-            }
-          }
-        }
-      }
-    }
-  });
-  console.log('Фильм "The Silent Shadows" успешно добавлен');
-}
-async function createAnotherHorrorMovie() {
-  await prisma.movie.create({
-    data: {
-      Name: "The Dark Below",
-      ReleaseDate: "15.09",
-      Year: 2026,
-      Country: "USA",
-      Director: "Sarah Miller",
-      Duration: "1.30 hours",
-      Screenwriter: "Mark Lee",
-      Description: "A group of friends is trapped underground in a forgotten mine. As they struggle to survive, they discover something much worse than the darkness lurking below.",
-      Language: "english",
-      FilmCompany: "Underground Studios",
-      Img: "https://m.media-amazon.com/images/M/MV5BMTc1MDk2Nzk0NV5BMl5BanBnXkFtZTgwNDE1MjAwNjE@._V1_.jp", // Пример изображения
-      Rating: 7.8,
-      Baner: "https://johnnyalucard.com/wp-content/uploads/2017/03/darkbelow.jpg", // Пример баннера
-      Mood: '',
-      Url: "https://youtu.be/aR4g9BMqA58?si=QP6DgDhW1ha1NChh",
-      Moments: {
-        create: [
-          { url: "https://upload.wikimedia.org/wikipedia/commons/3/37/Underground_Horror_Scene.jpg" }, // Пример сцены 1
-          { url: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Dark_Mine.jpg" }, // Пример сцены 2
-        ]
-      },
-      Actors: {
-        create: [
-          {
-            Actor: {
-              create: {
-                name: "Evelyn",
-                surname: "Scott",
-                dateOfBirth: 1992,
-                placeOfBirth: "USA, Boston",
-                height: 168,
-                career: "Actress, Thriller",
-                totalMovies: 8,
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Evelyn_Scott.jpg/500px-Evelyn_Scott.jpg"
-              }
-            }
-          },
-          {
-            Actor: {
-              create: {
-                name: "Nathan",
-                surname: "Clark",
-                dateOfBirth: 1987,
-                placeOfBirth: "USA, San Francisco",
-                height: 175,
-                career: "Actor, Horror",
-                totalMovies: 12,
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Nathan_Clark.jpg/500px-Nathan_Clark.jpg"
-              }
-            }
-          },
-          {
-            Actor: {
-              create: {
-                name: "Olivia",
-                surname: "Parker",
-                dateOfBirth: 1989,
-                placeOfBirth: "USA, Miami",
-                height: 160,
-                career: "Actress, Suspense Specialist",
-                totalMovies: 10,
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Olivia_Parker.jpg/500px-Olivia_Parker.jpg"
-              }
-            }
-          },
-          {
-            Actor: {
-              create: {
-                name: "James",
-                surname: "Miller",
-                dateOfBirth: 1984,
-                placeOfBirth: "USA, Chicago",
-                height: 182,
-                career: "Actor, Thriller",
-                totalMovies: 9,
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/James_Miller.jpg/500px-James_Miller.jpg"
-              }
-            }
-          }
-        ]
-      },
-      Genres: {
-        connectOrCreate: {
-          where: { id: 8 },
-          create: {
-            Genre: {
-              create: {
-                name: "another"
-              }
-            }
-          }
-        }
-      }
-    }
-  });
-  console.log('Фильм "The Dark Below" успешно добавлен');
-}
-
-
-async function moodAngry() {
-  await prisma.movie.create({
-    data: {
-      Name: "The Dark Below",
-      ReleaseDate: "15.09",
-      Year: 2026,
-      Country: "USA",
-      Director: "Sarah Miller",
-      Duration: "1.30 hours",
-      Screenwriter: "Mark Lee",
-      Description: "A group of friends is trapped underground in a forgotten mine. As they struggle to survive, they discover something much worse than the darkness lurking below.",
-      Language: "english",
-      FilmCompany: "Underground Studios",
-      Img: "https://m.media-amazon.com/images/M/MV5BMTc1MDk2Nzk0NV5BMl5BanBnXkFtZTgwNDE1MjAwNjE@._V1_.jpg", // Пример изображения
-      Rating: 7.8,
-      Baner: "https://johnnyalucard.com/wp-content/uploads/2017/03/darkbelow.jpg", // Пример баннера
-      Mood: 'Angry',
-      Url: "",
-      Moments: {
-        create: [
-          { url: "https://upload.wikimedia.org/wikipedia/commons/3/37/Underground_Horror_Scene.jpg" }, // Пример сцены 1
-          { url: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Dark_Mine.jpg" }, // Пример сцены 2
-        ]
-      },
-      Actors: {
-        create: [
-          {
-            Actor: {
-              create: {
-                name: "Evelyn",
-                surname: "Scott",
-                dateOfBirth: 1992,
-                placeOfBirth: "USA, Boston",
-                height: 168,
-                career: "Actress, Thriller",
-                totalMovies: 8,
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Evelyn_Scott.jpg/500px-Evelyn_Scott.jpg"
-              }
-            }
-          },
-          {
-            Actor: {
-              create: {
-                name: "Nathan",
-                surname: "Clark",
-                dateOfBirth: 1987,
-                placeOfBirth: "USA, San Francisco",
-                height: 175,
-                career: "Actor, Horror",
-                totalMovies: 12,
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Nathan_Clark.jpg/500px-Nathan_Clark.jpg"
-              }
-            }
-          },
-          {
-            Actor: {
-              create: {
-                name: "Olivia",
-                surname: "Parker",
-                dateOfBirth: 1989,
-                placeOfBirth: "USA, Miami",
-                height: 160,
-                career: "Actress, Suspense Specialist",
-                totalMovies: 10,
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Olivia_Parker.jpg/500px-Olivia_Parker.jpg"
-              }
-            }
-          },
-          {
-            Actor: {
-              create: {
-                name: "James",
-                surname: "Miller",
-                dateOfBirth: 1984,
-                placeOfBirth: "USA, Chicago",
-                height: 182,
-                career: "Actor, Thriller",
-                totalMovies: 9,
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/James_Miller.jpg/500px-James_Miller.jpg"
-              }
-            }
-          }
-        ]
-      },
-      Genres: {
-        connectOrCreate: {
-          where: { id: 8 },
-          create: {
-            Genre: {
-              create: {
-                name: "angry"
-              }
-            }
-          }
-        }
-      }
-    }
-  });
-  console.log('Фильм "The Dark Below" успешно добавлен');
-}
-async function moodSad() {
-  await prisma.movie.create({
-    data: {
-      Name: "The Dark Below",
-      ReleaseDate: "15.09",
-      Year: 2026,
-      Country: "USA",
-      Director: "Sarah Miller",
-      Duration: "1.30 hours",
-      Screenwriter: "Mark Lee",
-      Description: "A group of friends is trapped underground in a forgotten mine. As they struggle to survive, they discover something much worse than the darkness lurking below.",
-      Language: "english",
-      FilmCompany: "Underground Studios",
-      Img: "https://upload.wikimedia.org/wikipedia/commons/9/94/Dark_Horror_Theme.jpg", // Пример изображения
-      Rating: 7.8,
-      Baner: "https://upload.wikimedia.org/wikipedia/commons/7/7f/Horror_Movie_Banner.jpg", // Пример баннера
-      Mood: 'Sad',
-      Url: "",
-      Moments: {
-        create: [
-          { url: "https://upload.wikimedia.org/wikipedia/commons/3/37/Underground_Horror_Scene.jpg" }, // Пример сцены 1
-          { url: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Dark_Mine.jpg" }, // Пример сцены 2
-        ]
-      },
-      Actors: {
-        create: [
-          {
-            Actor: {
-              create: {
-                name: "Evelyn",
-                surname: "Scott",
-                dateOfBirth: 1992,
-                placeOfBirth: "USA, Boston",
-                height: 168,
-                career: "Actress, Thriller",
-                totalMovies: 8,
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Evelyn_Scott.jpg/500px-Evelyn_Scott.jpg"
-              }
-            }
-          },
-          {
-            Actor: {
-              create: {
-                name: "Nathan",
-                surname: "Clark",
-                dateOfBirth: 1987,
-                placeOfBirth: "USA, San Francisco",
-                height: 175,
-                career: "Actor, Horror",
-                totalMovies: 12,
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Nathan_Clark.jpg/500px-Nathan_Clark.jpg"
-              }
-            }
-          },
-          {
-            Actor: {
-              create: {
-                name: "Olivia",
-                surname: "Parker",
-                dateOfBirth: 1989,
-                placeOfBirth: "USA, Miami",
-                height: 160,
-                career: "Actress, Suspense Specialist",
-                totalMovies: 10,
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Olivia_Parker.jpg/500px-Olivia_Parker.jpg"
-              }
-            }
-          },
-          {
-            Actor: {
-              create: {
-                name: "James",
-                surname: "Miller",
-                dateOfBirth: 1984,
-                placeOfBirth: "USA, Chicago",
-                height: 182,
-                career: "Actor, Thriller",
-                totalMovies: 9,
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/James_Miller.jpg/500px-James_Miller.jpg"
-              }
-            }
-          }
-        ]
-      },
-      Genres: {
-        connectOrCreate: {
-          where: { id: 9 },
-          create: {
-            Genre: {
-              create: {
-                name: "sad"
-              }
-            }
-          }
-        }
-      }
-    }
-  });
-  console.log('Фильм "The Dark Below" успешно добавлен');
-}
-
-async function moodHappy() {
-  await prisma.movie.create({
-    data: {
-      Name: "The Dark Below",
-      ReleaseDate: "15.09",
-      Year: 2026,
-      Country: "USA",
-      Director: "Sarah Miller",
-      Duration: "1.30 hours",
-      Screenwriter: "Mark Lee",
-      Description: "A group of friends is trapped underground in a forgotten mine. As they struggle to survive, they discover something much worse than the darkness lurking below.",
-      Language: "english",
-      FilmCompany: "Underground Studios",
-      Img: "https://upload.wikimedia.org/wikipedia/commons/9/94/Dark_Horror_Theme.jpg", // Пример изображения
-      Rating: 7.8,
-      Baner: "https://upload.wikimedia.org/wikipedia/commons/7/7f/Horror_Movie_Banner.jpg", // Пример баннера
-      Mood: 'Happy',
-      Url: "",
-      Moments: {
-        create: [
-          { url: "https://upload.wikimedia.org/wikipedia/commons/3/37/Underground_Horror_Scene.jpg" }, // Пример сцены 1
-          { url: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Dark_Mine.jpg" }, // Пример сцены 2
-        ]
-      },
-      Actors: {
-        create: [
-          {
-            Actor: {
-              create: {
-                name: "Evelyn",
-                surname: "Scott",
-                dateOfBirth: 1992,
-                placeOfBirth: "USA, Boston",
-                height: 168,
-                career: "Actress, Thriller",
-                totalMovies: 8,
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Evelyn_Scott.jpg/500px-Evelyn_Scott.jpg"
-              }
-            }
-          },
-          {
-            Actor: {
-              create: {
-                name: "Nathan",
-                surname: "Clark",
-                dateOfBirth: 1987,
-                placeOfBirth: "USA, San Francisco",
-                height: 175,
-                career: "Actor, Horror",
-                totalMovies: 12,
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Nathan_Clark.jpg/500px-Nathan_Clark.jpg"
-              }
-            }
-          },
-          {
-            Actor: {
-              create: {
-                name: "Olivia",
-                surname: "Parker",
-                dateOfBirth: 1989,
-                placeOfBirth: "USA, Miami",
-                height: 160,
-                career: "Actress, Suspense Specialist",
-                totalMovies: 10,
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Olivia_Parker.jpg/500px-Olivia_Parker.jpg"
-              }
-            }
-          },
-          {
-            Actor: {
-              create: {
-                name: "James",
-                surname: "Miller",
-                dateOfBirth: 1984,
-                placeOfBirth: "USA, Chicago",
-                height: 182,
-                career: "Actor, Thriller",
-                totalMovies: 9,
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/James_Miller.jpg/500px-James_Miller.jpg"
-              }
-            }
-          }
-        ]
-      },
-      Genres: {
-        connectOrCreate: {
-          where: { id: 10 },
-          create: {
-            Genre: {
-              create: {
-                name: "happy"
-              }
-            }
-          }
-        }
-      }
-    }
-  });
-  console.log('Фильм "The Dark Below" успешно добавлен');
-}
-
-async function createUser() {
-  const user = await prisma.user.create({
-    data: {
-      nickname: "yehor",
-      email: "yehor@example.com",
-      password: '1234',
-      age: 12,
-      role: "user",
-      image: "https://pe-images.s3.amazonaws.com/basics/cc/image-size-resolution/resize-images-for-print/image-cropped-8x10.jpg"
-    },
-  });
-  console.log('User created!');
-}
-
-async function deleteUser(id: number) {
-  const user = await prisma.user.delete({
-    where: {id:id}
-  })
-  console.log('User deleted!')
-}
-
-async function clearAllUsers() {
-    const deleteResult = await prisma.user.deleteMany({});
-    
-    console.log(`Deleted ${deleteResult.count} users`);
-    return deleteResult
-}
-
-async function clearAllGenres() {
-  const deleteResult = await prisma.genre.deleteMany({});
-  
-  console.log(`Deleted ${deleteResult.count} genre`);
-  return deleteResult
-}
-
-async function clearAllFilms() {
-  const deleteResult = await prisma.movie.deleteMany({});
-  
-  console.log(`Deleted ${deleteResult.count} movie`);
-  return deleteResult
-}
-
-async function clearAllActors() {
-  const deleteResult = await prisma.actor.deleteMany({});
-  
-  console.log(`Deleted ${deleteResult.count} actor`);
-  return deleteResult
-}
-
-async function clearAllComments() {
-  const deleteResult = await prisma.comment.deleteMany({});
-  
-  console.log(`Deleted ${deleteResult.count} comment`);
-  return deleteResult
-}
-
-
-async function create25Movies() {
-  await prisma.movie.create({
-    data: {
-      Name: "Inception",
-      ReleaseDate: "16.07",
-      Year: 2010,
-      Country: "USA, UK",
-      Director: "Christopher Nolan",
-      Duration: "2.28 hours",
-      Screenwriter: "Christopher Nolan",
-      Description: "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
-      Language: "english",
-      FilmCompany: "Warner Bros., Legendary Pictures",
-      Img: "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg",
-      Rating: 8.8,
-      Baner: "https://m.media-amazon.com/images/M/MV5BMjExMjkwNTQ0Nl5BMl5BanBnXkFtZTcwNTY0OTk1Mw@@._V1_.jpg",
-      Mood: "mind-bending, thriller",
-      Url: "https://youtu.be/YoHD9XEInc0",
-      Moments: {
-        create: [
-          { url: "https://m.media-amazon.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_.jpg" },
-          { url: "https://m.media-amazon.com/images/M/MV5BZjU5OWVlN2EtODNlYy00MjhhLWI0MDUtMTA3MmQ5MGMwYTZmXkEyXkFqcGdeQXVyNjE5MDgzMjg@._V1_.jpg" }
-        ]
-      },
-      Actors: {
-        connectOrCreate: [
-          {
-            where: { id: 1 },
-            create: {
-              Actor: {
-                create: {
-                  name: "Leonardo",
-                  surname: "DiCaprio",
-                  dateOfBirth: 1974,
-                  placeOfBirth: "USA, California",
-                  height: 183,
-                  career: "Oscar-winning actor known for Titanic, The Revenant",
-                  totalMovies: 60,
-                  image: "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_.jpg"
-                }
-              }
-            }
-          }
-        ]
-      },
-      Genres: {
-        connectOrCreate: [
-          {
-            where: { id: 4 },
-            create: {
-              Genre: {
-                create: {
-                  name: "sci-fi"
-                }
-              }
-            }
-          },
-          {
-            where: { id: 5 },
-            create: {
-              Genre: {
-                create: {
-                  name: "thriller"
-                }
-              }
-            }
-          }
-        ]
-      }
-    }
-  });
-
-  // Фільм 2: The Dark Knight
-  await prisma.movie.create({
-    data: {
-      Name: "The Dark Knight",
-      ReleaseDate: "18.07",
-      Year: 2008,
-      Country: "USA, UK",
-      Director: "Christopher Nolan",
-      Duration: "2.32 hours",
-      Screenwriter: "Jonathan Nolan, Christopher Nolan",
-      Description: "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
-      Language: "english",
-      FilmCompany: "Warner Bros., DC Comics",
-      Img: "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
-      Rating: 9.0,
-      Baner: "https://m.media-amazon.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_.jpg",
-      Mood: "dark, action",
-      Url: "https://youtu.be/EXeTwQWrcwY",
-      Moments: {
-        create: [
-          { url: "https://m.media-amazon.com/images/M/MV5BMTI1MjM0NTE4NV5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg" },
-          { url: "https://m.media-amazon.com/images/M/MV5BNzY2NzI4OTE5MF5BMl5BanBnXkFtZTcwMjkwNTgyMQ@@._V1_.jpg" }
-        ]
-      },
-      Actors: {
-        connectOrCreate: [
-          {
-            where: { id: 4 },
-            create: {
-              Actor: {
-                create: {
-                  name: "Christian",
-                  surname: "Bale",
-                  dateOfBirth: 1974,
-                  placeOfBirth: "UK, Wales",
-                  height: 183,
-                  career: "Actor known for Batman trilogy, American Psycho",
-                  totalMovies: 70,
-                  image: "https://m.media-amazon.com/images/M/MV5BMTkxMzk4MjQ4MF5BMl5BanBnXkFtZTcwMzExODQxOA@@._V1_.jpg"
-                }
-              }
-            }
-          }
-        ]
-      },
-      Genres: {
-        connectOrCreate: [
-          {
-            where: { id: 6 },
-            create: {
-              Genre: {
-                create: {
-                  name: "action"
-                }
-              }
-            }
-          },
-          {
-            where: { id: 7 },
-            create: {
-              Genre: {
-                create: {
-                  name: "crime"
-                }
-              }
-            }
-          }
-        ]
-      }
-    }
-  });
-
-  // Фільм 3: Pulp Fiction
-  await prisma.movie.create({
-    data: {
-      Name: "Pulp Fiction",
-      ReleaseDate: "14.10",
-      Year: 1994,
-      Country: "USA",
-      Director: "Quentin Tarantino",
-      Duration: "2.34 hours",
-      Screenwriter: "Quentin Tarantino, Roger Avary",
-      Description: "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
-      Language: "english",
-      FilmCompany: "Miramax, A Band Apart",
-      Img: "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
-      Rating: 8.9,
-      Baner: "https://m.media-amazon.com/images/M/MV5BMTkxMzk4MjQ4MF5BMl5BanBnXkFtZTcwMzExODQxOA@@._V1_.jpg",
-      Mood: "crime, dark comedy",
-      Url: "https://youtu.be/s7EdQ4FqbhY",
-      Moments: {
-        create: [
-          { url: "https://m.media-amazon.com/images/M/MV5BNjc1NzYwODEyMV5BMl5BanBnXkFtZTcwNTM5NTQyMw@@._V1_.jpg" },
-          { url: "https://m.media-amazon.com/images/M/MV5BMTkxMzk4MjQ4MF5BMl5BanBnXkFtZTcwMzExODQxOA@@._V1_.jpg" }
-        ]
-      },
-      Actors: {
-        connectOrCreate: [
-          {
-            where: { id: 5 },
-            create: {
-              Actor: {
-                create: {
-                  name: "John",
-                  surname: "Travolta",
-                  dateOfBirth: 1954,
-                  placeOfBirth: "USA, New Jersey",
-                  height: 188,
-                  career: "Actor known for Grease, Saturday Night Fever",
-                  totalMovies: 90,
-                  image: "https://m.media-amazon.com/images/M/MV5BMTMyMjIxMTQ2NV5BMl5BanBnXkFtZTYwNDQ0NTE1._V1_.jpg"
-                }
-              }
-            }
-          }
-        ]
-      },
-      Genres: {
-        connectOrCreate: [
-          {
-            where: { id: 8 },
-            create: {
-              Genre: {
-                create: {
-                  name: "crime"
-                }
-              }
-            }
-          },
-          {
-            where: { id: 9 },
-            create: {
-              Genre: {
-                create: {
-                  name: "drama"
-                }
-              }
-            }
-          }
-        ]
-      }
-    }
-  });
-
-  // Фільм 4: The Shawshank Redemption
-  await prisma.movie.create({
-    data: {
-      Name: "The Shawshank Redemption",
-      ReleaseDate: "23.09",
-      Year: 1994,
-      Country: "USA",
-      Director: "Frank Darabont",
-      Duration: "2.22 hours",
-      Screenwriter: "Frank Darabont",
-      Description: "Two imprisoned men bond over several years, finding solace and eventual redemption through acts of common decency.",
-      Language: "english",
-      FilmCompany: "Castle Rock Entertainment",
-      Img: "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
-      Rating: 9.3,
-      Baner: "https://m.media-amazon.com/images/M/MV5BZjU0Yzk2MzEtMjAzYy00MzY0LTg2YmItM2RkNzdkY2ZhN2JkXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_.jpg",
-      Mood: "drama, inspirational",
-      Url: "https://youtu.be/6hB3S9bIaco",
-      Moments: {
-        create: [
-          { url: "https://m.media-amazon.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_.jpg" },
-          { url: "https://m.media-amazon.com/images/M/MV5BMTc5NjY4MjUwNF5BMl5BanBnXkFtZTgwODM3NzM5MzE@._V1_.jpg" }
-        ]
-      },
-      Actors: {
-        connectOrCreate: [
-          {
-            where: { id: 6 },
-            create: {
-              Actor: {
-                create: {
-                  name: "Tim",
-                  surname: "Robbins",
-                  dateOfBirth: 1958,
-                  placeOfBirth: "USA, California",
-                  height: 196,
-                  career: "Oscar-winning actor known for Mystic River",
-                  totalMovies: 75,
-                  image: "https://m.media-amazon.com/images/M/MV5BMTI1OTYxNzAxOF5BMl5BanBnXkFtZTYwNTE5ODI4._V1_.jpg"
-                }
-              }
-            }
-          }
-        ]
-      },
-      Genres: {
-        connectOrCreate: [
-          {
-            where: { id: 10 },
-            create: {
-              Genre: {
-                create: {
-                  name: "drama"
-                }
-              }
-            }
-          }
-        ]
-      }
-    }
-  });
-
-  // Фільм 5: Interstellar
-  await prisma.movie.create({
-    data: {
-      Name: "Interstellar",
-      ReleaseDate: "07.11",
-      Year: 2014,
-      Country: "USA, UK",
-      Director: "Christopher Nolan",
-      Duration: "2.49 hours",
-      Screenwriter: "Jonathan Nolan, Christopher Nolan",
-      Description: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
-      Language: "english",
-      FilmCompany: "Paramount Pictures, Warner Bros.",
-      Img: "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
-      Rating: 8.6,
-      Baner: "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
-      Mood: "sci-fi, emotional",
-      Url: "https://youtu.be/zSWdZVtXT7E",
-      Moments: {
-        create: [
-          { url: "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" },
-          { url: "https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" }
-        ]
-      },
-      Actors: {
-        connectOrCreate: [
-          {
-            where: { id: 7 },
-            create: {
-              Actor: {
-                create: {
-                  name: "Matthew",
-                  surname: "McConaughey",
-                  dateOfBirth: 1969,
-                  placeOfBirth: "USA, Texas",
-                  height: 182,
-                  career: "Oscar-winning actor known for Dallas Buyers Club",
-                  totalMovies: 65,
-                  image: "https://m.media-amazon.com/images/M/MV5BMTg0MDc3ODUwOV5BMl5BanBnXkFtZTcwMTk2NjY4Nw@@._V1_.jpg"
-                }
-              }
-            }
-          }
-        ]
-      },
-      Genres: {
-        connectOrCreate: [
-          {
-            where: { id: 11 },
-            create: {
-              Genre: {
-                create: {
-                  name: "sci-fi"
-                }
-              }
-            }
-          },
-          {
-            where: { id: 12 },
-            create: {
-              Genre: {
-                create: {
-                  name: "adventure"
-                }
-              }
-            }
-          }
-        ]
-      }
-    }
-  });
-
-  console.log("25 фільмів успішно створено!");
-}
-
 async function createSonic4() {
   await prisma.movie.create({
     data: {
@@ -1441,32 +238,137 @@ async function createSonic4() {
       }
     }
   });
-  console.log('Фильм "Sonic the Hedgehog 4" добавлен.');
+  console.log('Фильм "Sonic the Hedgehog 3" добавлен.');
 }
 
-async function createInception2() {
+
+
+async function createHappyMovies() {
+  // Movie 1: The Super Mario Bros. Movie
   await prisma.movie.create({
     data: {
-      Name: "Inception 2",
-      ReleaseDate: "15.07",
-      Year: 2025,
-      Country: "USA, UK",
-      Director: "Christopher Nolan",
-      Duration: "2.28 hours",
-      Screenwriter: "Christopher Nolan",
-      Description: "A sequel to the mind-bending thriller about dream thieves and the power of the subconscious.",
+      Name: "The Super Mario Bros. Movie",
+      ReleaseDate: "05.04",
+      Year: 2023,
+      Country: "USA, Japan",
+      Director: "Aaron Horvath, Michael Jelenic",
+      Duration: "1.32 hours",
+      Screenwriter: "Matthew Fogel",
+      Description: "The story of Brooklyn plumbers Mario and Luigi as they travel through a mysterious pipe to a magical new world.",
       Language: "english",
-      FilmCompany: "Warner Bros, Syncopy",
-      Img: "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg",
-      Rating: 9,
-      Baner: "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg",
-      Mood: "mind-bending",
-      Url: "https://youtu.be/YoHD9XEInc0",
+      FilmCompany: "Illumination, Nintendo",
+      Img: "https://m.media-amazon.com/images/M/MV5BOTJhNzlmNzctNTU5Yy00N2YwLThhMjQtZDM0YjEzN2Y0ZjNhXkEyXkFqcGdeQXVyMTEwMTQ4MzU5._V1_.jpg",
+      Rating: 7,
+      Baner: "https://www.escapistmagazine.com/wp-content/uploads/2023/04/THE-SUPER-MARIO-BROS-MOVIE3.jpg?fit=1280%2C720",
+      Mood: "Happy",
+      Url: "https://youtu.be/TnGl01FkMMo",
       Moments: {
         create: [
-          { url: "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg" },
-          { url: "https://i.ytimg.com/vi/YoHD9XEInc0/maxresdefault.jpg" },
-          { url: "https://www.indiewire.com/wp-content/uploads/2020/07/inception.jpg" }
+          { url: "https://media.newyorker.com/photos/64526e8287ae684cabca2c9c/master/w_1920,c_limit/Chayka-Mario.jpg" },
+          { url: "https://variety.com/wp-content/uploads/2023/04/MCDSUMA_UV036.jpg?w=1000&h=562&crop=1" },
+          { url: "https://static.filmvandaag.nl/news/22519/super-mario-bros-the-movie-vanaf-vandaag-op-netflix.jpg?ts=1729493869" },
+          { url: "https://www.hollywoodreporter.com/wp-content/uploads/2023/04/Super-Mario-Bros-Movie-Toad-Peach-Everett-MCDSUMA_UV009-H-2023.jpg?w=1296&h=730&crop=1" }
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 1 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Chris",
+                  surname: "Pratt",
+                  dateOfBirth: 1979,
+                  placeOfBirth: "USA, Minnesota",
+                  height: 188,
+                  career: "Actor known for Guardians of the Galaxy and Jurassic World",
+                  totalMovies: 90,
+                  image: "https://upload.wikimedia.org/wikipedia/commons/9/99/Chris_Pratt_2018.jpg"
+                }
+              }
+            }
+          },
+          {
+            where: { id: 2 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Anya",
+                  surname: "Taylor-Joy",
+                  dateOfBirth: 1996,
+                  placeOfBirth: "USA, Florida",
+                  height: 173,
+                  career: "Actress known for The Queen's Gambit and Furiosa",
+                  totalMovies: 30,
+                  image: "https://cdn.britannica.com/31/222531-050-BB75F3FD/Anya-Taylor-Joy-2020.jpg"
+                }
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          {
+            where: { id: 1 },
+            create: {
+              Genre: {
+                create: {
+                  name: "animation"
+                }
+              }
+            }
+          },
+          {
+            where: { id: 2 },
+            create: {
+              Genre: {
+                create: {
+                  name: "adventure"
+                }
+              }
+            }
+          },
+          {
+            where: { id: 3 },
+            create: {
+              Genre: {
+                create: {
+                  name: "comedy"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+
+  // Movie 2: Paddington 2
+  await prisma.movie.create({
+    data: {
+      Name: "Paddington 2",
+      ReleaseDate: "10.11",
+      Year: 2017,
+      Country: "UK, France",
+      Director: "Paul King",
+      Duration: "1.43 hours",
+      Screenwriter: "Paul King, Simon Farnaby",
+      Description: "Paddington, now happily settled with the Brown family, picks up a series of odd jobs to buy the perfect present for his Aunt Lucy's 100th birthday.",
+      Language: "english",
+      FilmCompany: "StudioCanal, Heyday Films",
+      Img: "https://m.media-amazon.com/images/M/MV5BMmYwNWZlNzEtNjE4Zi00NzQ4LWI2YmUtOWZhNzZhZDYyNmVmXkEyXkFqcGdeQXVyNzYzODM3Mzg@._V1_.jpg",
+      Rating: 8,
+      Baner: "https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/2f105508-af55-40fa-a2ce-59b021ce19bf/5d66ff71-4fee-483f-b69d-7c92898edcca?host=wbd-images.prod-vod.h264.io&partner=beamcom",
+      Mood: "Happy",
+      Url: "https://youtu.be/6FgUUO9Ztd0",
+      Moments: {
+        create: [
+          { url: "https://i.guim.co.uk/img/media/d29f48f658177e673f0c32a85c60cff063c75597/0_139_1538_922/master/1538.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=0ae026c586f43a203a9ed9a04f64a70f" },
+          { url: "https://fakty.ua/photos/article/25/52/255204w540zc0.jpg?v=233155" },
+          { url: "https://i.ytimg.com/vi/1AuP-nsrfXU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBWEsAnS9KzTfZTa3TQzUgsAOZHnA" },
+          { url: "https://i.ytimg.com/vi/2-fIxHN4xjw/maxresdefault.jpg" }
         ]
       },
       Actors: {
@@ -1476,31 +378,14 @@ async function createInception2() {
             create: {
               Actor: {
                 create: {
-                  name: "Leonardo",
-                  surname: "DiCaprio",
-                  dateOfBirth: 1974,
-                  placeOfBirth: "USA, California",
-                  height: 183,
-                  career: "Academy Award-winning actor",
-                  totalMovies: 50,
-                  image: "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_.jpg"
-                }
-              }
-            }
-          },
-          {
-            where: { id: 4 },
-            create: {
-              Actor: {
-                create: {
-                  name: "Joseph",
-                  surname: "Gordon-Levitt",
-                  dateOfBirth: 1981,
-                  placeOfBirth: "USA, California",
-                  height: 175,
-                  career: "Actor, director, producer",
-                  totalMovies: 60,
-                  image: "https://m.media-amazon.com/images/M/MV5BZTk5ZGQ0OGQtYWYwMy00Zjg1LWE0MDMtZjA2NjA4ZGY0YTIyXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg"
+                  name: "Hugh",
+                  surname: "Grant",
+                  dateOfBirth: 1960,
+                  placeOfBirth: "UK, London",
+                  height: 180,
+                  career: "Actor known for romantic comedies and dramatic roles",
+                  totalMovies: 70,
+                  image: "https://globalnews.ca/wp-content/uploads/2016/08/hugh-grant.jpg?quality=85&strip=all"
                 }
               }
             }
@@ -1514,13 +399,335 @@ async function createInception2() {
             create: {
               Genre: {
                 create: {
-                  name: "sci-fi"
+                  name: "family"
+                }
+              }
+            }
+          },
+          {
+            where: { id: 3 },
+            create: {
+              Genre: {
+                create: {
+                  name: "comedy"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+}
+
+// Calm Mood Movies
+async function createCalmMovies() {
+  // Movie 4: Chef
+  await prisma.movie.create({
+    data: {
+      Name: "Chef",
+      ReleaseDate: "09.05",
+      Year: 2014,
+      Country: "USA",
+      Director: "Jon Favreau",
+      Duration: "1.54 hours",
+      Screenwriter: "Jon Favreau",
+      Description: "A chef who loses his restaurant job starts up a food truck in an effort to reclaim his creative promise.",
+      Language: "english",
+      FilmCompany: "Fairview Entertainment",
+      Img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz7WeZAkQhbzycUBc1vb9B4BC4CLMXbo0gLg&s",
+      Rating: 7,
+      Baner: "https://ntvb.tmsimg.com/assets/p10367270_v_h8_ab.jpg?w=1280&h=720",
+      Mood: "Calm",
+      Url: "https://youtu.be/ffxP2xf7G2c",
+      Moments: {
+        create: [
+          { url: "https://people.com/thmb/-BFSXF3ikyx8Gecwxl0Drx6mr60=/4000x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(299x0:301x2)/chef-600x450-4ac4d97049814c6898331caa1f75be88.jpg" },
+          { url: "https://cdn.theplaylist.net/wp-content/uploads/2014/05/15124127/jon-favreau-chef.jpg" },
+          { url: "https://statcdn.fandango.com/MPX/image/NBCU_Fandango/540/907/Chef_Trailer1.jpg" },
+          { url: "https://lh3.googleusercontent.com/2GjVm3Diot6ZhhJy7Iee9yULPFDp9k-p1LDP2xIIzJtxu-Xt36yPbQ88KHYeKsHg6JGrYNNQk1v9vLZVQc_DKLN9QSHTUzNO6a1_1jalI9Sv-2bhkMyYnjgDue91-pXECu0qGHvkBa1HBEqBJz83tPAbPI24f9cgNo-YWV-WNMNxfS474fNSadQ7_Xflkw" },
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 5 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Jon",
+                  surname: "Favreau",
+                  dateOfBirth: 1966,
+                  placeOfBirth: "USA, New York",
+                  height: 185,
+                  career: "Actor, director and producer known for Iron Man and The Mandalorian",
+                  totalMovies: 100,
+                  image: "https://www.onthisday.com/images/people/jon-favreau.jpg?w=360"
+                }
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          {
+            where: { id: 3 },
+            create: {
+              Genre: {
+                create: {
+                  name: "comedy"
                 }
               }
             }
           },
           {
             where: { id: 5 },
+            create: {
+              Genre: {
+                create: {
+                  name: "drama"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+}
+
+// Sad Mood Movies
+async function createSadMovies() {
+  // Movie 5: The Fault in Our Stars
+  await prisma.movie.create({
+    data: {
+      Name: "The Fault in Our Stars",
+      ReleaseDate: "06.06",
+      Year: 2014,
+      Country: "USA",
+      Director: "Josh Boone",
+      Duration: "2.06 hours",
+      Screenwriter: "Scott Neustadter, Michael H. Weber",
+      Description: "Two teenage cancer patients begin a life-affirming journey to visit a reclusive author in Amsterdam.",
+      Language: "english",
+      FilmCompany: "20th Century Fox",
+      Img: "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/The_Fault_in_Our_Stars_%28Official_Film_Poster%29.png/250px-The_Fault_in_Our_Stars_%28Official_Film_Poster%29.png",
+      Rating: 8,
+      Baner: "https://musicart.xboxlive.com/7/dd1c5200-0000-0000-0000-000000000002/504/image.jpg",
+      Mood: "Sad",
+      Url: "https://youtu.be/9ItBvH5J6ss",
+      Moments: {
+        create: [
+          { url: "https://decider.com/wp-content/uploads/2019/05/the-fault-in-our-stars-2.jpg?quality=75&strip=all" },
+          { url: "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2014/6/12/1402574582977/The-Fault-Is-In-Our-Stars-014.jpg?width=465&dpr=1&s=none&crop=none" },
+          { url: "https://tvgidsassets.nl/v355/upload/t/the-fault-in-our-stars-454757641.jpg" },
+          { url: "https://nypost.com/wp-content/uploads/sites/2/2014/05/the_fault_in_our_stars_93833527-e1401600706471.jpg?quality=75&strip=all&w=744" },
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 6 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Shailene",
+                  surname: "Woodley",
+                  dateOfBirth: 1991,
+                  placeOfBirth: "USA, California",
+                  height: 173,
+                  career: "Actress known for Divergent series and Big Little Lies",
+                  totalMovies: 40,
+                  image: "https://starsunfolded.com/wp-content/uploads/2025/04/Shailene-Woodley.jpg"
+                }
+              }
+            }
+          },
+          {
+            where: { id: 7 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Ansel",
+                  surname: "Elgort",
+                  dateOfBirth: 1994,
+                  placeOfBirth: "USA, New York",
+                  height: 193,
+                  career: "Actor and singer known for Baby Driver and West Side Story",
+                  totalMovies: 20,
+                  image: "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2017_30/1231111/ansel-elgort-baby-names-today-inline.jpg"
+                }
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          {
+            where: { id: 7 },
+            create: {
+              Genre: {
+                create: {
+                  name: "romance"
+                }
+              }
+            }
+          },
+          {
+            where: { id: 5 },
+            create: {
+              Genre: {
+                create: {
+                  name: "drama"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+
+  // Movie 6: Manchester by the Sea
+  await prisma.movie.create({
+    data: {
+      Name: "Manchester by the Sea",
+      ReleaseDate: "18.11",
+      Year: 2016,
+      Country: "USA",
+      Director: "Kenneth Lonergan",
+      Duration: "2.17 hours",
+      Screenwriter: "Kenneth Lonergan",
+      Description: "A depressed uncle is asked to take care of his teenage nephew after the boy's father dies.",
+      Language: "english",
+      FilmCompany: "Amazon Studios",
+      Img: "https://m.media-amazon.com/images/S/pv-target-images/85fbbb9b523a60e9270b66042ab7cc35997f37ba6934e700e4d6c9eba7692da0.jpg",
+      Rating: 8,
+      Baner: "https://i0.wp.com/elementsofmadness.com/wp-content/uploads/2017/01/manchester-by-the-sea.png?fit=851%2C315&ssl=1",
+      Mood: "Sad",
+      Url: "https://youtu.be/gsVoD0pTge0",
+      Moments: {
+        create: [
+          { url: "https://variety.com/wp-content/uploads/2016/10/manchester-by-the-sea.jpg?w=1000&h=563&crop=1" },
+          { url: "https://variety.com/wp-content/uploads/2016/01/manchester-by-the-sea-sundance-2016.jpg?w=1000&h=608&crop=1" },
+          { url: "https://media.newyorker.com/photos/59097c1f1c7a8e33fb390338/master/pass/Brody-KennethLonergansDevastatingLiberatingManchesterbytheSea2.jpg" },
+          { url: "https://static01.nyt.com/images/2016/11/18/arts/18MANBYSEA/18MANBYSEA-videoSixteenByNineJumbo1600.jpg" }
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 8 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Casey",
+                  surname: "Affleck",
+                  dateOfBirth: 1975,
+                  placeOfBirth: "USA, Massachusetts",
+                  height: 175,
+                  career: "Actor known for his dramatic roles and brother of Ben Affleck",
+                  totalMovies: 60,
+                  image: "https://ntvb.tmsimg.com/assets/assets/10933_v9_bc.jpg"
+                }
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          {
+            where: { id: 5 },
+            create: {
+              Genre: {
+                create: {
+                  name: "drama"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+}
+
+// Angry Mood Movies
+async function createAngryMovies() {
+  // Movie 7: Joker
+  await prisma.movie.create({
+    data: {
+      Name: "Joker",
+      ReleaseDate: "04.10",
+      Year: 2019,
+      Country: "USA",
+      Director: "Todd Phillips",
+      Duration: "2.02 hours",
+      Screenwriter: "Todd Phillips, Scott Silver",
+      Description: "A mentally troubled stand-up comedian embarks on a downward spiral that leads to the creation of an iconic villain.",
+      Language: "english",
+      FilmCompany: "Warner Bros.",
+      Img: "https://resizing.flixster.com/z4hiL8ZBmyZYrgP523AZvdk7uUI=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzRmOWU4ODJhLTNkMzAtNDNhMC04YjhjLWVkMjJjMGI4MjE4Ni5wbmc=",
+      Rating: 9,
+      Baner: "https://images.mubicdn.net/images/film/205704/cache-372080-1683644542/image-w1280.jpg",
+      Mood: "Angry",
+      Url: "https://youtu.be/zAGVQLHvwOY",
+      Moments: {
+        create: [
+          { url: "https://static.labiennale.org/files/styles/full_screen_slide/public/cinema/2019/Schede_film/970x647/Venezia_76/joker.jpg?itok=Tn_swkJU" },
+          { url: "https://static1.cbrimages.com/wordpress/wp-content/uploads/2019/10/joker-movie-header.jpg" },
+          { url: "https://platform.vox.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/19282421/JOKER_MOVIE_REVIEW.jpg?quality=90&strip=all&crop=7.8125,0,84.375,100" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsZhjwwg_F9O1rSCfbBevyTXiatVCLLrcSlQ&s" }
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 9 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Joaquin",
+                  surname: "Phoenix",
+                  dateOfBirth: 1974,
+                  placeOfBirth: "USA, Puerto Rico",
+                  height: 173,
+                  career: "Academy Award winning actor known for intense dramatic roles",
+                  totalMovies: 50,
+                  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Joaquin_Phoenix-64908_%28cropped%29.jpg/960px-Joaquin_Phoenix-64908_%28cropped%29.jpg"
+                }
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          {
+            where: { id: 8 },
+            create: {
+              Genre: {
+                create: {
+                  name: "crime"
+                }
+              }
+            }
+          },
+          {
+            where: { id: 5 },
+            create: {
+              Genre: {
+                create: {
+                  name: "drama"
+                }
+              }
+            }
+          },
+          {
+            where: { id: 9 },
             create: {
               Genre: {
                 create: {
@@ -1533,66 +740,288 @@ async function createInception2() {
       }
     }
   });
-  console.log('Фильм "Inception 2" добавлен.');
-}
 
-async function createDunePart3() {
+  // Movie 8: Fight Club
   await prisma.movie.create({
     data: {
-      Name: "Dune: Part Three",
-      ReleaseDate: "18.11",
-      Year: 2026,
-      Country: "USA, Canada",
-      Director: "Denis Villeneuve",
-      Duration: "2.45 hours",
-      Screenwriter: "Jon Spaihts, Denis Villeneuve",
-      Description: "The epic conclusion to the Dune trilogy following Paul Atreides' journey as the messiah of the Fremen.",
+      Name: "Fight Club",
+      ReleaseDate: "15.10",
+      Year: 1999,
+      Country: "USA, Germany",
+      Director: "David Fincher",
+      Duration: "2.19 hours",
+      Screenwriter: "Jim Uhls",
+      Description: "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
       Language: "english",
-      FilmCompany: "Legendary Pictures, Warner Bros",
-      Img: "https://m.media-amazon.com/images/M/MV5BN2FjNmEyNWMtYzM0ZS00NjIyLTg5YzYtYThlMGVjNzE1OGViXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+      FilmCompany: "20th Century Fox",
+      Img: "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
       Rating: 9,
-      Baner: "https://m.media-amazon.com/images/M/MV5BN2FjNmEyNWMtYzM0ZS00NjIyLTg5YzYtYThlMGVjNzE1OGViXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg",
-      Mood: "epic",
-      Url: "https://youtu.be/8g18jFHCLXk",
+      Baner: "https://media.newyorker.com/photos/5dbafcc91b4a6700085a7a9b/master/pass/Baker-FightClub.jpg",
+      Mood: "Angry",
+      Url: "https://youtu.be/qtRKdVHc-cE",
       Moments: {
         create: [
-          { url: "https://m.media-amazon.com/images/M/MV5BN2FjNmEyNWMtYzM0ZS00NjIyLTg5YzYtYThlMGVjNzE1OGViXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" },
-          { url: "https://i.ytimg.com/vi/8g18jFHCLXk/maxresdefault.jpg" },
-          { url: "https://www.hollywoodreporter.com/wp-content/uploads/2023/05/Dune-Part-Two-Publicity-Still-2023.jpg" }
+          { url: "https://m.media-amazon.com/images/M/MV5BMzVjNDRkMTYtMTczYS00ZTEyLWI3NTQtYTc3NWE4MTY3OGNkXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg" },
+          { url: "https://images.justwatch.com/backdrop/247729258/s640/fight-club" },
+          { url: "https://erickimphotography.com/blog/wp-content/uploads/2017/05/fight-club-cinematography-life-lessons-18.jpg" },
+          { url: "https://m.media-amazon.com/images/M/MV5BMTgxNzY2NjIxOV5BMl5BanBnXkFtZTcwNzU3ODMzMw@@._V1_.jpg" }
         ]
       },
       Actors: {
         connectOrCreate: [
           {
-            where: { id: 5 },
+            where: { id: 10 },
             create: {
               Actor: {
                 create: {
-                  name: "Timothée",
-                  surname: "Chalamet",
-                  dateOfBirth: 1995,
-                  placeOfBirth: "USA, New York",
-                  height: 178,
-                  career: "Academy Award-nominated actor",
-                  totalMovies: 25,
-                  image: "https://m.media-amazon.com/images/M/MV5BOWMyNjE0MzEtMzVjNy00NjIxLTg0ZjMtMWJhNGI1YmVjYTczXkEyXkFqcGdeQXVyNjg3MDMxNzU@._V1_.jpg"
+                  name: "Brad",
+                  surname: "Pitt",
+                  dateOfBirth: 1963,
+                  placeOfBirth: "USA, Oklahoma",
+                  height: 180,
+                  career: "Academy Award winning actor and producer",
+                  totalMovies: 100,
+                  image: "https://hips.hearstapps.com/hmg-prod/images/actor-brad-pitt-attends-the-photocall-of-the-movie-wolfs-news-photo-1726680022.jpg?crop=0.670xw:1.00xh;0.0760xw,0&resize=640:*"
                 }
               }
             }
           },
           {
-            where: { id: 6 },
+            where: { id: 11 },
             create: {
               Actor: {
                 create: {
-                  name: "Zendaya",
-                  surname: "",
-                  dateOfBirth: 1996,
-                  placeOfBirth: "USA, California",
-                  height: 178,
-                  career: "Actress and singer",
-                  totalMovies: 20,
-                  image: "https://m.media-amazon.com/images/M/MV5BNDVkYjU0MzctMWRmZi00NTkxLTgwZWEtOWVhYjZlYjllYmU4XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg"
+                  name: "Edward",
+                  surname: "Norton",
+                  dateOfBirth: 1969,
+                  placeOfBirth: "USA, Massachusetts",
+                  height: 183,
+                  career: "Academy Award nominated actor known for intense dramatic roles",
+                  totalMovies: 50,
+                  image: "https://upload.wikimedia.org/wikipedia/commons/3/35/Ed_Norton_Shankbone_Metropolitan_Opera_2009.jpg"
+                }
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          {
+            where: { id: 5 },
+            create: {
+              Genre: {
+                create: {
+                  name: "drama"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+}
+
+async function createHappyAdventure() {
+  await prisma.movie.create({
+    data: {
+      Name: "The Happy Adventure",
+      ReleaseDate: "15.05",
+      Year: 2025,
+      Country: "USA",
+      Director: "John Doe",
+      Duration: "1.45 hours",
+      Screenwriter: "Jane Doe",
+      Description: "A heartwarming adventure of a young girl who discovers the beauty of life and friendship in unexpected places.",
+      Language: "english",
+      FilmCompany: "Happy Films",
+      Img: "https://i.mydramalist.com/nv75Ec.jpg?v=1",
+      Rating: 8,
+      Baner: "https://static.diksia.com/media/id/2024/03/Sinopsis-Film-The-Adventures-2023-Petualangan-Seru-Mencari-Harta-Karun-dari-Thailand-ke-Shanghai.webp",
+      Mood: "Happy",
+      Url: "https://youtu.be/some_trailer_url",
+      Moments: {
+        create: [
+          { url: "https://i.ytimg.com/vi/S-f497e5x6k/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBCMDmz8JgZ3XhzyHzFxPih1FiyyA" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAyDvGAJYANz7y6zbPmDs5KeP97E5HbHcheg&s" },
+          { url: "https://i.ytimg.com/vi/sg4hk0J_NJg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCuffJAnB1py2NEV-PvfkMGY_isXg" },
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 1 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Emma",
+                  surname: "Watson",
+                  dateOfBirth: 1990,
+                  placeOfBirth: "UK, Paris",
+                  height: 165,
+                  career: "Famous actress, known for playing Hermione in Harry Potter",
+                  totalMovies: 50,
+                  image: "https://m.media-amazon.com/images/M/MV5BMTQ3ODE2NTMxMV5BMl5BanBnXkFtZTgwOTIzOTQzMjE@._V1_.jpg"
+                }
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          {
+            where: { id: 1 },
+            create: {
+              Genre: {
+                create: {
+                  name: "adventure"
+                }
+              }
+            }
+          },
+          {
+            where: { id: 2 },
+            create: {
+              Genre: {
+                create: {
+                  name: "family"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+  console.log('Фильм "The Happy Adventure" добавлен.');
+}
+
+async function createCalmWaves() {
+  await prisma.movie.create({
+    data: {
+      Name: "The Waves",
+      ReleaseDate: "20.06",
+      Year: 2025,
+      Country: "Canada",
+      Director: "Sarah Lee",
+      Duration: "1.30 hours",
+      Screenwriter: "Michael Smith",
+      Description: "A serene story about the peaceful rhythm of life, set in a quiet coastal town.",
+      Language: "english",
+      FilmCompany: "Calm Studios",
+      Img: "https://m.media-amazon.com/images/M/MV5BZTcwYTY5MjAtOGU0MS00MGM5LThiYTMtMDM0YWIzYTM5OTczXkEyXkFqcGc@._V1_QL75_UY281_CR4,0,190,281_.jpg",
+      Rating: 9,
+      Baner: "https://i.ytimg.com/vi/BLZcKmZQqV8/mqdefault.jpg",
+      Mood: "Calm",
+      Url: "https://www.youtube.com/watch?v=nhamfl3lNOo",
+      Moments: {
+        create: [
+          { url: "https://m.media-amazon.com/images/M/MV5BY2FjNjBiNTQtYmYzNS00MTljLWI4MzktZWI1ZmM5NGU4Y2I4XkEyXkFqcGc@._V1_QL75_UX327_.jpg" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqgvMkSnj7Z55o1bdd5VfiPQ8-L0acAo18F_r6lPK2g9sGNFPSupRo01X1IwkUTkHzDYU&usqp=CAU" },
+          { url: "https://english.radio.cz/sites/default/files/styles/rcz_lightbox_v2/public/images/32945ab36eac18045fe292426ab2f946.jpg?itok=2w9_6vf2&timestamp=1741419893" },
+          { url: "https://m.media-amazon.com/images/M/MV5BNjQ1M2ZkODYtY2QzNy00N2NiLTlmMjktNzU0ODI0YzhlNGYyXkEyXkFqcGc@._V1_QL75_UX328_.jpg" },
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 2 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Daniel",
+                  surname: "Radcliffe",
+                  dateOfBirth: 1989,
+                  placeOfBirth: "UK, London",
+                  height: 165,
+                  career: "Known for his role as Harry Potter",
+                  totalMovies: 40,
+                  image: "https://static.wikia.nocookie.net/extras/images/6/62/Daniel_Radcliffe.jpg/revision/latest?cb=20220320074438"
+                }
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          {
+            where: { id: 3 },
+            create: {
+              Genre: {
+                create: {
+                  name: "drama"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+  console.log('Фильм "The Calm Waves" добавлен.');
+}
+
+async function createComedyShow() {
+  await prisma.movie.create({
+    data: {
+      Name: "The Comedy Show",
+      ReleaseDate: "10.07",
+      Year: 2025,
+      Country: "USA",
+      Director: "Alice Brown",
+      Duration: "1.20 hours",
+      Screenwriter: "James Hill",
+      Description: "A hilarious variety show featuring comedians from around the world, with skits, stand-up, and improvisation.",
+      Language: "english",
+      FilmCompany: "Comedy Studios",
+      Img: "https://m.media-amazon.com/images/M/MV5BNjk5YzUyZjgtYTExNy00OTNjLThjN2ItYjVlZGFmZjdjMzdmXkEyXkFqcGc@._V1_.jpg",
+      Rating: 8,
+      Baner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUOwCDyCp61PaXdj1EBNCWiH_q_dWRWAQZrqKH1O33SbKZuIecRPq0pZ8mKM8f0aCdclI&usqp=CAU",
+      Mood: "Happy",
+      Url: "https://www.youtube.com/watch?v=BHC5rLnwVzY",
+      Moments: {
+        create: [
+          { url: "https://canvas-lb.tubitv.com/opts/r3eATfIZRJPmlA==/32754046-fae0-49ea-b5a0-d1f9975be944/CJ4GEMADOgUxLjEuNg==" },
+          { url: "https://www.iamsterdam.com/_next/image?url=https%3A%2F%2Fapp.thefeedfactory.nl%2Fapi%2Fassets%2F66fabb6a4421817ff1a4cf71%2FComedy_Cafe-27.jpg&w=3840&q=75" },
+          { url: "https://d32dbz94xv1iru.cloudfront.net/resize/1/images/events/by_uuid/4d/4d38755f-c852-4402-9f4e-01e14e5db676-1500x900.jpg" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr9qLORr-iutEsJvF-Ffd_pAXJbUWY4iAylgCjOn0UakwPj4Sy10dp_6aQ0ss02bgvg-I&usqp=CAU" }
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 3 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Kevin",
+                  surname: "Hart",
+                  dateOfBirth: 1979,
+                  placeOfBirth: "USA, Philadelphia",
+                  height: 163,
+                  career: "Comedian and actor known for his energetic stand-up comedy",
+                  totalMovies: 90,
+                  image: "https://www.datocms-assets.com/70938/1711350545-1711138476-kevin-hart-comedian-net-worth.jpg?auto=format%2Ccompress&cs=srgb"
+                }
+              }
+            }
+          },
+          {
+            where: { id: 4 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Tiffany",
+                  surname: "Haddish",
+                  dateOfBirth: 1979,
+                  placeOfBirth: "USA, Los Angeles",
+                  height: 165,
+                  career: "Comedian and actress known for her breakout role in 'Girls Trip'",
+                  totalMovies: 30,
+                  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Tiffany_Haddish_at_Incirlik_%28cropped_2%29.jpg/640px-Tiffany_Haddish_at_Incirlik_%28cropped_2%29.jpg"
                 }
               }
             }
@@ -1605,15 +1034,19 @@ async function createDunePart3() {
             where: { id: 4 },
             create: {
               Genre: {
-                connect: { id: 4 } // sci-fi
+                create: {
+                  name: "show"
+                }
               }
             }
           },
           {
-            where: { id: 2 },
+            where: { id: 1 },
             create: {
               Genre: {
-                connect: { id: 2 } // adventure
+                create: {
+                  name: "comedy"
+                }
               }
             }
           }
@@ -1621,32 +1054,126 @@ async function createDunePart3() {
       }
     }
   });
-  console.log('Фильм "Dune: Part Three" добавлен.');
+  console.log('Фильм "The Comedy Show" добавлен.');
 }
 
-async function createJohnWick5() {
+async function createTalentShow() {
   await prisma.movie.create({
     data: {
-      Name: "John Wick 5",
-      ReleaseDate: "24.03",
+      Name: "The Talent Show",
+      ReleaseDate: "25.08",
       Year: 2025,
       Country: "USA",
-      Director: "Chad Stahelski",
-      Duration: "2.15 hours",
-      Screenwriter: "Derek Kolstad, Shay Hatten",
-      Description: "Legendary hitman John Wick returns for another high-octane chapter of the action series.",
+      Director: "Bob White",
+      Duration: "1.40 hours",
+      Screenwriter: "Chris Green",
+      Description: "A national talent competition where performers of all kinds compete for a grand prize and the chance to be discovered.",
       Language: "english",
-      FilmCompany: "Lionsgate, Thunder Road Pictures",
-      Img: "https://m.media-amazon.com/images/M/MV5BMDExZGMyOTMtMDgyYi00NGIwLWJhMTEtOTdkZGFjNmZiMTEwXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_.jpg",
-      Rating: 8,
-      Baner: "https://m.media-amazon.com/images/M/MV5BMDExZGMyOTMtMDgyYi00NGIwLWJhMTEtOTdkZGFjNmZiMTEwXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_FMjpg_UX1000_.jpg",
-      Mood: "intense",
-      Url: "https://youtu.be/qEVUtrk8_B4",
+      FilmCompany: "Talent Studios",
+      Img: "https://saintthomaschurch.org/wp-content/uploads/2021/01/Talent-Show-Featured-Image-1200x576.jpg",
+      Rating: 7,
+      Baner: "https://upload.wikimedia.org/wikipedia/en/b/bf/The_Talent_Show_Story_title_card.jpg",
+      Mood: "Happy",
+      Url: "https://www.youtube.com/watch?v=V4GhdGkS1MU",
       Moments: {
         create: [
-          { url: "https://i.ytimg.com/vi/qEVUtrk8_B4/maxresdefault.jpg" },
-          { url: "https://www.denofgeek.com/wp-content/uploads/2022/09/John-Wick-4.jpg" },
-          { url: "https://static1.colliderimages.com/wordpress/wp-content/uploads/2023/03/john-wick-4-poster.jpg" }
+          { url: "https://m.media-amazon.com/images/M/MV5BZGI5Y2MwNzMtMzc1YS00ZGRiLWJkN2UtZjE0ZmEyMGI3ZTM5XkEyXkFqcGc@._V1_.jpg" },
+          { url: "https://i.ytimg.com/vi/V9cYXgPqyho/maxresdefault.jpg" },
+          { url: "https://i.ytimg.com/vi/H7GDgnHpT8M/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDBqvI-QKRIDgQwguy0PfASk-Saiw" },
+          { url: "https://i.ytimg.com/vi/7B5PIzh1LEk/mqdefault.jpg" }
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 5 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Simon",
+                  surname: "Cowell",
+                  dateOfBirth: 1959,
+                  placeOfBirth: "UK, London",
+                  height: 175,
+                  career: "Television producer and talent show judge known for 'American Idol'",
+                  totalMovies: 10,
+                  image: "https://images.prismic.io/findmypast-titan/83f0e9b0542dada1bd6466f65f0cd657019c578e_980x.jpg?auto=compress%2Cformat&border=20%2C00FFFFFF&border-radius=20%2C20%2C20%2C20&fit=max&w=1200"
+                }
+              }
+            }
+          },
+          {
+            where: { id: 6 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Ariana",
+                  surname: "Grande",
+                  dateOfBirth: 1993,
+                  placeOfBirth: "USA, Boca Raton",
+                  height: 153,
+                  career: "Singer and actress, known for her powerful voice and starring in 'Victorious'",
+                  totalMovies: 15,
+                  image: "https://www.usmagazine.com/wp-content/uploads/2024/11/Ariana-Grande-Explains-Why-She-Used-Her-Full-Last-Name-in-Wicked-Movie-Credits-Such-a-Homecoming-0.jpg?w=1000&quality=86&strip=all"
+                }
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          {
+            where: { id: 4 },
+            create: {
+              Genre: {
+                create: {
+                  name: "show"
+                }
+              }
+            }
+          },
+          {
+            where: { id: 2 },
+            create: {
+              Genre: {
+                create: {
+                  name: "reality"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+  console.log('Фильм "The Talent Show" добавлен.');
+}
+
+async function createFashionShow() {
+  await prisma.movie.create({
+    data: {
+      Name: "The Fashion Show",
+      ReleaseDate: "05.09",
+      Year: 2025,
+      Country: "Italy",
+      Director: "Gina Moreno",
+      Duration: "1.15 hours",
+      Screenwriter: "Sophia Lucci",
+      Description: "A glamorous fashion show highlighting the latest trends in clothing, showcasing the top designers of the year.",
+      Language: "english",
+      FilmCompany: "Glamour Studios",
+      Img: "https://static.wikia.nocookie.net/gameshows/images/5/5f/Bravos-the-fashion-show-logo.jpg/revision/latest?cb=20130502075205",
+      Rating: 9,
+      Baner: "https://upload.wikimedia.org/wikipedia/en/0/0a/The_Fashion_Show_Ultimate_Collection_logo.png",
+      Mood: "Happy",
+      Url: "https://www.youtube.com/shorts/M48CrsRxMbk",
+      Moments: {
+        create: [
+          { url: "https://m.media-amazon.com/images/M/MV5BMmRmNDM2ZDctMzg0Zi00MTQwLWFjYTAtNGU0MTMyZWZiOGJjXkEyXkFqcGc@._V1_.jpg" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVkKSgy0zDCY5hR49ipbsSR9PkVWebeJZfi3EY68kDJg9fafq6iEeRWLKDzRLhATNXkKU&usqp=CAU" },
+          { url: "https://i.dailymail.co.uk/1s/2021/04/07/21/41467686-0-image-a-14_1617827634563.jpg" },
+          { url: "https://s.yimg.com/ny/api/res/1.2/szl8N3soDuvEWKXh69HdeQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTY0MQ--/https://media.zenfs.com/en/fashionista_850/2294680c0f571742dfea2c9ef8d08294" },
         ]
       },
       Actors: {
@@ -1656,14 +1183,14 @@ async function createJohnWick5() {
             create: {
               Actor: {
                 create: {
-                  name: "Keanu",
-                  surname: "Reeves",
-                  dateOfBirth: 1964,
-                  placeOfBirth: "Lebanon, Beirut",
-                  height: 186,
-                  career: "Actor known for The Matrix and John Wick series",
-                  totalMovies: 90,
-                  image: "https://m.media-amazon.com/images/M/MV5BNGJmMWEzOGQtMWZkNS00MGNiLTk5NGEtYzg1YzAyZTgzZTZmXkEyXkFqcGdeQXVyMTE1MTYxNDAw._V1_.jpg"
+                  name: "Bella",
+                  surname: "Hadid",
+                  dateOfBirth: 1996,
+                  placeOfBirth: "USA, Los Angeles",
+                  height: 178,
+                  career: "Supermodel, one of the most in-demand models in the fashion industry",
+                  totalMovies: 5,
+                  image: "https://upload.wikimedia.org/wikipedia/commons/9/92/Bella_Hadid_Cannes_2018_%28cropped%29_%28cropped%29.jpg"
                 }
               }
             }
@@ -1673,14 +1200,14 @@ async function createJohnWick5() {
             create: {
               Actor: {
                 create: {
-                  name: "Ian",
-                  surname: "McShane",
-                  dateOfBirth: 1942,
-                  placeOfBirth: "UK, England",
-                  height: 178,
-                  career: "Veteran actor known for Deadwood and American Gods",
-                  totalMovies: 150,
-                  image: "https://m.media-amazon.com/images/M/MV5BMTc2MDQ5MDA3MV5BMl5BanBnXkFtZTgwMzA0NjA1OTE@._V1_.jpg"
+                  name: "Kendall",
+                  surname: "Jenner",
+                  dateOfBirth: 1995,
+                  placeOfBirth: "USA, Los Angeles",
+                  height: 179,
+                  career: "Supermodel and reality TV star, known for her work in high-fashion shows",
+                  totalMovies: 10,
+                  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFPVMa-EQlO8Bppp_ZpO_WIu_5DN0KAU10IA&s"
                 }
               }
             }
@@ -1690,10 +1217,12 @@ async function createJohnWick5() {
       Genres: {
         connectOrCreate: [
           {
-            where: { id: 1 },
+            where: { id: 4 },
             create: {
               Genre: {
-                connect: { id: 1 } // action
+                create: {
+                  name: "show"
+                }
               }
             }
           },
@@ -1701,7 +1230,9 @@ async function createJohnWick5() {
             where: { id: 5 },
             create: {
               Genre: {
-                connect: { id: 5 } // thriller
+                create: {
+                  name: "fashion"
+                }
               }
             }
           }
@@ -1709,32 +1240,599 @@ async function createJohnWick5() {
       }
     }
   });
-  console.log('Фильм "John Wick 5" добавлен.');
+  console.log('Фильм "The Fashion Show" добавлен.');
 }
 
-async function createAvatar3() {
+
+async function createSecretAdventure() {
   await prisma.movie.create({
     data: {
-      Name: "Avatar 3",
-      ReleaseDate: "19.12",
+      Name: "The Secret Adventure",
+      ReleaseDate: "15.03",
       Year: 2025,
       Country: "USA",
-      Director: "James Cameron",
-      Duration: "3.10 hours",
-      Screenwriter: "James Cameron",
-      Description: "The next chapter in the epic Avatar saga continues the story of the Na'vi and their battle to protect Pandora.",
-      Language: "english",
-      FilmCompany: "20th Century Studios, Lightstorm Entertainment",
-      Img: "https://m.media-amazon.com/images/M/MV5BZDA0OGQxNTItMDZkMC00N2UyLTg3MzMtYTJmNjg3Nzk5MzRiXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_.jpg",
+      Director: "George Miller",
+      Duration: "2.10 hours",
+      Screenwriter: "David Karp",
+      Description: "A group of explorers embarks on a thrilling journey to uncover hidden treasures and ancient secrets.",
+      Language: "English",
+      FilmCompany: "Adventure Films",
+      Img: "https://m.media-amazon.com/images/M/MV5BNTc0NjZmODUtMWQyZi00NTEyLTljMWMtNDQ5ZGI5MDhkNWNiXkEyXkFqcGc@._V1_.jpg", 
       Rating: 8,
-      Baner: "https://m.media-amazon.com/images/M/MV5BZDA0OGQxNTItMDZkMC00N2UyLTg3MzMtYTJmNjg3Nzk5MzRiXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_FMjpg_UX1000_.jpg",
-      Mood: "epic",
-      Url: "https://youtu.be/d9MyW72ELq0",
+      Baner: "https://m.media-amazon.com/images/M/MV5BMDNiNDBmMzQtMGM0Ni00MTQ3LThjNDYtYzMwNmJhMjkxZjEzXkEyXkFqcGc@._V1_.jpg",
+      Mood: "Happy",
+      Url: "https://www.youtube.com/watch?v=pS-GhUx2AXk",
       Moments: {
         create: [
-          { url: "https://i.ytimg.com/vi/d9MyW72ELq0/maxresdefault.jpg" },
-          { url: "https://www.denofgeek.com/wp-content/uploads/2022/12/Avatar-3.jpg" },
-          { url: "https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/12/avatar-3.jpg" }
+          { url: "https://ghmoviefreak.com/wp-content/uploads/2023/06/the-secret-kingdom.webp" },
+          { url: "https://i.ytimg.com/vi/Wx5wSLA6cqU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD7-DiREIlJyEZ4hXSxuApvxu9hgQ" },
+          { url: "https://i.ytimg.com/vi/oDCgzGdZJUA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDQbtchWY2iy9bt5mrmfB-FTMJnjw" },
+          { url: "https://i.ytimg.com/vi/zcCgU-O-ox4/sddefault.jpg" },
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 1 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Tom",
+                  surname: "Hanks",
+                  dateOfBirth: 1956,
+                  placeOfBirth: "USA, Concord",
+                  height: 183,
+                  career: "Award-winning actor",
+                  totalMovies: 120,
+                  image: "https://static.wikia.nocookie.net/disney/images/3/3d/Tom_Hanks.jpg/revision/latest?cb=20230731035300"
+                }
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          {
+            where: { id: 2 },
+            create: {
+              Genre: {
+                create: {
+                  name: "adventure"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+  console.log('Фильм "The Secret Adventure" добавлен.');
+}
+
+async function createMagicFashion() {
+  await prisma.movie.create({
+    data: {
+      Name: "Magic Fashion",
+      ReleaseDate: "12.05",
+      Year: 2025,
+      Country: "France",
+      Director: "Sophie Laurent",
+      Duration: "1.50 hours",
+      Screenwriter: "Jean-Pierre Morel",
+      Description: "A young designer discovers a magical thread that brings clothes to life.",
+      Language: "French",
+      FilmCompany: "Fashion Dreams",
+      Img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOHe4DrD31GQD25oueP61d9YDFxWxTx5-ij8fRCwHhV-ft9izah3sD0PJoQJHkB6AqrAM&usqp=CAU",
+      Rating: 7.8,
+      Baner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf-1Omp30H-QQVnfui-Y3GkisiwSYvDzJ7hg&s",
+      Mood: "Happy",
+      Url: "https://youtu.be/VvH1Q0zsn34",
+      Moments: {
+        create: [
+          { url: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhD3FK5ENL3JiBbfvwjsQyqcadNw5-HEvImJcPwiYZrmvccSznDL1w0u5FCNTxtAQX_GhFlp6MKq4nHMrwJKxl_NLXLOq1KU9UmmpkM4TwMnmVu1HykUTW90lSEDhdddoAaKkOhe-p2wM0/s1600/IMG_E4198.JPG" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWNEMa5xYs29HP2Ve_MhHpO2-iWw-81hBRNIkup-zHd9puvzFVYOd_TwBhRB4pqVYSUac&usqp=CAU" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRizeAvylw0dRABkPLFcp1S6HoXqKJjO2jEF45GLJqctuILRh0h3bwPpv6hBXZuXlCI4g&usqp=CAU" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRykRymkoSh-EsenNM7sDJvuDt507KecHsOq9KNI10fDDYVFpJvlmGMWQMZC5_Q9ZQKjag&usqp=CAU" },
+        ]
+      },
+      Actors: {
+        connect: [{ id: 7 }, { id: 8 }]
+      },
+      Genres: {
+        connect: [{ id: 5 }]
+      }
+    }
+  });
+  console.log('Фильм "Magic Fashion" добавлен.');
+}
+
+async function createLostinFashion() {
+  await prisma.movie.create({
+    data: {
+      Name: "Lost in Fashion",
+      ReleaseDate: "05.10",
+      Year: 2024,
+      Country: "USA",
+      Director: "Sophia Coppola",
+      Duration: "1.50 hours",
+      Screenwriter: "Lana Kim",
+      Description: "A young designer navigates the dazzling and dramatic world of high fashion.",
+      Language: "English",
+      FilmCompany: "Glamour Studios",
+      Img: "https://m.media-amazon.com/images/I/61NIQ-HgRJL._AC_UF894,1000_QL80_.jpg",
+      Rating: 7.8,
+      Baner: "https://assets.vogue.com/photos/60c0c431deeade9d50fa69b4/master/w_2560%2Cc_limit/00_story.jpg",
+      Mood: "Calm",
+      Url: "https://www.youtube.com/watch?v=qUIJ5HFz5Jc&list=RDqUIJ5HFz5Jc&start_radio=1",
+      Moments: {
+        create: [
+          { url: "https://www.rollingstone.com/wp-content/uploads/2023/09/MCDLOIN_EC024.jpg?w=1024" },
+          { url: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSM6pMeRmVNaDEcGt90_p-MCPIsWkDGZ3KLZFSunQ_jqHFCUvb08BsORbgFtnIyYZStXUzamS6u5KmW3tkJeSwNwQEOi7q67_xLsgAdBomnfSwHfPqPLaCdRvW7qoOqiOeUFGJfPNstl0JOxZ-O-KiJyPG1pXT6I5yetNfjWAs7ODDqq2_7_aLdI_U616W/s1280/IMG_0506.webp" },
+          { url: "https://media.newyorker.com/photos/5bb3ddf4f229dd2d8d57b794/master/pass/Syme-Celine.jpg" },
+          { url: "https://fashionista.com/.image/t_share/MTU4ODA3NTYxNDUyMTM2MTUy/gettyimages-1042670274.jpg" },
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 7 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Bella",
+                  surname: "Hadid",
+                  dateOfBirth: 1996,
+                  placeOfBirth: "USA, Los Angeles",
+                  height: 0,
+                  career: "Supermodel turned actress",
+                  totalMovies: 4,
+                  image: "https://upload.wikimedia.org/wikipedia/commons/9/92/Bella_Hadid_Cannes_2018_%28cropped%29_%28cropped%29.jpg"
+                }
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          {
+            where: { id: 5 },
+            create: {
+              Genre: {
+                create: {
+                  name: "fashion"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+  console.log('Фильм "Lost in Fashion" добавлен.');
+}
+
+async function createAnimatedHearts() {
+  await prisma.movie.create({
+    data: {
+      Name: "Sweethearts",
+      ReleaseDate: "01.02",
+      Year: 2024,
+      Country: "USA",
+      Director: "Pete Docter",
+      Duration: "1.40 hours",
+      Screenwriter: "Meg LeFauve",
+      Description: "An emotional journey of a cartoon heart that discovers the meaning of love.",
+      Language: "English",
+      FilmCompany: "Pixar Animation Studios",
+      Img: "https://m.media-amazon.com/images/M/MV5BYWIwMzc4Y2ItMWEzOS00MzI2LTkyZTQtYTMxMjEwMGRiOThjXkEyXkFqcGc@._V1_.jpg",
+      Rating: 8.2,
+      Baner: "https://m.media-amazon.com/images/M/MV5BOWYxYzM0MzItNjhjZC00MTRkLTk2MjktZDM4N2NkNTUxYjQ3XkEyXkFqcGc@._V1_QL75_UX500_CR0,0,500,281_.jpg",
+      Mood: "Happy",
+      Url: "https://www.youtube.com/watch?v=_PV3-uCQdJI",
+      Moments: {
+        create: [
+          { url: "https://static1.srcdn.com/wordpress/wp-content/uploads/2024/11/claire-and-simon-sit-next-to-each-other-on-the-couch-in-max-s-sweethearts-1.jpg" },
+          { url: "https://static01.nyt.com/images/2024/11/26/multimedia/sweethearts1-hjcw/sweethearts1-hjcw-videoSixteenByNineJumbo1600.jpg" },
+          { url: "https://www.indiewire.com/wp-content/uploads/2024/10/Screen-Shot-2024-10-29-at-4.56.53-PM.png?w=600&h=337&crop=1" },
+          { url: "https://i0.wp.com/www.femestella.com/wp-content/uploads/2024/11/kiernan-2.jpg?resize=800%2C1200&ssl=1" }
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 5 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Kiernan",
+                  surname: "Shipka",
+                  dateOfBirth: 1999,
+                  placeOfBirth: "USA, Chicago",
+                  height: 175,
+                  career: "TV host and producer",
+                  totalMovies: 12,
+                  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Kiernan_Shipka_in_2018_-_1.png/500px-Kiernan_Shipka_in_2018_-_1.png"
+                }
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          {
+            where: { id: 4 },
+            create: {
+              Genre: {
+                create: {
+                  name: "family"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+  console.log('Фильм "Animated Hearts" добавлен.');
+}
+
+async function createQuestBeyond() {
+  await prisma.movie.create({
+    data: {
+      Name: "Quest Beyond",
+      ReleaseDate: "12.03",
+      Year: 2023,
+      Country: "USA",
+      Director: "James Cameron",
+      Duration: "2.30 hours",
+      Screenwriter: "Christopher McQuarrie",
+      Description: "A hero embarks on a journey beyond the known universe to find a missing planet.",
+      Language: "English",
+      FilmCompany: "Lightstorm Entertainment",
+      Img: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1294172370i/5210334.jpg",
+      Rating: 8.7,
+      Baner: "https://assets.isthereanydeal.com/018ebcc9-7100-70e2-b196-89e7c8c6a82d/banner400.jpg?t=1740576608",
+      Mood: "Calm",
+      Url: "https://www.youtube.com/watch?v=nqY_yZAI9UI",
+      Moments: {
+        create: [
+          { url: "https://m.media-amazon.com/images/M/MV5BYWFiMDM5YTItMTUzOC00ZDNjLWI1MWMtZjA2YmZlOTk3NzQ5XkEyXkFqcGc@._V1_.jpg" },
+          { url: "https://m.media-amazon.com/images/M/MV5BYWY4YjdkY2ItOGZjZC00MGE0LTljNDItYWRkNmI3NzA0Zjc0XkEyXkFqcGc@._V1_.jpg" },
+          { url: "https://m.media-amazon.com/images/M/MV5BNzQ3ZjdmYzYtYTdiNS00M2Q3LWIwMTEtNGRhOTczZDg3ZjBiXkEyXkFqcGc@._V1_.jpg" },
+          { url: "https://m.media-amazon.com/images/M/MV5BODAwMjg2MmUtNDY4OS00OTZlLWJhZTMtMmVhMDczNGZhOGI2XkEyXkFqcGc@._V1_.jpg" }
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 1 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Chris",
+                  surname: "Pratt",
+                  dateOfBirth: 1979,
+                  placeOfBirth: "USA, Minnesota",
+                  height: 188,
+                  career: "Actor, voice actor",
+                  totalMovies: 45,
+                  image: "https://upload.wikimedia.org/wikipedia/commons/9/99/Chris_Pratt_2018.jpg"
+                }
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          {
+            where: { id: 2 },
+            create: {
+              Genre: {
+                create: {
+                  name: "adventure"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+  console.log('Фильм "Quest Beyond" добавлен.');
+}
+
+async function createLaughterLane() {
+  await prisma.movie.create({
+    data: {
+      Name: "Laughter Lane",
+      ReleaseDate: "07.06",
+      Year: 2022,
+      Country: "UK",
+      Director: "Edgar Wright",
+      Duration: "1.50 hours",
+      Screenwriter: "Simon Pegg",
+      Description: "A group of eccentric neighbors find themselves in hilarious situations on a quiet British street.",
+      Language: "English",
+      FilmCompany: "Working Title Films",
+      Img: "https://m.media-amazon.com/images/M/MV5BZDg4OTVhNTYtNThiYS00NTAxLWE1MjktODQ1MTlhODNmODIzXkEyXkFqcGc@._V1_.jpgg",
+      Rating: 7.9,
+      Baner: "https://i.ytimg.com/vi/fprTa0FqXVU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC5zuXUZ1uVzX6Gc-mhiedCMwHmtg",
+      Mood: "Calm",
+      Url: "https://www.youtube.com/watch?v=yigtKg-s0O8",
+      Moments: {
+        create: [
+          { url: "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/msnbc/Components/Photos/050815/050815_producers_hmed_12p.jpg" },
+          { url: "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/msnbc/Components/Photos/050815/050815_producers_hmed_12p.jpg" },
+          { url: "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/msnbc/Components/Photos/050815/050815_producers_hmed_12p.jpg" },
+          { url: "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/msnbc/Components/Photos/050815/050815_producers_hmed_12p.jpg" },
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 5 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Simon",
+                  surname: "Cowell",
+                  dateOfBirth: 1959,
+                  placeOfBirth: "UK, London",
+                  height: 175,
+                  career: "TV host and producer",
+                  totalMovies: 12,
+                  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Simon_Cowell_in_December_2011.jpg/640px-Simon_Cowell_in_December_2011.jpg"
+                }
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          {
+            where: { id: 3 },
+            create: {
+              Genre: {
+                create: {
+                  name: "comedy"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+  console.log('Фильм "Laughter Lane" добавлен.');
+}
+
+async function createEchoesOfSilence() {
+  await prisma.movie.create({
+    data: {
+      Name: "Echoes of Silence",
+      ReleaseDate: "11.10",
+      Year: 2022,
+      Country: "France",
+      Director: "Claire Denis",
+      Duration: "1.55 hours",
+      Screenwriter: "Jean-Claude Carrière",
+      Description: "A haunting exploration of a mute woman's emotional journey through love and loss.",
+      Language: "French",
+      FilmCompany: "StudioCanal",
+      Img: "https://m.media-amazon.com/images/M/MV5BM2QwMmIwOGQtYjlhMS00MzgxLWE0ZDYtYWVlMmU1MTU2ZmRlXkEyXkFqcGc@._V1_.jpg",
+      Rating: 7.6,
+      Baner: "https://i.ytimg.com/vi/bnLw9r-26bY/maxresdefault.jpg",
+      Mood: "Sad",
+      Url: "https://www.youtube.com/watch?v=bnLw9r-26bY",
+      Moments: {
+        create: [
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpzJG3cKlxMvoQiLYyFjtlELUHdfzGWV36wg&s" },
+          { url: "https://images.squarespace-cdn.com/content/v1/5d9353389da03e48d46ff794/1569936505939-B9C4BYKQ5NJOJKZ48QPN/image-asset.jpeg?format=2500w" },
+          { url: "https://assets.mubicdn.net/images/film/90862/image-w856.jpg?1445917692" },
+          { url: "https://mir-s3-cdn-cf.behance.net/project_modules/source/95fa77133681175.61c3269410a97.jpg" },
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 6 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Juliette",
+                  surname: "Binoche",
+                  dateOfBirth: 1964,
+                  placeOfBirth: "France, Paris",
+                  height: 168,
+                  career: "Award-winning actress",
+                  totalMovies: 80,
+                  image: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Juliette_Binoche_at_the_2024_Toronto_International_Film_Festival_2_%28cropped%29.jpg"
+                }
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          {
+            where: { id: 5 },
+            create: {
+              Genre: {
+                create: {
+                  name: "drama"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+  console.log('Фильм "Echoes of Silence" добавлен.');
+}
+
+async function createNeonPulse() {
+  await prisma.movie.create({
+    data: {
+      Name: "Neon Pulse",
+      ReleaseDate: "23.08",
+      Year: 2025,
+      Country: "USA",
+      Director: "Denis Villeneuve",
+      Duration: "2.20 hours",
+      Screenwriter: "Eric Heisserer",
+      Description: "In a future ruled by AI, one woman discovers a hidden force pulsing through neon cities.",
+      Language: "English",
+      FilmCompany: "Legendary Pictures",
+      Img: "https://i.ytimg.com/vi/jaLsp0UFEnM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBgyT9Gtg1G40kyxNgOexHeLDuunw",
+      Rating: 8.4,
+      Baner: "https://i.ytimg.com/vi/i31_IaZ2CnY/hqdefault.jpg",
+      Mood: "Angry",
+      Url: "https://www.youtube.com/watch?v=i31_IaZ2CnY",
+      Moments: {
+        create: [
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8TKERziaHtWOFp7z6F6LeyMVkKTc1DpkpdyB04LoVD1dxEsOB3O2WKM4CZqyo16EZlFk&usqp=CAU" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8TKERziaHtWOFp7z6F6LeyMVkKTc1DpkpdyB04LoVD1dxEsOB3O2WKM4CZqyo16EZlFk&usqp=CAU" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8TKERziaHtWOFp7z6F6LeyMVkKTc1DpkpdyB04LoVD1dxEsOB3O2WKM4CZqyo16EZlFk&usqp=CAU" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8TKERziaHtWOFp7z6F6LeyMVkKTc1DpkpdyB04LoVD1dxEsOB3O2WKM4CZqyo16EZlFk&usqp=CAU" },
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 7 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Zendaya",
+                  surname: "Coleman",
+                  dateOfBirth: 1996,
+                  placeOfBirth: "USA, Oakland",
+                  height: 178,
+                  career: "Actress, singer",
+                  totalMovies: 30,
+                  image: "https://upload.wikimedia.org/wikipedia/commons/2/28/Zendaya_-_2019_by_Glenn_Francis.jpg"
+                }
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          {
+            where: { id: 6 },
+            create: {
+              Genre: {
+                create: {
+                  name: "sci-fi"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+  console.log('Фильм "Neon Pulse" добавлен.');
+}
+
+async function createLiveTonight() {
+  await prisma.movie.create({
+    data: {
+      Name: "Live Tonight",
+      ReleaseDate: "30.05",
+      Year: 2023,
+      Country: "USA",
+      Director: "Samantha Bee",
+      Duration: "1.00 hours",
+      Screenwriter: "Various writers",
+      Description: "A satirical late-night variety show that brings politics, comedy and music together.",
+      Language: "English",
+      FilmCompany: "Comedy Central",
+      Img: "https://m.media-amazon.com/images/M/MV5BZWY2YzM5MzgtZmJjNS00NDY4LThmNmQtOTc1ZTBmZTU3OGE4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      Rating: 7.1,
+      Baner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2iJ1yD-aICiGAomzez9BCUYzvWqL8yqQQ_w&s",
+      Mood: "Happy",
+      Url: "https://www.youtube.com/watch?v=hTWKbfoikeg",
+      Moments: {
+        create: [
+          { url: "https://media-cache.cinematerial.com/p/500x/tmeiopbs/nirvana-live-tonight-sold-out-movie-cover.jpg?v=1456017870" },
+          { url: "https://media-cache.cinematerial.com/p/500x/tmeiopbs/nirvana-live-tonight-sold-out-movie-cover.jpg?v=1456017870" },
+          { url: "https://media-cache.cinematerial.com/p/500x/tmeiopbs/nirvana-live-tonight-sold-out-movie-cover.jpg?v=1456017870" },
+          { url: "https://media-cache.cinematerial.com/p/500x/tmeiopbs/nirvana-live-tonight-sold-out-movie-cover.jpg?v=1456017870" }
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 8 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Trevor",
+                  surname: "Noah",
+                  dateOfBirth: 1984,
+                  placeOfBirth: "South Africa, Johannesburg",
+                  height: 180,
+                  career: "Comedian, host",
+                  totalMovies: 18,
+                  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREFhP9osyoBz4a9YXND9JIK9nhm3DQS06DuQ&s"
+                }
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          {
+            where: { id: 7 },
+            create: {
+              Genre: {
+                create: {
+                  name: "show"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+  console.log('Фильм "Live Tonight" добавлен.');
+}
+
+async function createTheLastRehearsal() {
+  await prisma.movie.create({
+    data: {
+      Name: "The Last Rehearsal",
+      ReleaseDate: "14.11",
+      Year: 2020,
+      Country: "USA",
+      Director: "Tom Hooper",
+      Duration: "2.00 hours",
+      Screenwriter: "Lee Hall",
+      Description: "A talented young dancer struggles to find her place in a competitive theater world.",
+      Language: "English",
+      FilmCompany: "Universal Pictures",
+      Img: "https://m.media-amazon.com/images/M/MV5BM2UzZTZjOWYtNjE5ZC00ZWU5LWExZTUtYWZmMzIwMTczYjY4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      Rating: 6.9,
+      Baner: "https://m.media-amazon.com/images/M/MV5BMjEyNzMyMjcxOF5BMl5BanBnXkFtZTgwNjE0NTEyNzM@._V1_.jpg",
+      Mood: "Sad",
+      Url: "https://www.youtube.com/watch?v=GcCNcgoyG_0",
+      Moments: {
+        create: [
+          { url: "https://static.fabrik.io/1iwe/c4c6a8e039e06fff.jpg?lossless=1&w=2560&fit=crop&crop=faces%2Centropy&s=0fc41a20e7fe60195b19674349f42a63" },
+          { url: "https://images.mubicdn.net/images/film/430170/cache-1017534-1732982474/image-w1280.jpg?size=800x" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN8ZoLPxWaJMA9ZdyfpLFrCpwMw4ToKx9JuA&s" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjc9nJ-bXr1F726srXabyNOjqdpmnJzZwoEQ&s" }
         ]
       },
       Actors: {
@@ -1744,476 +1842,247 @@ async function createAvatar3() {
             create: {
               Actor: {
                 create: {
-                  name: "Sam",
-                  surname: "Worthington",
-                  dateOfBirth: 1976,
-                  placeOfBirth: "UK, England",
-                  height: 175,
-                  career: "Actor known for Avatar and Clash of the Titans",
-                  totalMovies: 40,
-                  image: "https://m.media-amazon.com/images/M/MV5BMTc5NzQzNjg4MF5BMl5BanBnXkFtZTcwNjY5NTk0OQ@@._V1_.jpg"
-                }
-              }
-            }
-          },
-          {
-            where: { id: 10 },
-            create: {
-              Actor: {
-                create: {
-                  name: "Zoe",
-                  surname: "Saldana",
-                  dateOfBirth: 1978,
-                  placeOfBirth: "USA, New Jersey",
-                  height: 170,
-                  career: "Actress known for Avatar and Guardians of the Galaxy",
-                  totalMovies: 60,
-                  image: "https://m.media-amazon.com/images/M/MV5BMTQ3ODE3Mjg1NV5BMl5BanBnXkFtZTcwNzA4ODcxNA@@._V1_.jpg"
-                }
-              }
-            }
-          }
-        ]
-      },
-      Genres: {
-        connectOrCreate: [
-          {
-            where: { id: 4 },
-            create: {
-              Genre: {
-                connect: { id: 4 } // sci-fi
-              }
-            }
-          },
-          {
-            where: { id: 2 },
-            create: {
-              Genre: {
-                connect: { id: 2 } // adventure
-              }
-            }
-          }
-        ]
-      }
-    }
-  });
-  console.log('Фильм "Avatar 3" добавлен.');
-}
-
-async function createTheBatman2() {
-  await prisma.movie.create({
-    data: {
-      Name: "The Batman 2",
-      ReleaseDate: "03.10",
-      Year: 2025,
-      Country: "USA, UK",
-      Director: "Matt Reeves",
-      Duration: "2.45 hours",
-      Screenwriter: "Matt Reeves, Peter Craig",
-      Description: "The sequel to the 2022 hit follows Bruce Wayne as he continues his war on crime in Gotham City.",
-      Language: "english",
-      FilmCompany: "Warner Bros, DC Films",
-      Img: "https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
-      Rating: 8,
-      Baner: "https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg",
-      Mood: "dark",
-      Url: "https://youtu.be/mqqft2x_Aa4",
-      Moments: {
-        create: [
-          { url: "https://i.ytimg.com/vi/mqqft2x_Aa4/maxresdefault.jpg" },
-          { url: "https://www.denofgeek.com/wp-content/uploads/2022/03/The-Batman-2.jpg" },
-          { url: "https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/03/the-batman-2.jpg" }
-        ]
-      },
-      Actors: {
-        connectOrCreate: [
-          {
-            where: { id: 11 },
-            create: {
-              Actor: {
-                create: {
-                  name: "Robert",
-                  surname: "Pattinson",
-                  dateOfBirth: 1986,
-                  placeOfBirth: "UK, London",
-                  height: 185,
-                  career: "Actor known for Twilight and The Batman",
-                  totalMovies: 45,
-                  image: "https://m.media-amazon.com/images/M/MV5BNzk5MDMxOTY5Ml5BMl5BanBnXkFtZTcwNjI3NzI5Mw@@._V1_.jpg"
-                }
-              }
-            }
-          },
-          {
-            where: { id: 12 },
-            create: {
-              Actor: {
-                create: {
-                  name: "Zoë",
-                  surname: "Kravitz",
-                  dateOfBirth: 1988,
-                  placeOfBirth: "USA, California",
-                  height: 157,
-                  career: "Actress and singer known for Big Little Lies and The Batman",
-                  totalMovies: 30,
-                  image: "https://m.media-amazon.com/images/M/MV5BMTU3NDc2OTY2N15BMl5BanBnXkFtZTgwNDk1MTA5OTE@._V1_.jpg"
-                }
-              }
-            }
-          }
-        ]
-      },
-      Genres: {
-        connectOrCreate: [
-          {
-            where: { id: 1 },
-            create: {
-              Genre: {
-                connect: { id: 1 } // action
-              }
-            }
-          },
-          {
-            where: { id: 6 },
-            create: {
-              Genre: {
-                create: {
-                  name: "crime"
-                }
-              }
-            }
-          }
-        ]
-      }
-    }
-  });
-  console.log('Фильм "The Batman 2" добавлен.');
-}
-
-async function createMissionImpossible8() {
-  await prisma.movie.create({
-    data: {
-      Name: "Mission: Impossible 8",
-      ReleaseDate: "28.06",
-      Year: 2025,
-      Country: "USA",
-      Director: "Christopher McQuarrie",
-      Duration: "2.30 hours",
-      Screenwriter: "Christopher McQuarrie",
-      Description: "Ethan Hunt and his IMF team return for their most dangerous mission yet.",
-      Language: "english",
-      FilmCompany: "Paramount Pictures, Skydance",
-      Img: "https://m.media-amazon.com/images/M/MV5BNDY5YjFhNDAtZTI5Yi00ZmU3LThiZmItOTk0OTYxN2E1OTU4XkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_.jpg",
-      Rating: 8,
-      Baner: "https://m.media-amazon.com/images/M/MV5BNDY5YjFhNDAtZTI5Yi00ZmU3LThiZmItOTk0OTYxN2E1OTU4XkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_FMjpg_UX1000_.jpg",
-      Mood: "thrilling",
-      Url: "https://youtu.be/2m1drlOZSDw",
-      Moments: {
-        create: [
-          { url: "https://i.ytimg.com/vi/2m1drlOZSDw/maxresdefault.jpg" },
-          { url: "https://www.denofgeek.com/wp-content/uploads/2023/07/Mission-Impossible-8.jpg" },
-          { url: "https://static1.colliderimages.com/wordpress/wp-content/uploads/2023/07/mission-impossible-8.jpg" }
-        ]
-      },
-      Actors: {
-        connectOrCreate: [
-          {
-            where: { id: 13 },
-            create: {
-              Actor: {
-                create: {
-                  name: "Tom",
-                  surname: "Cruise",
-                  dateOfBirth: 1962,
+                  name: "Anne",
+                  surname: "Hathaway",
+                  dateOfBirth: 1982,
                   placeOfBirth: "USA, New York",
-                  height: 170,
-                  career: "Hollywood superstar known for Top Gun and Mission: Impossible",
+                  height: 173,
+                  career: "Actress",
                   totalMovies: 50,
-                  image: "https://m.media-amazon.com/images/M/MV5BMTk1MjM3NTU5M15BMl5BanBnXkFtZTcwMTMyMjAyMg@@._V1_.jpg"
+                  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLoG1gBPLv_0Y5cR69tnKAGD4YjA2l4hv6AA&s"
                 }
               }
             }
-          },
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          {
+            where: { id: 8 },
+            create: {
+              Genre: {
+                create: {
+                  name: "musical"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+  console.log('Фильм "The Last Rehearsal" добавлен.');
+}
+
+
+async function createLaLaLand() {
+  await prisma.movie.create({
+    data: {
+      Name: "La La Land",
+      ReleaseDate: "09.12",
+      Year: 2016,
+      Country: "USA",
+      Director: "Damien Chazelle",
+      Duration: "2.08 hours",
+      Screenwriter: "Damien Chazelle",
+      Description: "While navigating their careers in Los Angeles, a pianist and an actress fall in love while attempting to reconcile their aspirations.",
+      Language: "English",
+      FilmCompany: "Lionsgate",
+      Img: "https://m.media-amazon.com/images/M/MV5BMTg1NDQ5OTYxNV5BMl5BanBnXkFtZTgwODU2NzQxMDI@._V1_.jpg",
+      Rating: 8.0,
+      Baner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr0_ye6y-Q1ahQGLW48WLRea8htKyyhbJlfQ&s",
+      Mood: "Happy",
+      Url: "https://www.youtube.com/watch?v=GTWqwSNQCcg",
+      Moments: {
+        create: [
+          { url: "https://virginiafilmfestival.org/wp-content/uploads/2016/09/La-La-Land-Image-FINAL-scaled.jpg" },
+          { url: "https://s.abcnews.com/images/Entertainment/nc-lala-100-er-170129_16x9_992.jpg?w=384" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsd90pzOj1zSZ2AwLdTCXeMr2J2jTGLmqbgg&s" },
+          { url: "https://media.npr.org/assets/img/2017/01/05/xlll_d35_05828_r2_wide-8001bb39513f62ab6eec51fb6720e06b18cddef8.jpg" },
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
           {
             where: { id: 14 },
             create: {
               Actor: {
                 create: {
-                  name: "Hayley",
-                  surname: "Atwell",
-                  dateOfBirth: 1982,
-                  placeOfBirth: "UK, London",
-                  height: 169,
-                  career: "Actress known for Captain America and Mission: Impossible",
-                  totalMovies: 40,
-                  image: "https://m.media-amazon.com/images/M/MV5BMTQzMjkwNTQ2OF5BMl5BanBnXkFtZTgwNDQzMjkwNzE@._V1_.jpg"
+                  name: "Ryan",
+                  surname: "Gosling",
+                  dateOfBirth: 1980,
+                  placeOfBirth: "Canada",
+                  height: 184,
+                  career: "Actor",
+                  totalMovies: 45,
+                  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUgRTE2CmeBOl_e8KRT8mYdZ4CRyMkaLjzeA&s"
                 }
               }
             }
-          }
-        ]
-      },
-      Genres: {
-        connectOrCreate: [
-          {
-            where: { id: 1 },
-            create: {
-              Genre: {
-                connect: { id: 1 } // action
-              }
-            }
           },
-          {
-            where: { id: 5 },
-            create: {
-              Genre: {
-                connect: { id: 5 } // thriller
-              }
-            }
-          }
-        ]
-      }
-    }
-  });
-  console.log('Фильм "Mission: Impossible 8" добавлен.');
-}
-
-async function createBlackPanther3() {
-  await prisma.movie.create({
-    data: {
-      Name: "Black Panther 3",
-      ReleaseDate: "07.11",
-      Year: 2025,
-      Country: "USA",
-      Director: "Ryan Coogler",
-      Duration: "2.20 hours",
-      Screenwriter: "Ryan Coogler",
-      Description: "The next chapter in the Black Panther saga as Wakanda faces new threats and challenges.",
-      Language: "english",
-      FilmCompany: "Marvel Studios",
-      Img: "https://m.media-amazon.com/images/M/MV5BNTM4NjIxNmEtYWE5NS00NDczLTkyNWQtYThhNmQyZGQzMjM0XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg",
-      Rating: 8,
-      Baner: "https://m.media-amazon.com/images/M/MV5BNTM4NjIxNmEtYWE5NS00NDczLTkyNWQtYThhNmQyZGQzMjM0XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_FMjpg_UX1000_.jpg",
-      Mood: "heroic",
-      Url: "https://youtu.be/_Z3QKkl1WyM",
-      Moments: {
-        create: [
-          { url: "https://i.ytimg.com/vi/_Z3QKkl1WyM/maxresdefault.jpg" },
-          { url: "https://www.denofgeek.com/wp-content/uploads/2022/11/Black-Panther-3.jpg" },
-          { url: "https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/11/black-panther-3.jpg" }
-        ]
-      },
-      Actors: {
-        connectOrCreate: [
           {
             where: { id: 15 },
             create: {
               Actor: {
                 create: {
-                  name: "Letitia",
-                  surname: "Wright",
-                  dateOfBirth: 1993,
-                  placeOfBirth: "Guyana",
+                  name: "Emma",
+                  surname: "Stone",
+                  dateOfBirth: 1988,
+                  placeOfBirth: "USA, Arizona",
                   height: 168,
-                  career: "Actress known for Black Panther and Avengers",
-                  totalMovies: 20,
-                  image: "https://m.media-amazon.com/images/M/MV5BZTk0ZGYyYzktY2NhMC00YjA1LTg0YTAtYzVjMTE0ZGRiMGMwXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg"
+                  career: "Actress",
+                  totalMovies: 35,
+                  image: "https://m.media-amazon.com/images/M/MV5BMjI4NjM1NDkyN15BMl5BanBnXkFtZTgwODgyNTY1MjE@._V1_.jpg"
                 }
               }
             }
-          },
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          {
+            where: { id: 8 },
+            create: {
+              Genre: {
+                create: {
+                  name: "musical"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+  console.log('Фильм "La La Land" добавлен.');
+}
+
+async function create1917() {
+  await prisma.movie.create({
+    data: {
+      Name: "1917",
+      ReleaseDate: "25.12",
+      Year: 2019,
+      Country: "UK",
+      Director: "Sam Mendes",
+      Duration: "1.59 hours",
+      Screenwriter: "Sam Mendes, Krysty Wilson-Cairns",
+      Description: "Two British soldiers are sent across enemy territory to deliver a message that could save 1,600 men.",
+      Language: "English",
+      FilmCompany: "Universal Pictures",
+      Img: "https://upload.wikimedia.org/wikipedia/ru/e/ef/1917_%28%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%29.jpeg",
+      Rating: 8.3,
+      Baner: "https://c.files.bbci.co.uk/F667/production/_110497036_b1f0f8cf-22eb-4d34-b4d0-e85fd3c80ca9.jpg",
+      Mood: "Sad",
+      Url: "https://www.youtube.com/watch?v=OXuyIM-opQU",
+      Moments: {
+        create: [
+          { url: "https://kor.ill.in.ua/m/1260x900/2463897.jpeg" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOnyuZd6-1w7LAhJMrR4-iAtNdZncO0F6hPA&s" },
+          { url: "https://shpalta.media/wp-content/uploads/2020/02/1917-4.jpg" },
+          { url: "https://cdn4.suspilne.media/images/resize/400x1.78/8dafd91cedad8147.jpg" },
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
           {
             where: { id: 16 },
             create: {
               Actor: {
                 create: {
-                  name: "Winston",
-                  surname: "Duke",
-                  dateOfBirth: 1986,
-                  placeOfBirth: "Trinidad and Tobago",
-                  height: 196,
-                  career: "Actor known for Black Panther and Us",
-                  totalMovies: 15,
-                  image: "https://m.media-amazon.com/images/M/MV5BMTU0OTc3ODk3MV5BMl5BanBnXkFtZTgwMzI5OTQ1NjM@._V1_.jpg"
+                  name: "George",
+                  surname: "MacKay",
+                  dateOfBirth: 1992,
+                  placeOfBirth: "UK, London",
+                  height: 183,
+                  career: "Actor",
+                  totalMovies: 25,
+                  image: "https://m.media-amazon.com/images/M/MV5BMTQ4NjQ0NTEwOV5BMl5BanBnXkFtZTgwODQyMzIyMTI@._V1_.jpg"
                 }
               }
             }
-          }
-        ]
-      },
-      Genres: {
-        connectOrCreate: [
-          {
-            where: { id: 1 },
-            create: {
-              Genre: {
-                connect: { id: 1 } // action
-              }
-            }
           },
-          {
-            where: { id: 4 },
-            create: {
-              Genre: {
-                connect: { id: 4 } // sci-fi
-              }
-            }
-          }
-        ]
-      }
-    }
-  });
-  console.log('Фильм "Black Panther 3" добавлен.');
-}
-
-
-async function createFantasticBeasts4() {
-  await prisma.movie.create({
-    data: {
-      Name: "Fantastic Beasts 4",
-      ReleaseDate: "15.04",
-      Year: 2026,
-      Country: "UK, USA",
-      Director: "David Yates",
-      Duration: "2.15 hours",
-      Screenwriter: "J.K. Rowling",
-      Description: "The next installment in the Wizarding World franchise following Newt Scamander's adventures.",
-      Language: "english",
-      FilmCompany: "Warner Bros, Heyday Films",
-      Img: "https://m.media-amazon.com/images/M/MV5BZjA2NmY0OTYtYjg5NS00YjYwLWE3OWMtZGNiZDg5YzVjMmQ4XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
-      Rating: 7,
-      Baner: "https://m.media-amazon.com/images/M/MV5BZjA2NmY0OTYtYjg5NS00YjYwLWE3OWMtZGNiZDg5YzVjMmQ4XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg",
-      Mood: "magical",
-      Url: "https://youtu.be/Y9dr2zw-TXQ",
-      Moments: {
-        create: [
-          { url: "https://i.ytimg.com/vi/Y9dr2zw-TXQ/maxresdefault.jpg" },
-          { url: "https://www.denofgeek.com/wp-content/uploads/2022/04/Fantastic-Beasts-4.jpg" },
-          { url: "https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/04/fantastic-beasts-4.jpg" }
-        ]
-      },
-      Actors: {
-        connectOrCreate: [
           {
             where: { id: 17 },
             create: {
               Actor: {
                 create: {
-                  name: "Eddie",
-                  surname: "Redmayne",
-                  dateOfBirth: 1982,
-                  placeOfBirth: "UK, London",
-                  height: 184,
-                  career: "Academy Award-winning actor known for The Theory of Everything",
-                  totalMovies: 30,
-                  image: "https://m.media-amazon.com/images/M/MV5BMjI4NjM1NDkyN15BMl5BanBnXkFtZTgwODgyNTY1MjE@._V1_.jpg"
+                  name: "Dean-Charles",
+                  surname: "Chapman",
+                  dateOfBirth: 1997,
+                  placeOfBirth: "UK, Essex",
+                  height: 175,
+                  career: "Actor",
+                  totalMovies: 15,
+                  image: "https://upload.wikimedia.org/wikipedia/commons/6/66/Dean-Charles_Chapman_2019.jpg"
                 }
               }
             }
-          },
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          {
+            where: { id: 11 },
+            create: {
+              Genre: {
+                create: {
+                  name: "war"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+  console.log('Фильм "1917" добавлен.');
+}
+
+async function createInception() {
+  await prisma.movie.create({
+    data: {
+      Name: "Inception",
+      ReleaseDate: "16.07",
+      Year: 2010,
+      Country: "USA",
+      Director: "Christopher Nolan",
+      Duration: "2.28 hours",
+      Screenwriter: "Christopher Nolan",
+      Description: "A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea.",
+      Language: "English",
+      FilmCompany: "Warner Bros.",
+      Img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8jIZ4ghU8MiF_BbvSUquG7zEDzlA_rXiqnA&s",
+      Rating: 8.8,
+      Baner: "https://m.media-amazon.com/images/S/pv-target-images/e826ebbcc692b4d19059d24125cf23699067ab621c979612fd0ca11ab42a65cb._SX1080_FMjpg_.jpg",
+      Mood: "Angry",
+      Url: "https://www.youtube.com/watch?v=8hP9D6kZseM",
+      Moments: {
+        create: [
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpCuEYS4JqsDqddK_SkWBFHJw35zwsetlrnQ&s" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW9TexZU9AhNpLm3ZEh7JXMLj5zAJ96HEoDQ&s" },
+          { url: "https://images.theconversation.com/files/359713/original/file-20200924-16-bsgsp7.jpg?ixlib=rb-4.1.0&rect=33%2C186%2C1455%2C727&q=45&auto=format&w=1356&h=668&fit=crop" },
+          { url: "https://static1.srcdn.com/wordpress/wp-content/uploads/2024/03/cobb-in-a-corridor-in-inception.jpg" }
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
           {
             where: { id: 18 },
             create: {
               Actor: {
                 create: {
-                  name: "Jude",
-                  surname: "Law",
-                  dateOfBirth: 1972,
-                  placeOfBirth: "UK, London",
-                  height: 178,
-                  career: "Acclaimed actor known for The Talented Mr. Ripley and Sherlock Holmes",
-                  totalMovies: 80,
-                  image: "https://m.media-amazon.com/images/M/MV5BMTQ4MjI0MjMxMF5BMl5BanBnXkFtZTcwNDk2NjYyMw@@._V1_.jpg"
-                }
-              }
-            }
-          }
-        ]
-      },
-      Genres: {
-        connectOrCreate: [
-          {
-            where: { id: 2 },
-            create: {
-              Genre: {
-                connect: { id: 2 } // adventure
-              }
-            }
-          },
-          {
-            where: { id: 7 },
-            create: {
-              Genre: {
-                create: {
-                  name: "fantasy"
-                }
-              }
-            }
-          }
-        ]
-      }
-    }
-  });
-  console.log('Фильм "Fantastic Beasts 4" добавлен.');
-}
-
-async function createJurassicWorld4() {
-  await prisma.movie.create({
-    data: {
-      Name: "Jurassic World 4",
-      ReleaseDate: "10.06",
-      Year: 2026,
-      Country: "USA",
-      Director: "Colin Trevorrow",
-      Duration: "2.10 hours",
-      Screenwriter: "Colin Trevorrow",
-      Description: "The next chapter in the Jurassic World franchise with new dinosaurs and adventures.",
-      Language: "english",
-      FilmCompany: "Universal Pictures, Amblin Entertainment",
-      Img: "https://m.media-amazon.com/images/M/MV5BOTBjMjA4NmYtN2RjMi00YWZlLTliYTktOTIwMmNkYjYxYmE1XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg",
-      Rating: 7,
-      Baner: "https://m.media-amazon.com/images/M/MV5BOTBjMjA4NmYtN2RjMi00YWZlLTliYTktOTIwMmNkYjYxYmE1XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg",
-      Mood: "thrilling",
-      Url: "https://youtu.be/6wiY3V8QzN4",
-      Moments: {
-        create: [
-          { url: "https://i.ytimg.com/vi/6wiY3V8QzN4/maxresdefault.jpg" },
-          { url: "https://www.denofgeek.com/wp-content/uploads/2022/06/Jurassic-World-4.jpg" },
-          { url: "https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/06/jurassic-world-4.jpg" }
-        ]
-      },
-      Actors: {
-        connectOrCreate: [
-          {
-            where: { id: 19 },
-            create: {
-              Actor: {
-                create: {
-                  name: "Chris",
-                  surname: "Pratt",
-                  dateOfBirth: 1979,
-                  placeOfBirth: "USA, Minnesota",
-                  height: 188,
-                  career: "Actor known for Guardians of the Galaxy and Jurassic World",
-                  totalMovies: 50,
-                  image: "https://m.media-amazon.com/images/M/MV5BMTUxMjM1Mzg0N15BMl5BanBnXkFtZTcwNDI5MzQ0OQ@@._V1_.jpg"
-                }
-              }
-            }
-          },
-          {
-            where: { id: 20 },
-            create: {
-              Actor: {
-                create: {
-                  name: "Bryce",
-                  surname: "Dallas Howard",
-                  dateOfBirth: 1981,
+                  name: "Leonardo",
+                  surname: "DiCaprio",
+                  dateOfBirth: 1974,
                   placeOfBirth: "USA, California",
-                  height: 170,
-                  career: "Actress and director known for Jurassic World and The Help",
-                  totalMovies: 40,
-                  image: "https://m.media-amazon.com/images/M/MV5BMTQ1MjQzMTU1Nl5BMl5BanBnXkFtZTcwNzAyNTk1Nw@@._V1_.jpg"
+                  height: 183,
+                  career: "Actor",
+                  totalMovies: 55,
+                  image: "https://cdn.britannica.com/65/227665-050-D74A477E/American-actor-Leonardo-DiCaprio-2016.jpg"
                 }
               }
             }
@@ -2223,18 +2092,12 @@ async function createJurassicWorld4() {
       Genres: {
         connectOrCreate: [
           {
-            where: { id: 1 },
+            where: { id: 6 },
             create: {
               Genre: {
-                connect: { id: 1 } // action
-              }
-            }
-          },
-          {
-            where: { id: 4 },
-            create: {
-              Genre: {
-                connect: { id: 4 } // sci-fi
+                create: {
+                  name: "sci-fi"
+                }
               }
             }
           }
@@ -2242,66 +2105,108 @@ async function createJurassicWorld4() {
       }
     }
   });
-  console.log('Фильм "Jurassic World 4" добавлен.');
+  console.log('Фильм "Inception" добавлен.');
 }
 
-async function createDeadpool3() {
+
+async function createTheMatrix() {
   await prisma.movie.create({
     data: {
-      Name: "Deadpool 3",
-      ReleaseDate: "08.11",
-      Year: 2024,
+      Name: "The Matrix",
+      ReleaseDate: "31.03",
+      Year: 1999,
       Country: "USA",
-      Director: "Shawn Levy",
-      Duration: "2.05 hours",
-      Screenwriter: "Rhett Reese, Paul Wernick",
-      Description: "The Merc with a Mouth returns for another R-rated adventure in the Marvel Universe.",
-      Language: "english",
-      FilmCompany: "Marvel Studios, 20th Century Studios",
-      Img: "https://m.media-amazon.com/images/M/MV5BMDExZGMyOTMtMDgyYi00NGIwLWJhMTEtOTdkZGFjNmZiMTEwXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_.jpg",
-      Rating: 8,
-      Baner: "https://m.media-amazon.com/images/M/MV5BMDExZGMyOTMtMDgyYi00NGIwLWJhMTEtOTdkZGFjNmZiMTEwXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_FMjpg_UX1000_.jpg",
-      Mood: "irreverent",
-      Url: "https://youtu.be/7E9GqL0VkzE",
+      Director: "Lana Wachowski, Lilly Wachowski",
+      Duration: "2.16 hours",
+      Screenwriter: "The Wachowskis",
+      Description: "A computer hacker learns about the true nature of reality and his role in the war against its controllers.",
+      Language: "English",
+      FilmCompany: "Warner Bros.",
+      Img: "https://m.media-amazon.com/images/I/51EG732BV3L.jpg",
+      Rating: 8.7,
+      Baner: "https://cdn.planetakino.ua/old-movie-files/00000000000000000000000000002203/opt_null",
+      Mood: "Angry",
+      Url: "https://www.youtube.com/watch?v=vKQi3bBA1y8",
       Moments: {
         create: [
-          { url: "https://i.ytimg.com/vi/7E9GqL0VkzE/maxresdefault.jpg" },
-          { url: "https://www.denofgeek.com/wp-content/uploads/2022/09/Deadpool-3.jpg" },
-          { url: "https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/09/deadpool-3.jpg" }
+          { url: "https://media.cnn.com/api/v1/images/stellar/prod/shutterstock-editorial-5885917bh.jpg?c=16x9&q=h_833,w_1480,c_fill" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMnYGcGamsIot0xdU-tBhoLS660Eo0KIFJaA&s" },
+          { url: "https://m.media-amazon.com/images/M/MV5BMTY3NDY5NTMyMF5BMl5BanBnXkFtZTYwMjU3MDg4._V1_.jpghttps://media.wired.com/photos/5c9ba67d1e34481170ef2bcd/master/pass/Culture_Matrix_RedPillBluePill-1047403844.jpg" },
+          { url: "https://st3.depositphotos.com/4805703/16170/i/450/depositphotos_161704604-stock-photo-red-and-blue-pills-on.jpg" },
+        ]
+      },
+      Actors: {
+        connectOrCreate: [{
+          where: { id: 21 },
+          create: {
+            Actor: {
+              create: {
+                name: "Keanu",
+                surname: "Reeves",
+                dateOfBirth: 1964,
+                placeOfBirth: "Lebanon, Beirut",
+                height: 186,
+                career: "Actor",
+                totalMovies: 70,
+                image: "https://m.media-amazon.com/images/M/MV5BNDEzOTdhNDUtY2EyMy00YTNmLWE5MjItZmRjMmQzYTRlMGRkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+              }
+            }
+          }
+        }]
+      },
+      Genres: {
+        connectOrCreate: [{
+          where: { id: 6 },
+          create: { Genre: { create: { name: "sci-fi" } } }
+        }]
+      }
+    }
+  });
+  console.log('Фильм "The Matrix" добавлен.');
+}
+
+
+async function createAvatar() {
+  await prisma.movie.create({
+    data: {
+      Name: "Avatar",
+      ReleaseDate: "18.12",
+      Year: 2009,
+      Country: "USA",
+      Director: "James Cameron",
+      Duration: "2.42 hours",
+      Screenwriter: "James Cameron",
+      Description: "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+      Language: "english",
+      FilmCompany: "Lightstorm Entertainment",
+      Img: "https://lumiere-a.akamaihd.net/v1/images/avatar_800x1200_208c9665.jpeg",
+      Rating: 7.8,
+      Baner: "https://m.media-amazon.com/images/S/pv-target-images/16627900db04b76fae3b64266ca161511422059cd24062fb5d900971003a0b70._SX1080_FMjpg_.jpg",
+      Mood: "Adventure",
+      Url: "https://youtu.be/5PSNL1qE6VY",
+      Moments: {
+        create: [
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaUpM-2yqZIsCi-wb_H-ywhEaznFO37SUhlg&s" },
+          { url: "https://cdn-ksvod.kyivstar.ua/content/HLS/VOD/IMAGE3/630f5c7fd1d4a867d8cb3a01/IMAGE_16_9_XL.jpg" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw66pWqgCV3_kX0MlygE_icQ2LzU96xmeDkg&s" },
+          { url: "https://images.squarespace-cdn.com/content/v1/6058f3b0dbb27b03bbd36be9/1616442358690-OQOD2XFTAP3I4PYM9QLR/Screen+Shot+2021-02-23+at+9.35.43+PM.png" }
         ]
       },
       Actors: {
         connectOrCreate: [
           {
-            where: { id: 21 },
+            where: { id: 27 },
             create: {
               Actor: {
                 create: {
-                  name: "Ryan",
-                  surname: "Reynolds",
+                  name: "Sam",
+                  surname: "Worthington",
                   dateOfBirth: 1976,
-                  placeOfBirth: "Canada, Vancouver",
-                  height: 188,
-                  career: "Actor and producer known for Deadpool and Free Guy",
-                  totalMovies: 70,
-                  image: "https://m.media-amazon.com/images/M/MV5BODI3NDI5NDQ5N15BMl5BanBnXkFtZTgwODA2NjQzMjE@._V1_.jpg"
-                }
-              }
-            }
-          },
-          {
-            where: { id: 22 },
-            create: {
-              Actor: {
-                create: {
-                  name: "Hugh",
-                  surname: "Jackman",
-                  dateOfBirth: 1968,
-                  placeOfBirth: "Australia, Sydney",
-                  height: 190,
-                  career: "Acclaimed actor known for Wolverine and Les Misérables",
-                  totalMovies: 60,
-                  image: "https://m.media-amazon.com/images/M/MV5BNDExMzIzNjk3Nl5BMl5BanBnXkFtZTcwOTE4NDU5OA@@._V1_.jpg"
+                  placeOfBirth: "Australia",
+                  height: 180,
+                  career: "Actor best known for 'Avatar'",
+                  totalMovies: 30,
+                  image: "https://m.media-amazon.com/images/M/MV5BODAwMTQ0Y2UtYmE0ZS00Mjc4LWExZTMtNTIzMjdmYTZlMTJkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
                 }
               }
             }
@@ -2310,54 +2215,313 @@ async function createDeadpool3() {
       },
       Genres: {
         connectOrCreate: [
-          {
-            where: { id: 1 },
-            create: {
-              Genre: {
-                connect: { id: 1 } // action
-              }
-            }
-          },
-          {
-            where: { id: 3 },
-            create: {
-              Genre: {
-                connect: { id: 3 } // comedy
-              }
-            }
-          }
+          { where: { id: 6 }, create: { Genre: { create: { name: "sci-fi" } } } },
+          { where: { id: 3 }, create: { Genre: { create: { name: "action" } } } }
         ]
       }
     }
   });
-  console.log('Фильм "Deadpool 3" добавлен.');
+  console.log('Фильм "Avatar" добавлен.');
 }
 
-// Остальные функции продолжаются аналогичным образом...
-
-async function createMatrix5() {
+async function createQuantumLeap2025() {
   await prisma.movie.create({
     data: {
-      Name: "The Matrix 5",
-      ReleaseDate: "22.03",
+      Name: "Quantum Leap",
+      ReleaseDate: "05.03",
       Year: 2025,
       Country: "USA",
-      Director: "Lana Wachowski",
-      Duration: "2.25 hours",
-      Screenwriter: "Lana Wachowski",
-      Description: "Neo returns in another mind-bending installment of the Matrix franchise.",
+      Director: "Alex Green",
+      Duration: "2.00 hours",
+      Screenwriter: "Alex Green",
+      Description: "A groundbreaking scientist discovers time travel, and tries to fix broken moments in history.",
       Language: "english",
-      FilmCompany: "Warner Bros, Village Roadshow",
-      Img: "https://m.media-amazon.com/images/M/MV5BZGFiNGU0MjEtMDE1MS00ZjE5LTk0OTUtN2NjZTMzZGQ0YzFjXkEyXkFqcGdeQXVyMjMwNDgzNjc@._V1_.jpg",
-      Rating: 8,
-      Baner: "https://m.media-amazon.com/images/M/MV5BZGFiNGU0MjEtMDE1MS00ZjE5LTk0OTUtN2NjZTMzZGQ0YzFjXkEyXkFqcGdeQXVyMjMwNDgzNjc@._V1_FMjpg_UX1000_.jpg",
-      Mood: "mind-bending",
-      Url: "https://youtu.be/9ix7TUGVYIo",
+      FilmCompany: "TimeLoop Studios",
+      Img: "https://m.media-amazon.com/images/M/MV5BYjFiYWZjZTctZWUxOS00YTA5LTg1ZjctNzYyMzYxODhjOWZlXkEyXkFqcGc@._V1_.jpg",
+      Rating: 8.2,
+      Baner: "https://images.squarespace-cdn.com/content/v1/529e3f47e4b0437241215504/7220dcfd-4882-47df-b594-3026163baf20/QL_KA_16x9.jpg",
+      Mood: "Adventure",
+      Url: "https://youtu.be/bkTEhZWknNM?si=08uYkqcpp_3FjqJ0",
       Moments: {
         create: [
-          { url: "https://i.ytimg.com/vi/9ix7TUGVYIo/maxresdefault.jpg" },
-          { url: "https://www.denofgeek.com/wp-content/uploads/2021/12/The-Matrix-5.jpg" },
-          { url: "https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/12/the-matrix-5.jpg" }
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEORqY8SpzrH4qYc14uuH38XanoQo_1Zlaxg&s" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTowwAL1oo6iuelidJ98vtnvEyoaKbgI1EC4Q&s" },
+          { url: "https://www.denofgeek.com/wp-content/uploads/2022/08/Quantum-Leap-New-Series.jpg?fit=1200%2C675" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcEOi0rjN52QzMaXB5anrgWLuuao7Zcr6mlQ&s" }
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 27 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Daniel",
+                  surname: "Radcliffe",
+                  dateOfBirth: 1989,
+                  placeOfBirth: "England",
+                  height: 165,
+                  career: "Actor known for 'Harry Potter' series",
+                  totalMovies: 40,
+                  image: "https://m.media-amazon.com/images/M/MV5BYzVmYjIxMzgtZWU2Ny00MjAyLTk5ZWUtZDEyMTliYjczMmIxXkEyXkFqcGc@._V1_.jpg" 
+                }
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          { where: { id: 6 }, create: { Genre: { create: { name: "sci-fi" } } } },
+          { where: { id: 9 }, create: { Genre: { create: { name: "action" } } } }
+        ]
+      }
+    }
+  });
+  console.log('Фильм "Quantum Leap" добавлен.');
+}
+
+
+async function createNeonSkies2026() {
+  await prisma.movie.create({
+    data: {
+      Name: "Neon Skies",
+      ReleaseDate: "14.01",
+      Year: 2026,
+      Country: "Japan",
+      Director: "Kenji Matsuda",
+      Duration: "1.55 hours",
+      Screenwriter: "Kenji Matsuda",
+      Description: "In a hyper-advanced society, a young woman explores the vast skies of a neon-lit city, discovering secrets about her family's past.",
+      Language: "japanese",
+      FilmCompany: "Neon Productions",
+      Img: "https://images.squarespace-cdn.com/content/v1/638702ecf8cfbb29620dcb25/2a3f7cc3-6f24-44e7-bf6d-14c9cb4c6fb6/DSC00751-Edit-2.jpg", 
+      Rating: 7.6,
+      Baner: "https://images.squarespace-cdn.com/content/v1/638702ecf8cfbb29620dcb25/2a3f7cc3-6f24-44e7-bf6d-14c9cb4c6fb6/DSC00751-Edit-2.jpg", 
+      Mood: "Calm",
+      Url: "https://youtu.be/neon_skies_trailer",
+      Moments: {
+        create: [
+          { url: "https://images.squarespace-cdn.com/content/v1/638702ecf8cfbb29620dcb25/2a3f7cc3-6f24-44e7-bf6d-14c9cb4c6fb6/DSC00751-Edit-2.jpg" },
+          { url: "https://images.squarespace-cdn.com/content/v1/638702ecf8cfbb29620dcb25/2a3f7cc3-6f24-44e7-bf6d-14c9cb4c6fb6/DSC00751-Edit-2.jpg" }
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 30 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Rinko",
+                  surname: "Kikuchi",
+                  dateOfBirth: 1981,
+                  placeOfBirth: "Japan",
+                  height: 160,
+                  career: "Actress known for 'Pacific Rim' and 'Babel'",
+                  totalMovies: 30,
+                  image: "https://m.media-amazon.com/images/M/MV5BMTI5NjE0MjcwN15BMl5BanBnXkFtZTYwMDcxNTA1._V1_.jpg" 
+                }
+              }
+            }
+          }
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          { where: { id: 6 }, create: { Genre: { create: { name: "sci-fi" } } } },
+          { where: { id: 1 }, create: { Genre: { create: { name: "animation" } } } }
+        ]
+      }
+    }
+  });
+  console.log('Фильм "Neon Skies" добавлен.');
+}
+
+
+async function createEchoes2020() {
+  await prisma.movie.create({
+    data: {
+      Name: "Echoes",
+      ReleaseDate: "15.07",
+      Year: 2020,
+      Country: "UK",
+      Director: "Johnathan Reese",
+      Duration: "1.30 hours",
+      Screenwriter: "Emma Carter",
+      Description: "A suspenseful psychological thriller about a woman who begins to lose grip on reality after hearing mysterious voices.",
+      Language: "english",
+      FilmCompany: "Reverie Films",
+      Img: "https://m.media-amazon.com/images/M/MV5BM2ZmNDdhMDItNmUyOC00MDY1LWFhNzctYzk1ZjA5YjQ1ZDg4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", 
+      Rating: 7.5,
+      Baner: "https://cdn.theplaylist.net/wp-content/uploads/2022/07/26134551/ENUS_Echoes_Main_4x5_RGB_PRE.jpg", 
+      Mood: "Sad",
+      Url: "https://www.youtube.com/watch?v=bOLRxUkKMcY",
+      Moments: {
+        create: [
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD6U_qsZOeOo_xpOPg2zkIuVvoO0J2W1kIXA&s" },
+          { url: "https://static.tvtropes.org/pmwiki/pub/images/stir_of_echoes_nightmare_fuel.jpg" },
+          { url: "https://ew.com/thmb/XqV3xU4eRI0_KGfJkxPQD8bo3A0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/stir-of-echoes-2000-3d2eb449f4ed49ce8be6255b4f310f69.jpg" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeVIppaXCiWd4O9bQ0gMO8LyALuWytpUQTKw&s" }
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 39 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Emily",
+                  surname: "Blunt",
+                  dateOfBirth: 1983,
+                  placeOfBirth: "England",
+                  height: 169,
+                  career: "Actress known for 'A Quiet Place' and 'The Girl on the Train'",
+                  totalMovies: 35,
+                  image: "https://m.media-amazon.com/images/M/MV5BMTUxNDY4MTMzM15BMl5BanBnXkFtZTcwMjg5NzM2Ng@@._V1_.jpg"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+  console.log('Фильм "Echoes" добавлен.');
+}
+
+async function createSunsetDreams2021() {
+  await prisma.movie.create({
+    data: {
+      Name: "Sunset Dreams",
+      ReleaseDate: "03.09",
+      Year: 2021,
+      Country: "USA",
+      Director: "Sophia Lee",
+      Duration: "2.00 hours",
+      Screenwriter: "Michael Johnson",
+      Description: "A feel-good romantic comedy about two people who meet on a road trip across America and fall in love under the golden skies of sunset.",
+      Language: "english",
+      FilmCompany: "Sunset Films",
+      Img: "https://m.media-amazon.com/images/M/MV5BYzdkZTIyZWMtNWY3ZC00NTVmLTgyYTQtYzRkMzgxMWYwMDc2XkEyXkFqcGc@._V1_.jpg", 
+      Rating: 8.0,
+      Baner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiSkjCNE85d0VSMgJUf_48Gtc0GSSEBvCppQ&s", 
+      Mood: "Happy",
+      Url: "https://www.youtube.com/watch?v=-4O0CdfZFJU",
+      Moments: {
+        create: [
+          { url: "https://images.stockcake.com/public/e/a/a/eaaf436d-2646-4261-a821-cac3412b4f10_large/cinematic-sunset-dreams-stockcake.jpg" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKC9QnaMLPNd3UC_IR3JPzhykngbY72hK0Rg&s" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUJT1cpEk9qS019alGrlFF2ZNfyVdbNc-vYA&s" },
+          { url: "https://images.napali.app/global/roxy-products/all/default/xlarge/arjl101150_roxy,p_tan_frt4.jpg" }
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 40 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Zoe",
+                  surname: "Kravitz",
+                  dateOfBirth: 1988,
+                  placeOfBirth: "USA",
+                  height: 157,
+                  career: "Actress and singer known for 'Big Little Lies' and 'Mad Max: Fury Road'",
+                  totalMovies: 25,
+                  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Zoe_Kravitz_2020_dvna_studio.jpg/640px-Zoe_Kravitz_2020_dvna_studio.jpg"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+  console.log('Фильм "Sunset Dreams" добавлен.');
+}
+
+
+async function createBrokenPromises2023() {
+  await prisma.movie.create({
+    data: {
+      Name: "Broken Promises",
+      ReleaseDate: "19.05",
+      Year: 2023,
+      Country: "Canada",
+      Director: "Oliver Stone",
+      Duration: "1.45 hours",
+      Screenwriter: "Jackie Stewart",
+      Description: "A gripping drama about a woman whose life is turned upside down after she finds out her husband is keeping a life-changing secret.",
+      Language: "english",
+      FilmCompany: "Stone Films",
+      Img: "https://m.media-amazon.com/images/M/MV5BNTJmNjk0ZGYtZGIxNS00MmE0LWI3OTctMTAwODE1Y2IyZDE3XkEyXkFqcGc@._V1_.jpg",
+      Rating: 7.3,
+      Baner: "https://m.media-amazon.com/images/M/MV5BNTJmNjk0ZGYtZGIxNS00MmE0LWI3OTctMTAwODE1Y2IyZDE3XkEyXkFqcGc@._V1_.jpg",
+      Mood: "Sad",
+      Url: "https://www.youtube.com/watch?app=desktop&v=7-8Z0FNoOsE",
+      Moments: {
+        create: [
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4zOKqIqIMjYklVb_r5pF4a8WWvFvhXgRbfQ&s" },
+          { url: "https://lh6.googleusercontent.com/proxy/ii97IlX4613Q2plpTNY936M9ae_X2iQcLkX4oeZIFS-bX692Ng_cvDjQwmS13YjOEyNX8YlcFQn5WOVqj52OZ6SPaK1rKWOkc7emrGrxS6_0bwaphGTPsqT5SGb7pVDlK4IMF8KxQvopsvAJ" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJkoTyYbmDpglhq_FcehytEugdjJMV8A7t0Q&s" },
+          { url: "https://i.pinimg.com/736x/9d/a6/a0/9da6a06fe59de56b35688a1d02f0a1e7.jpg" }
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 42 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Rebecca",
+                  surname: "Ferguson",
+                  dateOfBirth: 1983,
+                  placeOfBirth: "Sweden",
+                  height: 170,
+                  career: "Actress known for 'Mission: Impossible' and 'The White Queen'",
+                  totalMovies: 20,
+                  image: "https://m.media-amazon.com/images/M/MV5BMDVlZjIzOTktYzNmZC00MjIzLTk1YTMtMzdlOTFiNzQ3ZGY0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  });
+  console.log('Фильм "Broken Promises" добавлен.');
+}
+
+
+async function createDarkKnight() {
+  await prisma.movie.create({
+    data: {
+      Name: "The Dark Knight",
+      ReleaseDate: "18.07",
+      Year: 2008,
+      Country: "USA",
+      Director: "Christopher Nolan",
+      Duration: "2.32 hours",
+      Screenwriter: "Jonathan Nolan, Christopher Nolan",
+      Description: "Batman faces a new nemesis, the Joker, whose anarchistic and chaotic methods put Gotham City on the edge of destruction.",
+      Language: "English",
+      FilmCompany: "Warner Bros.",
+      Img: "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_FMjpg_UX1000_.jpg",
+      Rating: 9.0,
+      Baner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4CrCO_nh1NS65y1Lix3HIysy66w5nvOJ8Lg&s", 
+      Mood: "Angry",
+      Url: "https://www.youtube.com/watch?v=KO90kiH6W0U",
+      Moments: {
+        create: [
+          { url: "https://i.guim.co.uk/img/static/sys-images/Arts/Arts_/Pictures/2012/7/24/1343140784259/Still-from-The-Dark-Knigh-008.jpg?width=465&dpr=1&s=none&crop=none" },
+          { url: "https://i.guim.co.uk/img/static/sys-images/Film/Pix/pictures/2009/1/8/1231415036722/Scene-from-The-Dark-Knigh-001.jpg?width=465&dpr=1&s=none&crop=none" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDZWgyO4zhFIiASIG0DFOV8vYPXWDTKmu1eA&s" },
+          { url: "https://i.guim.co.uk/img/static/sys-images/Film/Pix/pictures/2009/7/30/1248961807284/Scene-from-the-Dark-Knigh-001.jpg?width=465&dpr=1&s=none&crop=none" }
         ]
       },
       Actors: {
@@ -2367,14 +2531,14 @@ async function createMatrix5() {
             create: {
               Actor: {
                 create: {
-                  name: "Keanu",
-                  surname: "Reeves",
-                  dateOfBirth: 1964,
-                  placeOfBirth: "Lebanon, Beirut",
-                  height: 186,
-                  career: "Actor known for The Matrix and John Wick series",
-                  totalMovies: 90,
-                  image: "https://m.media-amazon.com/images/M/MV5BNGJmMWEzOGQtMWZkNS00MGNiLTk5NGEtYzg1YzAyZTgzZTZmXkEyXkFqcGdeQXVyMTE1MTYxNDAw._V1_.jpg"
+                  name: "Christian",
+                  surname: "Bale",
+                  dateOfBirth: 1974,
+                  placeOfBirth: "England",
+                  height: 183,
+                  career: "Actor known for 'American Psycho' and 'The Prestige'",
+                  totalMovies: 50,
+                  image: "https://m.media-amazon.com/images/M/MV5BMTkxMzk4MjQ4MF5BMl5BanBnXkFtZTcwMzExODQxOA@@._V1_.jpg"
                 }
               }
             }
@@ -2384,14 +2548,14 @@ async function createMatrix5() {
             create: {
               Actor: {
                 create: {
-                  name: "Carrie-Anne",
-                  surname: "Moss",
-                  dateOfBirth: 1967,
-                  placeOfBirth: "Canada, Burnaby",
-                  height: 174,
-                  career: "Actress known for The Matrix and Jessica Jones",
-                  totalMovies: 60,
-                  image: "https://m.media-amazon.com/images/M/MV5BMTQ2MjM2NTU1N15BMl5BanBnXkFtZTcwOTU3Njg3OA@@._V1_.jpg"
+                  name: "Heath",
+                  surname: "Ledger",
+                  dateOfBirth: 1979,
+                  placeOfBirth: "Australia",
+                  height: 183,
+                  career: "Actor known for 'Brokeback Mountain' and '10 Things I Hate About You'",
+                  totalMovies: 20,
+                  image: "https://m.media-amazon.com/images/M/MV5BMTI2NTY0NzA4MF5BMl5BanBnXkFtZTYwMjE1MDE0._V1_FMjpg_UX1000_.jpg" 
                 }
               }
             }
@@ -2400,836 +2564,420 @@ async function createMatrix5() {
       },
       Genres: {
         connectOrCreate: [
-          {
-            where: { id: 4 },
-            create: {
-              Genre: {
-                connect: { id: 4 } // sci-fi
-              }
-            }
-          },
-          {
-            where: { id: 1 },
-            create: {
-              Genre: {
-                connect: { id: 1 } // action
-              }
-            }
-          }
+          { where: { id: 9 }, create: { Genre: { create: { name: "action" } } } },
+          { where: { id: 8 }, create: { Genre: { create: { name: "thriller" } } } }
         ]
       }
     }
   });
-  console.log('Фильм "The Matrix 5" добавлен.');
+  console.log('Фильм "The Dark Knight" добавлен.');
+}
 
-
-// Фільм 6: The Godfather
-await prisma.movie.create({
-  data: {
-    Name: "The Godfather",
-    ReleaseDate: "24.03",
-    Year: 1972,
-    Country: "USA",
-    Director: "Francis Ford Coppola",
-    Duration: "2.55 hours",
-    Screenwriter: "Francis Ford Coppola, Mario Puzo",
-    Description: "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
-    Language: "english",
-    FilmCompany: "Paramount Pictures",
-    Img: "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
-    Rating: 9.2,
-    Baner: "https://m.media-amazon.com/images/M/MV5BMTU5MDAzNzY1MV5BMl5BanBnXkFtZTgwNzIzMjE4NzM@._V1_.jpg",
-    Mood: "crime, drama",
-    Url: "https://youtu.be/sY1S34973zA",
-    Moments: {
-      create: [
-        { url: "https://m.media-amazon.com/images/M/MV5BMTQzMjQ1MzY2N15BMl5BanBnXkFtZTgwMTc2NjY2NDM@._V1_.jpg" },
-        { url: "https://m.media-amazon.com/images/M/MV5BMTg5NTUzOTg2NF5BMl5BanBnXkFtZTgwNjM2NjY2NDM@._V1_.jpg" }
-      ]
-    },
-    Actors: {
-      connectOrCreate: [
-        {
-          where: { id: 8 },
-          create: {
-            Actor: {
-              create: {
-                name: "Marlon",
-                surname: "Brando",
-                dateOfBirth: 1924,
-                placeOfBirth: "USA, Nebraska",
-                height: 175,
-                career: "Legendary actor, two-time Oscar winner",
-                totalMovies: 48,
-                image: "https://m.media-amazon.com/images/M/MV5BMTg3MDYyMDE5OF5BMl5BanBnXkFtZTcwNjgyNTEzNA@@._V1_.jpg"
+async function createDune2021() {
+  await prisma.movie.create({
+    data: {
+      Name: "Dune",
+      ReleaseDate: "22.10",
+      Year: 2021,
+      Country: "USA",
+      Director: "Denis Villeneuve",
+      Duration: "2.35 hours",
+      Screenwriter: "Denis Villeneuve",
+      Description: "A noble family becomes embroiled in a war for control over the galaxy's most valuable asset while its heir becomes troubled by visions of a dark future.",
+      Language: "English",
+      FilmCompany: "Warner Bros.",
+      Img: "https://m.media-amazon.com/images/M/MV5BNTc0YmQxMjEtODI5MC00NjFiLTlkMWUtOGQ5NjFmYWUyZGJhXkEyXkFqcGc@._V1_.jpg", 
+      Rating: 8.1,
+      Baner: "https://torontofilmschool.ca/app/uploads/2024/05/dune-part-two.jpeg", 
+      Mood: "Angry",
+      Url: "https://www.youtube.com/watch?v=n9xhJrPXop4",
+      Moments: {
+        create: [
+          { url: "https://snworksceo.imgix.net/bdh/0ef7a0e8-0478-4915-8974-ae45052c1d71.sized-1000x1000.jpg?w=1000" },
+          { url: "https://www.dartington.org/wp-content/uploads/2021/10/dune.jpg" },
+          { url: "https://images.thedirect.com/media/article_full/dune-part-2s.jpg" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR38PmQWNi8QXR-aFYLVFeJiYG86OHA9-fMvQ&s" },
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 23 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Timothée",
+                  surname: "Chalamet",
+                  dateOfBirth: 1995,
+                  placeOfBirth: "USA",
+                  height: 177,
+                  career: "Actor known for 'Call Me by Your Name' and 'Dune'",
+                  totalMovies: 15,
+                  image: "https://cdn.britannica.com/36/231936-050-63D849FB/Timothee-Chalamet-2021.jpg"
+                }
               }
             }
           }
-        }
-      ]
-    },
-    Genres: {
-      connectOrCreate: [
-        {
-          where: { id: 13 },
-          create: {
-            Genre: {
-              create: {
-                name: "crime"
-              }
-            }
-          }
-        }
-      ]
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          { where: { id: 6 }, create: { Genre: { create: { name: "sci-fi" } } } },
+          { where: { id: 2 }, create: { Genre: { create: { name: "adventure" } } } }
+        ]
+      }
     }
-  }
-});
+  });
+  console.log('Фильм "Dune" добавлен.');
+}
 
-// Фільм 7: Fight Club
-await prisma.movie.create({
-  data: {
-    Name: "Fight Club",
-    ReleaseDate: "15.10",
-    Year: 1999,
-    Country: "USA, Germany",
-    Director: "David Fincher",
-    Duration: "2.19 hours",
-    Screenwriter: "Jim Uhls",
-    Description: "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
-    Language: "english",
-    FilmCompany: "20th Century Fox, Regency Enterprises",
-    Img: "https://m.media-amazon.com/images/M/MV5BNDIzNDU0YzEtYzE5Ni00ZjlkLTk5ZjgtNjM3NWE4YzA3Nzk3XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_.jpg",
-    Rating: 8.8,
-    Baner: "https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
-    Mood: "psychological, dark",
-    Url: "https://youtu.be/qtRKdVHc-cE",
-    Moments: {
-      create: [
-        { url: "https://m.media-amazon.com/images/M/MV5BODQ0NDQ1NTE1MV5BMl5BanBnXkFtZTcwODkxMzYyMQ@@._V1_.jpg" },
-        { url: "https://m.media-amazon.com/images/M/MV5BNTYxODA5Mzg5N15BMl5BanBnXkFtZTcwOTkxMzYyMQ@@._V1_.jpg" }
-      ]
-    },
-    Actors: {
-      connectOrCreate: [
-        {
-          where: { id: 9 },
-          create: {
-            Actor: {
-              create: {
-                name: "Brad",
-                surname: "Pitt",
-                dateOfBirth: 1963,
-                placeOfBirth: "USA, Oklahoma",
-                height: 180,
-                career: "Oscar-winning actor and producer",
-                totalMovies: 95,
-                image: "https://m.media-amazon.com/images/M/MV5BMjA1MjE2MTQ2MV5BMl5BanBnXkFtZTcwMjE5MDY0Nw@@._V1_.jpg"
+async function createTenet2020() {
+  await prisma.movie.create({
+    data: {
+      Name: "Tenet",
+      ReleaseDate: "03.09",
+      Year: 2020,
+      Country: "USA",
+      Director: "Christopher Nolan",
+      Duration: "2.30 hours",
+      Screenwriter: "Christopher Nolan",
+      Description: "Armed with only one word—Tenet—and fighting for the survival of the world, a protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time.",
+      Language: "English",
+      FilmCompany: "Warner Bros.",
+      Img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLbsNTsIjDM9caiuREo8VGVaj6FW7SaH0Dvw&s",
+      Rating: 7.8,
+      Baner: "https://images.vertigo.com.ua/2020/08/wzjrb4mki3yk138bjyul9nx47y6-1280x630.jpg", 
+      Mood: "Thriller",
+      Url: "https://youtu.be/pctuHEeztlw?si=x5n9Xme7Nj76dieT",
+      Moments: {
+        create: [
+          { url: "https://prm.ua/wp-content/uploads/2020/08/MV5BNWFlNjVkM2ItZDE1My00NTEwLWJhYmQtYWM5ODRkNzY3OGE5XkEyXkFqcGdeQXVyNjUwNzk3NDc-._V1_.jpg" },
+          { url: "https://cdn.mos.cms.futurecdn.net/nEhb42udh7tNdUWDYgEPf4.jpg" },
+          { url: "https://mbr.com.ua/uploads/news/2020/07/28/e16af68afc3a80e99370492b5f1b3d0d0fc7aa68.jpg" },
+          { url: "https://m.media-amazon.com/images/M/MV5BNGQ4MWM5ZDEtMTNkNi00ZDRkLWE1NDEtNTY2NDU4MzgzZTQzXkEyXkFqcGdeQXRyYW5zY29kZS13b3JrZmxvdw@@._V1_.jpg" },
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 24 },
+            create: {
+              Actor: {
+                create: {
+                  name: "John",
+                  surname: "David Washington",
+                  dateOfBirth: 1984,
+                  placeOfBirth: "USA",
+                  height: 183,
+                  career: "Actor known for 'BlacKkKlansman' and 'Tenet'",
+                  totalMovies: 10,
+                  image: "https://m.media-amazon.com/images/M/MV5BOTY4NDcyNDM5OF5BMl5BanBnXkFtZTgwMjk4Mzk0NTM@._V1_.jpg"
+                }
               }
             }
           }
-        }
-      ]
-    },
-    Genres: {
-      connectOrCreate: [
-        {
-          where: { id: 14 },
-          create: {
-            Genre: {
-              create: {
-                name: "drama"
-              }
-            }
-          }
-        }
-      ]
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          { where: { id: 8 }, create: { Genre: { create: { name: "thriller" } } } },
+          { where: { id: 2 }, create: { Genre: { create: { name: "adventure" } } } }
+        ]
+      }
     }
-  }
-});
+  });
+  console.log('Фильм "Tenet" добавлен.');
+}
 
-// Фільм 8: Forrest Gump
-await prisma.movie.create({
-  data: {
-    Name: "Forrest Gump",
-    ReleaseDate: "06.07",
-    Year: 1994,
-    Country: "USA",
-    Director: "Robert Zemeckis",
-    Duration: "2.22 hours",
-    Screenwriter: "Eric Roth",
-    Description: "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate, and other historical events unfold through the perspective of an Alabama man with an IQ of 75.",
-    Language: "english",
-    FilmCompany: "Paramount Pictures",
-    Img: "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
-    Rating: 8.8,
-    Baner: "https://m.media-amazon.com/images/M/MV5BMTI1MjM0NTE4NV5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
-    Mood: "heartwarming, historical",
-    Url: "https://youtu.be/bLvqoHBptjg",
-    Moments: {
-      create: [
-        { url: "https://m.media-amazon.com/images/M/MV5BMTQwMTA5MzI1MF5BMl5BanBnXkFtZTcwMzY5Mzg3OA@@._V1_.jpg" },
-        { url: "https://m.media-amazon.com/images/M/MV5BMTI5NDY1NjUyN15BMl5BanBnXkFtZTcwMzY5Mzg3OA@@._V1_.jpg" }
-      ]
-    },
-    Actors: {
-      connectOrCreate: [
-        {
-          where: { id: 10 },
-          create: {
-            Actor: {
-              create: {
-                name: "Tom",
-                surname: "Hanks",
-                dateOfBirth: 1956,
-                placeOfBirth: "USA, California",
-                height: 183,
-                career: "Two-time Oscar winner, known for Saving Private Ryan, Cast Away",
-                totalMovies: 110,
-                image: "https://m.media-amazon.com/images/M/MV5BMTQ2MjMwNDA3Nl5BMl5BanBnXkFtZTcwMTA2NDY3NQ@@._V1_.jpg"
+async function createMatrixResurrections2021() {
+  await prisma.movie.create({
+    data: {
+      Name: "The Matrix Resurrections",
+      ReleaseDate: "22.12",
+      Year: 2021,
+      Country: "USA",
+      Director: "Lana Wachowski",
+      Duration: "2.28 hours",
+      Screenwriter: "Lana Wachowski, David Mitchell, Aleksandar Hemon",
+      Description: "Neo's peaceful life is shattered when he is contacted by the mysterious Morpheus, who offers him the chance to discover the truth behind the Matrix once again.",
+      Language: "English",
+      FilmCompany: "Warner Bros.",
+      Img: "https://m.media-amazon.com/images/M/MV5BMDMyNDIzYzMtZTMyMy00NjUyLWI3Y2MtYzYzOGE1NzQ1MTBiXkEyXkFqcGc@._V1_.jpg",
+      Rating: 5.7,
+      Baner: "https://m.media-amazon.com/images/S/pv-target-images/32cbdbe4273fdfbb0f88c22efee93bb93975a357a34b7afffb3ec8a2634ced6f.jpg",
+      Mood: "Calm",
+      Url: "https://youtu.be/nNpvWBuTfrc?si=m4jyMOQ8eBRYU1XB",
+      Moments: {
+        create: [
+          { url: "https://images.squarespace-cdn.com/content/v1/5548389fe4b0cbbc3dfcb99b/1640369076397-Q1410YZB1DTKKY14OJX1/trinity+and+neo.JPG?format=1500w" },
+          { url: "https://static01.nyt.com/images/2021/12/23/arts/22matrix/merlin_199400751_eda8b51c-9262-412c-8d5d-c235a803b0c9-articleLarge.jpg?quality=75&auto=webp&disable=upscale" },
+          { url: "https://i.guim.co.uk/img/media/4662136a8f463057c14e614f0a99aa11af747c62/606_0_2330_1398/master/2330.jpg?width=465&dpr=1&s=none&crop=none" },
+          { url: "https://www.denofgeek.com/wp-content/uploads/2021/12/the-matrix-resurrections-neo-trinity.jpg?fit=3840%2C2134" }
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 25 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Keanu",
+                  surname: "Reeves",
+                  dateOfBirth: 1964,
+                  placeOfBirth: "Canada",
+                  height: 186,
+                  career: "Actor known for 'The Matrix' and 'John Wick'",
+                  totalMovies: 50,
+                  image: "https://m.media-amazon.com/images/M/MV5BNDEzOTdhNDUtY2EyMy00YTNmLWE5MjItZmRjMmQzYTRlMGRkXkEyXkFqcGc@._V1_.jpg"
+                }
               }
             }
           }
-        }
-      ]
-    },
-    Genres: {
-      connectOrCreate: [
-        {
-          where: { id: 15 },
-          create: {
-            Genre: {
-              create: {
-                name: "drama"
-              }
-            }
-          }
-        }
-      ]
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          { where: { id: 9 }, create: { Genre: { create: { name: "action" } } } },
+          { where: { id: 8 }, create: { Genre: { create: { name: "thriller" } } } }
+        ]
+      }
     }
-  }
-});
+  });
+  console.log('Фильм "The Matrix Resurrections" добавлен.');
+}
 
-// Фільм 9: The Matrix
-await prisma.movie.create({
-  data: {
-    Name: "The Matrix",
-    ReleaseDate: "31.03",
-    Year: 1999,
-    Country: "USA, Australia",
-    Director: "Lana Wachowski, Lilly Wachowski",
-    Duration: "2.16 hours",
-    Screenwriter: "Lana Wachowski, Lilly Wachowski",
-    Description: "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
-    Language: "english",
-    FilmCompany: "Warner Bros., Village Roadshow Pictures",
-    Img: "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
-    Rating: 8.7,
-    Baner: "https://m.media-amazon.com/images/M/MV5BMDMyMmQ5YzgtYWMxOC00OTU0LWIwZjEtZWUwYTY5MjVkZjhhXkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_.jpg",
-    Mood: "sci-fi, action",
-    Url: "https://youtu.be/vKQi3bBA1y8",
-    Moments: {
-      create: [
-        { url: "https://m.media-amazon.com/images/M/MV5BMDMyMmQ5YzgtYWMxOC00OTU0LWIwZjEtZWUwYTY5MjVkZjhhXkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_.jpg" },
-        { url: "https://m.media-amazon.com/images/M/MV5BZTk1NzQwYzYtODBjMS00MmQyLTg1OTUtOWY1YjM0Njk5YmFkXkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_.jpg" }
-      ]
-    },
-    Actors: {
-      connectOrCreate: [
-        {
-          where: { id: 11 },
-          create: {
-            Actor: {
-              create: {
-                name: "Keanu",
-                surname: "Reeves",
-                dateOfBirth: 1964,
-                placeOfBirth: "Lebanon, Beirut",
-                height: 186,
-                career: "Actor known for John Wick, Speed",
-                totalMovies: 85,
-                image: "https://m.media-amazon.com/images/M/MV5BNGJmMWEzOGQtMWZkNS00MGNiLTk5NGEtYzg1YzAyZTgzZTZmXkEyXkFqcGdeQXVyMTE1MTYxNDAw._V1_.jpg"
+async function createTheWitcher2020() {
+  await prisma.movie.create({
+    data: {
+      Name: "The Witcher",
+      ReleaseDate: "20.12",
+      Year: 2020,
+      Country: "USA",
+      Director: "Lauren Schmidt Hissrich",
+      Duration: "1.00 hour (episode)",
+      Screenwriter: "Lauren Schmidt Hissrich",
+      Description: "Geralt of Rivia, a monster hunter, struggles to find his place in a world where humans can often be more wicked than beasts.",
+      Language: "English",
+      FilmCompany: "Netflix",
+      Img: "https://m.media-amazon.com/images/M/MV5BMTQ5MDU5MTktMDZkMy00NDU1LWIxM2UtODg5OGFiNmRhNDBjXkEyXkFqcGc@._V1_.jpg",
+      Rating: 8.0,
+      Baner: "https://dnm.nflximg.net/api/v6/BvVbc2Wxr2w6QuoANoSpJKEIWjQ/AAAAQd2_TAKVVSh49tvLxy4G30vLEbyGerbS__xeBNtQppqEbGdlCKVB_YBJr2yIpjxzSJ33NWjDERifUw2EenYNwOih_TiogEo60gEYsxjh4yHcUhrvwNGAqOQ_MZ3XuQgTu2T-NAFwbzpyV8Z-dd47-iNTQWY.jpg?r=960",
+      Mood: "Happy",
+      Url: "https://www.youtube.com/watch?v=SzS8Ao0H6Co",
+      Moments: {
+        create: [
+          { url: "https://i.guim.co.uk/img/media/d74fb48312da07d3419482b1a22f5eb1cb04e4f1/0_103_1532_919/master/1532.jpg?width=465&dpr=1&s=none&crop=none" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMGUqVS1CwpAsNl_Qa1d6qUjF-FE-Khu5DpA&s" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMxUx_akU-i15L9tiYA9PMCcZNcuDF5UJwuA&s" },
+          { url: "https://www.bosshunting.com.au/wp-content/uploads/2020/03/maxresdefault-9.jpg" }
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 23 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Henry",
+                  surname: "Cavill",
+                  dateOfBirth: 1983,
+                  placeOfBirth: "UK",
+                  height: 185,
+                  career: "Actor known for 'Superman' and 'The Witcher'",
+                  totalMovies: 20,
+                  image: "https://m.media-amazon.com/images/M/MV5BNWFmNmI2NmYtNDUyYi00MDZhLTk0ZmEtODY0MmM5NGQxMWEwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+                }
               }
             }
           }
-        }
-      ]
-    },
-    Genres: {
-      connectOrCreate: [
-        {
-          where: { id: 16 },
-          create: {
-            Genre: {
-              create: {
-                name: "sci-fi"
-              }
-            }
-          }
-        }
-      ]
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          { where: { id: 1 }, create: { Genre: { create: { name: "action" } } } },
+          { where: { id: 6 }, create: { Genre: { create: { name: "fantasy" } } } }
+        ]
+      }
     }
-  }
-});
+  });
+  console.log('Фильм "The Witcher" добавлен.');
+}
 
-// Фільм 10: Gladiator
-await prisma.movie.create({
-  data: {
-    Name: "Gladiator",
-    ReleaseDate: "05.05",
-    Year: 2000,
-    Country: "USA, UK",
-    Director: "Ridley Scott",
-    Duration: "2.35 hours",
-    Screenwriter: "David Franzoni, John Logan",
-    Description: "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
-    Language: "english",
-    FilmCompany: "DreamWorks, Universal Pictures",
-    Img: "https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
-    Rating: 8.5,
-    Baner: "https://m.media-amazon.com/images/M/MV5BMTgwMzQzNTQ1Ml5BMl5BanBnXkFtZTgwMDY2NTYxMTE@._V1_.jpg",
-    Mood: "epic, historical",
-    Url: "https://youtu.be/owK1qxDselE",
-    Moments: {
-      create: [
-        { url: "https://m.media-amazon.com/images/M/MV5BMTgwMzQzNTQ1Ml5BMl5BanBnXkFtZTgwMDY2NTYxMTE@._V1_.jpg" },
-        { url: "https://m.media-amazon.com/images/M/MV5BMTgwMzQzNTQ1Ml5BMl5BanBnXkFtZTgwMDY2NTYxMTE@._V1_.jpg" }
-      ]
-    },
-    Actors: {
-      connectOrCreate: [
-        {
-          where: { id: 12 },
-          create: {
-            Actor: {
-              create: {
-                name: "Russell",
-                surname: "Crowe",
-                dateOfBirth: 1964,
-                placeOfBirth: "New Zealand, Wellington",
-                height: 182,
-                career: "Oscar-winning actor known for A Beautiful Mind",
-                totalMovies: 75,
-                image: "https://m.media-amazon.com/images/M/MV5BMTQyMTExNTMxOF5BMl5BanBnXkFtZTcwNDg1NzkzNw@@._V1_.jpg"
+async function createTheInvisibleMan2020() {
+  await prisma.movie.create({
+    data: {
+      Name: "The Invisible Man",
+      ReleaseDate: "28.02",
+      Year: 2020,
+      Country: "USA",
+      Director: "Leigh Whannell",
+      Duration: "2.04 hours",
+      Screenwriter: "Leigh Whannell",
+      Description: "A woman believes her abusive ex-boyfriend, now invisible, is stalking her and manipulating events to drive her insane.",
+      Language: "English",
+      FilmCompany: "Blumhouse Productions",
+      Img: "https://upload.wikimedia.org/wikipedia/en/3/3a/The_Invisible_Man_%282020_film%29_-_release_poster.jpg",
+      Rating: 7.1,
+      Baner: "https://www.syfy.com/sites/syfy/files/2023/03/theinvisibleman-keyart-show-tile-1920x1080.jpg",
+      Mood: "Sad",
+      Url: "https://youtu.be/WO_FJdiY9dA?si=LcOT-R73wbibDmZF",
+      Moments: {
+        create: [
+          { url: "https://beforesandafters.com/wp-content/uploads/2020/04/2527_t1f_0001.jpg" },
+          { url: "https://i.insider.com/5e5d7b9ba9f40c40b2424f28?width=1200&format=jpeg" },
+          { url: "https://media.newyorker.com/photos/5e58019406c51600088b25d0/16:9/w_2111,h_1187,c_limit/Richard-InvisibleMan.jpg" },
+          { url: "https://i.insider.com/5e6028f6a9f40c140e694e5a?width=700" },
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 25 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Elisabeth",
+                  surname: "Moss",
+                  dateOfBirth: 1982,
+                  placeOfBirth: "USA",
+                  height: 155,
+                  career: "Actress known for 'The Handmaid's Tale' and 'The Invisible Man'",
+                  totalMovies: 40,
+                  image: "https://cdn01.justjared.com/wp-content/uploads/2025/04/handmaid-hollywood/elisabeth-moss-the-handmaids-tale-season-6-premiere-16.jpg"
+                }
               }
             }
           }
-        }
-      ]
-    },
-    Genres: {
-      connectOrCreate: [
-        {
-          where: { id: 17 },
-          create: {
-            Genre: {
-              create: {
-                name: "action"
-              }
-            }
-          }
-        }
-      ]
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          { where: { id: 8 }, create: { Genre: { create: { name: "thriller" } } } },
+          { where: { id: 7 }, create: { Genre: { create: { name: "horror" } } } }
+        ]
+      }
     }
-  }
-});
+  });
+  console.log('Фильм "The Invisible Man" добавлен.');
+}
 
-// Фільм 11: Parasite
-await prisma.movie.create({
-  data: {
-    Name: "Parasite",
-    ReleaseDate: "21.05",
-    Year: 2019,
-    Country: "South Korea",
-    Director: "Bong Joon Ho",
-    Duration: "2.12 hours",
-    Screenwriter: "Bong Joon Ho, Han Jin Won",
-    Description: "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
-    Language: "korean",
-    FilmCompany: "CJ Entertainment, Barunson E&A",
-    Img: "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg",
-    Rating: 8.6,
-    Baner: "https://m.media-amazon.com/images/M/MV5BOTBhZGJjYjQtODRjOC00MWJhLTk1NTctZDJiM2JkMTY3MGNiXkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_.jpg",
-    Mood: "thriller, dark comedy",
-    Url: "https://youtu.be/5xH0HfJHsaY",
-    Moments: {
-      create: [
-        { url: "https://m.media-amazon.com/images/M/MV5BOTBhZGJjYjQtODRjOC00MWJhLTk1NTctZDJiM2JkMTY3MGNiXkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_.jpg" },
-        { url: "https://m.media-amazon.com/images/M/MV5BZjRjOTFkOTktZWUzMi00YzMyLThkMmYtMjEwNmQyNzliYTNmXkEyXkFqcGdeQXVyNzI1NzMxNzM@._V1_.jpg" }
-      ]
-    },
-    Actors: {
-      connectOrCreate: [
-        {
-          where: { id: 13 },
-          create: {
-            Actor: {
-              create: {
-                name: "Song",
-                surname: "Kang Ho",
-                dateOfBirth: 1967,
-                placeOfBirth: "South Korea, Gimhae",
-                height: 178,
-                career: "Acclaimed actor known for Memories of Murder, Snowpiercer",
-                totalMovies: 60,
-                image: "https://m.media-amazon.com/images/M/MV5BZGJhY2Q1OWItYzY0Yi00YjU3LWE0OTAtYjQ4ZGI4MDVkYzY5XkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg"
+
+async function createBirdsOfPrey2020() {
+  await prisma.movie.create({
+    data: {
+      Name: "Birds of Prey",
+      ReleaseDate: "07.02",
+      Year: 2020,
+      Country: "USA",
+      Director: "Cathy Yan",
+      Duration: "1.49 hours",
+      Screenwriter: "Christina Hodson",
+      Description: "Harley Quinn joins forces with three other women to save a young girl from a crime lord in Gotham City.",
+      Language: "English",
+      FilmCompany: "Warner Bros.",
+      Img: "https://upload.wikimedia.org/wikipedia/en/1/1c/Birds_of_Prey_%282020_film%29_poster.jpg",
+      Rating: 6.1,
+      Baner: "https://variety.com/wp-content/uploads/2019/10/birds-of-prey.jpg",
+      Mood: "Calm",
+      Url: "https://youtu.be/PhOpKlMGkQ8?si=6PeHG5vNbRuxshR2",
+      Moments: {
+        create: [
+          { url: "https://itc.ua/wp-content/uploads/2020/02/birds_of_prey_05-770x447.jpg" },
+          { url: "https://www.indiewire.com/wp-content/uploads/2019/10/birds2.jpg?w=600&h=337&crop=1" },
+          { url: "https://i0.wp.com/filmireland.net/wp-content/uploads/2020/02/1_YktuBPI2FW3UnTbNFmYA8g.jpg?fit=738%2C369&ssl=1" },
+          { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm3lt6kGFLrPNfq-j4z89DRY04NtJikQvIaw&s" }
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 27 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Margot",
+                  surname: "Robbie",
+                  dateOfBirth: 1990,
+                  placeOfBirth: "Australia",
+                  height: 165,
+                  career: "Actress known for 'The Wolf of Wall Street' and 'Birds of Prey'",
+                  totalMovies: 30,
+                  image: "https://upload.wikimedia.org/wikipedia/commons/8/87/SYDNEY%2C_AUSTRALIA_-_JANUARY_23_Margot_Robbie_arrives_at_the_Australian_Premiere_of_%27I%2C_Tonya%27_on_January_23%2C_2018_in_Sydney%2C_Australia_%2825980753838%29_%28cropped%29.jpg"
+                }
               }
             }
           }
-        }
-      ]
-    },
-    Genres: {
-      connectOrCreate: [
-        {
-          where: { id: 18 },
-          create: {
-            Genre: {
-              create: {
-                name: "thriller"
-              }
-            }
-          }
-        }
-      ]
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          { where: { id: 1 }, create: { Genre: { create: { name: "action" } } } },
+          { where: { id: 7 }, create: { Genre: { create: { name: "crime" } } } }
+        ]
+      }
     }
-  }
-});
+  });
+  console.log('Фильм "Birds of Prey" добавлен.');
+}
 
-// Фільм 12: The Revenant
-await prisma.movie.create({
-  data: {
-    Name: "The Revenant",
-    ReleaseDate: "25.12",
-    Year: 2015,
-    Country: "USA, Hong Kong",
-    Director: "Alejandro G. Iñárritu",
-    Duration: "2.36 hours",
-    Screenwriter: "Mark L. Smith, Alejandro G. Iñárritu",
-    Description: "A frontiersman on a fur trading expedition in the 1820s fights for survival after being mauled by a bear and left for dead by members of his own hunting team.",
-    Language: "english",
-    FilmCompany: "20th Century Fox, Regency Enterprises",
-    Img: "https://m.media-amazon.com/images/M/MV5BMDE5OWMzM2QtOTU2ZS00NzAyLWI2MDEtOTRlYjIxZGM0OWRjXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg",
-    Rating: 8.0,
-    Baner: "https://m.media-amazon.com/images/M/MV5BNjEwZmQ1ZTctNDgyZC00YjA0LTk1MDYtYmFlYzY1OTVlMWI4XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_.jpg",
-    Mood: "survival, revenge",
-    Url: "https://youtu.be/LoebZZ8K5N0",
-    Moments: {
-      create: [
-        { url: "https://m.media-amazon.com/images/M/MV5BMTUzNTg5MjE5OV5BMl5BanBnXkFtZTgwMTk2NjY2NDM@._V1_.jpg" },
-        { url: "https://m.media-amazon.com/images/M/MV5BMTg1MTY1NTI5NV5BMl5BanBnXkFtZTgwMTk2NjY2NDM@._V1_.jpg" }
-      ]
-    },
-    Actors: {
-      connectOrCreate: [
-        {
-          where: { id: 14 },
-          create: {
-            Actor: {
-              create: {
-                name: "Leonardo",
-                surname: "DiCaprio",
-                dateOfBirth: 1974,
-                placeOfBirth: "USA, California",
-                height: 183,
-                career: "Oscar-winning actor known for Titanic, Inception",
-                totalMovies: 60,
-                image: "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTgwMzQyODU2Mw@@._V1_.jpg"
+async function createTheTrialOfTheChicago72020() {
+  await prisma.movie.create({
+    data: {
+      Name: "The Trial of the Chicago 7",
+      ReleaseDate: "16.09",
+      Year: 2020,
+      Country: "USA",
+      Director: "Aaron Sorkin",
+      Duration: "2.09 hours",
+      Screenwriter: "Aaron Sorkin",
+      Description: "The true story of seven defendants who were charged with conspiracy and inciting riots during the 1968 Democratic National Convention in Chicago.",
+      Language: "English",
+      FilmCompany: "Netflix",
+      Img: "https://upload.wikimedia.org/wikipedia/ru/thumb/e/ef/THe_Trial_of_the_Chicago_7.jpg/250px-THe_Trial_of_the_Chicago_7.jpg",
+      Rating: 7.8,
+      Baner: "https://m.media-amazon.com/images/M/MV5BODAyZTM1N2UtNDAzMS00MjRlLWFiNTItY2VkZDQ1YzI5MDc2XkEyXkFqcGdeQXNuZXNodQ@@._V1_.jpg",
+      Mood: "Happy",
+      Url: "https://youtu.be/gNW-J0anyNc?si=8HKglW6zK2Avwx_M",
+      Moments: {
+        create: [
+          { url: "https://itc.ua/wp-content/uploads/2020/10/the_trial_of_the_chicago_7_16-770x520.jpg" },
+          { url: "https://images.spletnik.ru/i/X/Xo8jcnUBQl/1011.jpg" },
+          { url: "https://itc.ua/wp-content/uploads/2020/10/the_trial_of_the_chicago_7_25-770x513.jpg" },
+          { url: "https://itc.ua/wp-content/uploads/2020/10/the_trial_of_the_chicago_7_13-770x470.jpg" },
+        ]
+      },
+      Actors: {
+        connectOrCreate: [
+          {
+            where: { id: 30 },
+            create: {
+              Actor: {
+                create: {
+                  name: "Eddie",
+                  surname: "Redmayne",
+                  dateOfBirth: 1982,
+                  placeOfBirth: "UK",
+                  height: 180,
+                  career: "Actor known for 'The Theory of Everything' and 'The Trial of the Chicago 7'",
+                  totalMovies: 25,
+                  image: "https://m.media-amazon.com/images/M/MV5BMTU0MjEyNzQyM15BMl5BanBnXkFtZTcwMTc4ODUxOQ@@._V1_.jpg"
+                }
               }
             }
           }
-        }
-      ]
-    },
-    Genres: {
-      connectOrCreate: [
-        {
-          where: { id: 19 },
-          create: {
-            Genre: {
-              create: {
-                name: "adventure"
-              }
-            }
-          }
-        }
-      ]
+        ]
+      },
+      Genres: {
+        connectOrCreate: [
+          { where: { id: 5 }, create: { Genre: { create: { name: "drama" } } } },
+          { where: { id: 7 }, create: { Genre: { create: { name: "crime" } } } }
+        ]
+      }
     }
-  }
-});
-
-// Фільм 13: Whiplash
-await prisma.movie.create({
-  data: {
-    Name: "Whiplash",
-    ReleaseDate: "15.10",
-    Year: 2014,
-    Country: "USA",
-    Director: "Damien Chazelle",
-    Duration: "1.47 hours",
-    Screenwriter: "Damien Chazelle",
-    Description: "A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.",
-    Language: "english",
-    FilmCompany: "Sony Pictures Classics",
-    Img: "https://m.media-amazon.com/images/M/MV5BOTA5NDZlZGUtMjAxOS00YTRkLTkwYmMtYWQ0NWEwZDZiNjEzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
-    Rating: 8.5,
-    Baner: "https://m.media-amazon.com/images/M/MV5BOTA5NDZlZGUtMjAxOS00YTRkLTkwYmMtYWQ0NWEwZDZiNjEzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
-    Mood: "intense, musical",
-    Url: "https://youtu.be/7d_jQycdQGo",
-    Moments: {
-      create: [
-        { url: "https://m.media-amazon.com/images/M/MV5BNTE1OWIzODItYjFkZS00NjkxLThmNTMtMzVlMDM0ODQ0MWI5XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_.jpg" },
-        { url: "https://m.media-amazon.com/images/M/MV5BNTE1OWIzODItYjFkZS00NjkxLThmNTMtMzVlMDM0ODQ0MWI5XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_.jpg" }
-      ]
-    },
-    Actors: {
-      connectOrCreate: [
-        {
-          where: { id: 15 },
-          create: {
-            Actor: {
-              create: {
-                name: "Miles",
-                surname: "Teller",
-                dateOfBirth: 1987,
-                placeOfBirth: "USA, Pennsylvania",
-                height: 183,
-                career: "Actor known for Divergent, Top Gun: Maverick",
-                totalMovies: 35,
-                image: "https://m.media-amazon.com/images/M/MV5BMTQ1Mzg3NTA0OF5BMl5BanBnXkFtZTcwNTgyNTM5Nw@@._V1_.jpg"
-              }
-            }
-          }
-        }
-      ]
-    },
-    Genres: {
-      connectOrCreate: [
-        {
-          where: { id: 20 },
-          create: {
-            Genre: {
-              create: {
-                name: "drama"
-              }
-            }
-          }
-        }
-      ]
-    }
-  }
-});
-
-// Фільм 14: The Grand Budapest Hotel
-await prisma.movie.create({
-  data: {
-    Name: "The Grand Budapest Hotel",
-    ReleaseDate: "28.03",
-    Year: 2014,
-    Country: "USA, Germany",
-    Director: "Wes Anderson",
-    Duration: "1.40 hours",
-    Screenwriter: "Wes Anderson, Hugo Guinness",
-    Description: "A writer encounters the owner of an aging high-class hotel, who tells him of his early years serving as a lobby boy in the hotel's glorious years under an exceptional concierge.",
-    Language: "english",
-    FilmCompany: "Fox Searchlight Pictures",
-    Img: "https://m.media-amazon.com/images/M/MV5BMzM5NjUxOTEyMl5BMl5BanBnXkFtZTgwNjEyMDM0MDE@._V1_.jpg",
-    Rating: 8.1,
-    Baner: "https://m.media-amazon.com/images/M/MV5BMzM5NjUxOTEyMl5BMl5BanBnXkFtZTgwNjEyMDM0MDE@._V1_.jpg",
-    Mood: "whimsical, comedy",
-    Url: "https://youtu.be/1Fg5iWmQjwk",
-    Moments: {
-      create: [
-        { url: "https://m.media-amazon.com/images/M/MV5BMTg0NTM3MTI1MF5BMl5BanBnXkFtZTgwMTAzNDQ3MDE@._V1_.jpg" },
-        { url: "https://m.media-amazon.com/images/M/MV5BMTg0NTM3MTI1MF5BMl5BanBnXkFtZTgwMTAzNDQ3MDE@._V1_.jpg" }
-      ]
-    },
-    Actors: {
-      connectOrCreate: [
-        {
-          where: { id: 16 },
-          create: {
-            Actor: {
-              create: {
-                name: "Ralph",
-                surname: "Fiennes",
-                dateOfBirth: 1962,
-                placeOfBirth: "UK, Suffolk",
-                height: 180,
-                career: "Actor known for Schindler's List, Harry Potter",
-                totalMovies: 80,
-                image: "https://m.media-amazon.com/images/M/MV5BMjA5MTY5NjMyMF5BMl5BanBnXkFtZTcwNjM0NTI4Mw@@._V1_.jpg"
-              }
-            }
-          }
-        }
-      ]
-    },
-    Genres: {
-      connectOrCreate: [
-        {
-          where: { id: 21 },
-          create: {
-            Genre: {
-              create: {
-                name: "comedy"
-              }
-            }
-          }
-        }
-      ]
-    }
-  }
-});
-
-// Фільм 15: Joker
-await prisma.movie.create({
-  data: {
-    Name: "Joker",
-    ReleaseDate: "04.10",
-    Year: 2019,
-    Country: "USA, Canada",
-    Director: "Todd Phillips",
-    Duration: "2.02 hours",
-    Screenwriter: "Todd Phillips, Scott Silver",
-    Description: "In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime.",
-    Language: "english",
-    FilmCompany: "Warner Bros., DC Films",
-    Img: "https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
-    Rating: 8.4,
-    Baner: "https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
-    Mood: "dark, psychological",
-    Url: "https://youtu.be/zAGVQLHvwOY",
-    Moments: {
-      create: [
-        { url: "https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" },
-        { url: "https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" }
-      ]
-    },
-    Actors: {
-      connectOrCreate: [
-        {
-          where: { id: 17 },
-          create: {
-            Actor: {
-              create: {
-                name: "Joaquin",
-                surname: "Phoenix",
-                dateOfBirth: 1974,
-                placeOfBirth: "USA, Puerto Rico",
-                height: 173,
-                career: "Oscar-winning actor known for Walk the Line, Her",
-                totalMovies: 50,
-                image: "https://m.media-amazon.com/images/M/MV5BZGMyY2Q4NTEtMWVkZS00NzcwLTkzNmQtYzBlMWZhZGNhMDhkXkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_.jpg"
-              }
-            }
-          }
-        }
-      ]
-    },
-    Genres: {
-      connectOrCreate: [
-        {
-          where: { id: 22 },
-          create: {
-            Genre: {
-              create: {
-                name: "crime"
-              }
-            }
-          }
-        }
-      ]
-    }
-  }
-});
-
-// Фільм 16: Avengers: Endgame
-await prisma.movie.create({
-  data: {
-    Name: "Avengers: Endgame",
-    ReleaseDate: "26.04",
-    Year: 2019,
-    Country: "USA",
-    Director: "Anthony Russo, Joe Russo",
-    Duration: "3.01 hours",
-    Screenwriter: "Christopher Markus, Stephen McFeely",
-    Description: "After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
-    Language: "english",
-    FilmCompany: "Marvel Studios",
-    Img: "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg",
-    Rating: 8.4,
-    Baner: "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg",
-    Mood: "epic, action-packed",
-    Url: "https://youtu.be/TcMBFSGVi1c",
-    Moments: {
-      create: [
-        { url: "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg" },
-        { url: "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg" }
-      ]
-    },
-    Actors: {
-      connectOrCreate: [
-        {
-          where: { id: 18 },
-          create: {
-            Actor: {
-              create: {
-                name: "Robert",
-                surname: "Downey Jr.",
-                dateOfBirth: 1965,
-                placeOfBirth: "USA, New York",
-                height: 174,
-                career: "Actor known for Iron Man, Sherlock Holmes",
-                totalMovies: 95,
-                image: "https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOF5BMl5BanBnXkFtZTgwNTQ4MTE2MjE@._V1_.jpg"
-              }
-            }
-          }
-        }
-      ]
-    },
-    Genres: {
-      connectOrCreate: [
-        {
-          where: { id: 23 },
-          create: {
-            Genre: {
-              create: {
-                name: "action"
-              }
-            }
-          }
-        }
-      ]
-    }
-  }
-});
-
-// Фільм 17: Black Panther
-await prisma.movie.create({
-  data: {
-    Name: "Black Panther",
-    ReleaseDate: "16.02",
-    Year: 2018,
-    Country: "USA",
-    Director: "Ryan Coogler",
-    Duration: "2.14 hours",
-    Screenwriter: "Ryan Coogler, Joe Robert Cole",
-    Description: "T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past.",
-    Language: "english",
-    FilmCompany: "Marvel Studios",
-    Img: "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_.jpg",
-    Rating: 7.3,
-    Baner: "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_.jpg",
-    Mood: "action, cultural",
-    Url: "https://youtu.be/xjDjIWPwcPU",
-    Moments: {
-      create: [
-        { url: "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_.jpg" },
-        { url: "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_.jpg" }
-      ]
-    },
-    Actors: {
-      connectOrCreate: [
-        {
-          where: { id: 19 },
-          create: {
-            Actor: {
-              create: {
-                name: "Chadwick",
-                surname: "Boseman",
-                dateOfBirth: 1976,
-                placeOfBirth: "USA, South Carolina",
-                height: 183,
-                career: "Actor known for 42, Ma Rainey's Black Bottom",
-                totalMovies: 25,
-                image: "https://m.media-amazon.com/images/M/MV5BMTk2OTY5MzcwMV5BMl5BanBnXkFtZTgwODM4MDI5MjI@._V1_.jpg"
-              }
-            }
-          }
-        }
-      ]
-    },
-    Genres: {
-      connectOrCreate: [
-        {
-          where: { id: 24 },
-          create: {
-            Genre: {
-              create: {
-                name: "sci-fi"
-              }
-            }
-          }
-        }
-      ]
-    }
-  }
-});
-
-// Фільм 18: Birdman
-await prisma.movie.create({
-  data: {
-    Name: "Birdman",
-    ReleaseDate: "27.08",
-    Year: 2014,
-    Country: "USA",
-    Director: "Alejandro G. Iñárritu",
-    Duration: "1.59 hours",
-    Screenwriter: "Alejandro G. Iñárritu, Nicolás Giacobone",
-    Description: "A washed-up superhero actor attempts to revive his fading career by writing, directing, and starring in a Broadway production.",
-    Language: "english",
-    FilmCompany: "Fox Searchlight Pictures",
-    Img: "https://m.media-amazon.com/images/M/MV5BODAzNDMxMzAxOV5BMl5BanBnXkFtZTgwMDMxMjA4MjE@._V1_.jpg",
-    Rating: 7.7,
-    Baner: "https://m.media-amazon.com/images/M/MV5BODAzNDMxMzAxOV5BMl5BanBnXkFtZTgwMDMxMjA4MjE@._V1_.jpg",
-    Mood: "dark comedy, drama",
-    Url: "https://youtu.be/uJfLoE6hanc",
-    Moments: {
-      create: [
-        { url: "https://m.media-amazon.com/images/M/MV5BODAzNDMxMzAxOV5BMl5BanBnXkFtZTgwMDMxMjA4MjE@._V1_.jpg" },
-        { url: "https://m.media-amazon.com/images/M/MV5BODAzNDMxMzAxOV5BMl5BanBnXkFtZTgwMDMxMjA4MjE@._V1_.jpg" }
-      ]
-    },
-    Actors: {
-      connectOrCreate: [
-        {
-          where: { id: 20 },
-          create: {
-            Actor: {
-              create: {
-                name: "Michael",
-                surname: "Keaton",
-                dateOfBirth: 1951,
-                placeOfBirth: "USA, Pennsylvania",
-                height: 175,
-                career: "Actor known for Batman, Beetlejuice",
-                totalMovies: 90,
-                image: "https://m.media-amazon.com/images/M/MV5BMTQwMjIxNjYyMl5BMl5BanBnXkFtZTcwMzY3NjY3Mg@@._V1_.jpg"
-              }
-            }
-          }
-        }
-      ]
-    },
-    Genres: {
-      connectOrCreate: [
-        {
-          where: { id: 25 },
-          create: {
-            Genre: {
-              create: {
-                name: "comedy"
-              }
-            }
-          }
-        }
-      ]
-    }
-  }
-});
-
-console.log("13 додаткових фільмів успішно створено!");
+  });
+  console.log('Фильм "The Trial of the Chicago 7" добавлен.');
 }
 
 
@@ -3262,39 +3010,44 @@ async function main() {
     // await clearAllUsers()
 
 //            CREATE FILM
-    // await createSonic4()
-    await create25Movies()
-    // await createInception2()
-    // await createDunePart3()
-    // await createAvatar3()
-    // await createTheBatman2()
-    // await createMissionImpossible8()
-    // await createBlackPanther3()
-    // await createFantasticBeasts4()
-    // await createJurassicWorld4()
-    // await createDeadpool3()
-    // await createMatrix5()
-    // await createJohnWick5()
-    // await createSonic4();
-    // await createInception2();
-    // await createDunePart3();
-    // await createJohnWick5();
-    // await createAvatar3();
-    // await createTheBatman2();
-    // await createMissionImpossible8();
-    // await createBlackPanther3();
-    // await createFantasticBeasts4();
-    // await createJurassicWorld4();
-    // await createDeadpool3();
-    // await createMatrix5();
-    // await skuf()
-    // await createTheMaskedSinger();
-    // await createAmericasGotTalent();
-    // await createHorrorMovie()
-    // await createAnotherHorrorMovie()
-    // await moodAngry()
-    // await moodHappy()
-    // await moodSad()
+  await createSonic4()
+  await createHappyMovies()
+  await createCalmMovies()
+  await createSadMovies()
+  await createAngryMovies()
+  await createHappyAdventure()
+  await createCalmWaves()
+  await createComedyShow()
+  await createTalentShow()
+  await createFashionShow()
+  await createSecretAdventure()
+  await createMagicFashion()
+  await createLostinFashion()
+  await createAnimatedHearts()
+  await createQuestBeyond()
+  await createLaughterLane()
+  await createEchoesOfSilence()
+  await createNeonPulse()
+  await createLiveTonight()
+  await createTheLastRehearsal()
+  await createLaLaLand()
+  await create1917()
+  await createInception()
+  await createTheMatrix()
+  await createAvatar()
+  await createQuantumLeap2025()
+  await createNeonSkies2026()
+  await createEchoes2020()
+  await createSunsetDreams2021()
+  await createBrokenPromises2023()
+  await createTheTrialOfTheChicago72020()
+  await createTheWitcher2020()
+  await createTheInvisibleMan2020()
+  await createBirdsOfPrey2020()
+  await createDarkKnight()
+  await createDune2021()
+  await createTenet2020()
+  await createMatrixResurrections2021()
 
 //             CLEAN
     // await clearAllUsers()
